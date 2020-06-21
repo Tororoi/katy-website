@@ -26,6 +26,13 @@ const NavBar = (props) => {
             <NavLink className="navlink" to="/contact">Contact</NavLink>
             </li>
         </ul>
+        <div class="hamburger-click-area">
+            <div class="hamburger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
         </>
     )
   };

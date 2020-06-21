@@ -59,8 +59,7 @@ header {
   float: left;
   display: block;
   color: rgb(0, 0, 0);
-  font-size: 32px;
-  text-align: center;
+  font-size: 28px;
   white-space: nowrap;
   text-transform: uppercase;
   padding: 14px 16px;
@@ -84,6 +83,27 @@ header {
 
 .nav .navlink:hover {
   color: rgb(0, 0, 0);
+}
+
+.hamburger-click-area {
+  padding: 24px;
+  display: none;
+}
+
+.hamburger {
+  width: 24px;
+  height: 14px;
+}
+
+.hamburger i {
+  display: block;
+  height: 2px;
+  margin-bottom: 5px;
+  background-color: black;
+}
+
+.hamburger-click-area:hover {
+  background-color: lightblue;
 }
 
 /* Projects */
@@ -143,6 +163,18 @@ main {
     margin-left: 0%;
     margin-right: 0%;
     width: 100%
+  }
+
+  .artist {
+
+  }
+
+  .hamburger-click-area {
+    display: block;
+  }
+
+  .nav {
+    display: none;
   }
 }
 
