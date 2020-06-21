@@ -1,26 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './Components/NavBar'
+import ProjectContainer from './Components/ProjectContainer'
+import Media from './Components/Media'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import {connect} from 'react-redux'
+
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  withRouter
+} from "react-router-dom";
+
+class App extends React.Component {
+
+  render(){
+    return (
+      <div className="App">
+        <Router>
+          <div className="site-content">
+            <header>
+              <NavBar/>
+            </header>
+            <main>
+              <ProjectContainer/>
+              {/* <Media/> */}
+            </main>
+          </div>
+        </Router>
+      </div>
+    );
+  }
 }
 
-export default App;
+let toggleNight = (boolean) => {
+  return {
+    type: "TOGGLE_NIGHT",
+    payload: boolean
+  }
+}
+
+let sendThisInformation = {
+  toggleNight
+}
+
+export default withRouter(
+  connect(null, sendThisInformation)(App)
+);
