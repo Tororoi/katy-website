@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import NavBar from './Components/NavBar'
 import ProjectContainer from './Components/ProjectContainer'
+import ProjectDisplay from './Components/ProjectDisplay'
 import Media from './Components/Media'
 
 import {connect} from 'react-redux'
@@ -24,8 +25,17 @@ class App extends React.Component {
               <NavBar/>
             </header>
             <main>
-              <ProjectContainer/>
+              <Route path="/project" exact render={() =>
+                <ProjectDisplay/>
+              } />
+              <Route path="/gallery" exact render={() =>
+                <ProjectContainer/>
+              } />
+              <Route path="/" exact render={() =>
+                <ProjectContainer/>
+              } />
               {/* <Media/> */}
+
             </main>
           </div>
         </Router>

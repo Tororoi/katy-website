@@ -16,7 +16,8 @@ let initialState = {
   // Change the key-value pairs here
   night: false,
   hello: "From inside the state",
-  projects: [...data]
+  projects: [...data],
+  project: data[0]
 }
 
 // if an action gets dispatched, that action will be ran through all of the reducers

@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 
 //Parents: ProjectContainer
 
-const Project = (props) => {
+const ProjectDisplay = (props) => {
 
     const handleClick = (e) => {
         console.log("dispatch much?")
@@ -13,19 +13,23 @@ const Project = (props) => {
 
     return (
         <>
-        <div className="project-card">
-            <NavLink to="/project">
-            <div className="project">
+        <div className="project-display">
+            <div className="project-full">
                 <img
                     src={props.project.image}
                     alt={props.project.name}
                     onClick={handleClick}
                 />
             </div>
-            </NavLink>
         </div>
         </>
     )
 };
 
-export default connect()(Project);
+let mapStateToProps = (reduxState) => {
+    return {
+        project: reduxState.project
+    }
+}
+
+export default connect(mapStateToProps)(ProjectDisplay);

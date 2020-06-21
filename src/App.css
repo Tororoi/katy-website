@@ -118,7 +118,7 @@ main {
 }
 
 .project-container {
-  border: 1em solid black;
+  /* border: 1em solid black; */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -130,7 +130,7 @@ main {
   overflow: hidden;
   width: 33.3333%;
   /* padding: 1em; */
-  border: 1em solid transparent;
+  border: 0.5em solid transparent;
   box-sizing: border-box;
 }
 
@@ -152,12 +152,23 @@ main {
 .project img {
   width: 100%;
   object-fit: cover;
-  transform: scale(3);
+  transform: scale(2);
   position: absolute;
 }
 
 .project:hover {
   opacity: 0.5;
+}
+
+/* Project Display */
+
+.project-display {
+  width: 100%;
+}
+
+.project-full img {
+  width: 100%;
+  object-fit: contain;
 }
 
 /* Media Adjust */

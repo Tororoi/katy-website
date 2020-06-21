@@ -1,11 +1,11 @@
 [
-    {"image": "https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", "name": "one"},
-    {"image": "https://images-na.ssl-images-amazon.com/images/I/41ZYLP76XdL._SL1000_.jpg", "name": "one"},
-    {"image": "https://lh3.googleusercontent.com/proxy/1QwaWuqjJazT-L5LB1Qn6TibpPzKIXmDJjP1g9I4mrfAxB_xDovfm17ahqKsdkEc6QYlir2NnyHz0J6XnLt5urN98LtGYrPneypYJmGc9uXxzNZHCMKjgSDcJfo5hhNfzvaKr8AUbg", "name": "one"},
-    {"image": "https://images-na.ssl-images-amazon.com/images/I/41ZYLP76XdL._SL1000_.jpg", "name": "one"},
-    {"image": "https://images-na.ssl-images-amazon.com/images/I/41ZYLP76XdL._SL1000_.jpg", "name": "one"},
-    {"image": "https://images-na.ssl-images-amazon.com/images/I/41ZYLP76XdL._SL1000_.jpg", "name": "one"},
-    {"image": "https://images-na.ssl-images-amazon.com/images/I/41ZYLP76XdL._SL1000_.jpg", "name": "one"},
-    {"image": "https://images-na.ssl-images-amazon.com/images/I/41ZYLP76XdL._SL1000_.jpg", "name": "one"},
-    {"image": "https://images-na.ssl-images-amazon.com/images/I/41ZYLP76XdL._SL1000_.jpg", "name": "one"}
+    {"image": "./images/Wang_Chickenofthewoods.jpg", "name": "one"},
+    {"image": "./images/Wang_LeafMeditation.jpg", "name": "one"},
+    {"image": "./images/Wang_OrnamentalGourd1.jpg", "name": "one"},
+    {"image": "./images/Wang_OrnamentalGourd2.jpg", "name": "one"},
+    {"image": "./images/Wang_PitcherPlant.jpg", "name": "one"},
+    {"image": "./images/Wang_SuperHot1.jpg", "name": "one"},
+    {"image": "./images/Wang_SuperHot2.jpg", "name": "one"},
+    {"image": "./images/Wang_YuanYuan3.jpg", "name": "one"},
+    {"image": "./images/Wang_YuanYuan6.jpg", "name": "one"}
 ]
