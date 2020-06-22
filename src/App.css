@@ -60,12 +60,21 @@ header {
   display: block;
   color: rgb(0, 0, 0);
   font-size: 28px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   white-space: nowrap;
   text-transform: uppercase;
   padding: 14px 16px;
   text-decoration: none;
   cursor: pointer;
   transition: 0.2s ease-out;
+}
+
+.nickname {
+  font-weight: 300;
+
 }
 
 .nav .navlink {
@@ -169,6 +178,14 @@ main {
 .project-full img {
   width: 100%;
   object-fit: contain;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.description {
+
 }
 
 /* Media Adjust */

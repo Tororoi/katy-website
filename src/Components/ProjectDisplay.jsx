@@ -20,6 +20,8 @@ const ProjectDisplay = (props) => {
                     alt={props.project.name}
                     onClick={handleClick}
                 />
+                <p className="title">Title</p>
+                <p className="description">dsfjhsdgfhjs fshjsdfghs hdskhfks hbshghjh hsdjhgsk</p>
             </div>
         </div>
         </>

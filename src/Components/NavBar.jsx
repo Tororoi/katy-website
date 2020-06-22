@@ -8,7 +8,10 @@ const NavBar = (props) => {
 
     return(
         <>
-        <NavLink className="artist" to="/">Yuan Yuan Wang</NavLink>
+        <NavLink className="artist" to="/">
+            <div>Yuan Yuan Wang</div>
+            <div className="nickname">'Katy'</div>
+        </NavLink>
         <ul className="nav">
             {/* <li>
             <NavLink className="artist" to="/">Yuan Yuan Wang</NavLink>
