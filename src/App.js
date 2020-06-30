@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './Components/NavBar'
 import ProjectContainer from './Components/ProjectContainer'
 import ProjectDisplay from './Components/ProjectDisplay'
+import AboutPage from './Components/AboutPage'
 import Media from './Components/Media'
 
 import {connect} from 'react-redux'
@@ -25,6 +26,9 @@ class App extends React.Component {
               <NavBar/>
             </header>
             <main>
+              <Route path="/bio" exact render={() =>
+                <AboutPage/>
+              } />
               <Route path="/project" exact render={() =>
                 <ProjectDisplay/>
               } />
