@@ -4,6 +4,7 @@ import NavBar from './Components/NavBar'
 import ProjectContainer from './Components/ProjectContainer'
 import ProjectDisplay from './Components/ProjectDisplay'
 import AboutPage from './Components/AboutPage'
+import ExhibitionsContainer from './Components/ExhibitionsContainer'
 import Media from './Components/Media'
 
 import {connect} from 'react-redux'
@@ -26,6 +27,9 @@ class App extends React.Component {
               <NavBar/>
             </header>
             <main>
+              <Route path="/exhibitions" exact render={() =>
+                <ExhibitionsContainer/>
+              } />
               <Route path="/bio" exact render={() =>
                 <AboutPage/>
               } />
