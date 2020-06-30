@@ -1,14 +1,14 @@
 {
     "artwork": [
-        {"image": "./images/Wang_Chickenofthewoods.jpg", "name": "one"},
-        {"image": "./images/Wang_LeafMeditation.jpg", "name": "one"},
-        {"image": "./images/Wang_OrnamentalGourd1.jpg", "name": "one"},
-        {"image": "./images/Wang_OrnamentalGourd2.jpg", "name": "one"},
-        {"image": "./images/Wang_PitcherPlant.jpg", "name": "one"},
-        {"image": "./images/Wang_SuperHot1.jpg", "name": "one"},
-        {"image": "./images/Wang_SuperHot2.jpg", "name": "one"},
-        {"image": "./images/Wang_YuanYuan3.jpg", "name": "one"},
-        {"image": "./images/Wang_YuanYuan6.jpg", "name": "one"}
+        {"id": 1, "image": "./images/Wang_Chickenofthewoods.jpg", "name": "one"},
+        {"id": 2, "image": "./images/Wang_LeafMeditation.jpg", "name": "one"},
+        {"id": 3, "image": "./images/Wang_OrnamentalGourd1.jpg", "name": "one"},
+        {"id": 4, "image": "./images/Wang_OrnamentalGourd2.jpg", "name": "one"},
+        {"id": 5, "image": "./images/Wang_PitcherPlant.jpg", "name": "one"},
+        {"id": 6, "image": "./images/Wang_SuperHot1.jpg", "name": "one"},
+        {"id": 7, "image": "./images/Wang_SuperHot2.jpg", "name": "one"},
+        {"id": 8, "image": "./images/Wang_YuanYuan3.jpg", "name": "one"},
+        {"id": 9, "image": "./images/Wang_YuanYuan6.jpg", "name": "one"}
     ],
     "exhibitions": [
         {"name": "exhibition 1", "description": "this is the description"}

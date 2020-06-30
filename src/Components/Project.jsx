@@ -8,7 +8,7 @@ import {connect} from 'react-redux'
 const Project = (props) => {
 
     const handleClick = (e) => {
-        console.log("dispatch much?")
+        // console.log(props.project)
         props.projectDispatch(props.project)
     }
 
