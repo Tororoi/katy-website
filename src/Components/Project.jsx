@@ -9,6 +9,7 @@ const Project = (props) => {
 
     const handleClick = (e) => {
         console.log("dispatch much?")
+        props.projectDispatch(props.project)
     }
 
     return (
@@ -28,4 +29,15 @@ const Project = (props) => {
     )
 };
 
-export default connect()(Project);
+const chooseProject = (project) => {
+    return {
+        type: "CHOOSE_PROJECT",
+        payload: project
+    }
+}
+
+const mapDispatchToProps = {
+    projectDispatch: chooseProject
+}
+
+export default connect(null, mapDispatchToProps)(Project);

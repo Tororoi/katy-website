@@ -32,6 +32,12 @@ let theReducer = (state = initialState, action) => {
         night: !state.night
       }
 
+    case "CHOOSE_PROJECT":
+
+      return {
+        ...state,
+        project: action.payload
+      }
     default:
       return state
   }
