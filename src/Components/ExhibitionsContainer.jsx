@@ -24,13 +24,15 @@ const ExhibitionContainer = (props) => {
 
     return (
         <>
-        <h3><u>Exhibitions</u></h3>
-        <div className="exhibitions">
-            {exhibitionArray}
-        </div>
-        <h3><u>Artist Residency</u></h3>
-        <div className="residencies">
-            {residencyArray}
+        <div className="ex-container">
+            <h3><u>Exhibitions</u></h3>
+            <div className="exhibitions">
+                {exhibitionArray}
+            </div>
+            <h3><u>Artist Residency</u></h3>
+            <div className="residencies">
+                {residencyArray}
+            </div>
         </div>
         </>
     )
