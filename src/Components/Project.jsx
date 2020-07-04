@@ -19,7 +19,7 @@ const Project = (props) => {
             <div className="project">
                 <img
                     src={props.project.image}
-                    alt={props.project.name}
+                    alt={props.project.title}
                     onClick={handleClick}
                 />
             </div>

@@ -17,11 +17,16 @@ const ProjectDisplay = (props) => {
             <div className="project-full">
                 <img
                     src={props.project.image}
-                    alt={props.project.name}
+                    alt={props.project.title}
                     onClick={handleClick}
                 />
-                <p className="title">Title</p>
-                <p className="description">dsfjhsdgfhjs fshjsdfghs hdskhfks hbshghjh hsdjhgsk</p>
+                <div className="project-details">
+                    <p className="title">{props.project.title}</p>
+                    <p className="binomial"><i>{props.project.binomial}</i>{props.project.name !== "" ? `, '${props.project.name}'` : ""}</p>
+                    <p>{props.project.medium}</p>
+                    <p>{props.project.size}</p>
+                    <p>{props.project.status}</p>
+                </div>
             </div>
         </div>
         </>

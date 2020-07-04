@@ -1,14 +1,105 @@
 {
     "artwork": [
-        {"id": 1, "image": "./images/Wang_Chickenofthewoods.jpg", "name": "one"},
-        {"id": 2, "image": "./images/Wang_LeafMeditation.jpg", "name": "one"},
-        {"id": 3, "image": "./images/Wang_OrnamentalGourd1.jpg", "name": "one"},
-        {"id": 4, "image": "./images/Wang_OrnamentalGourd2.jpg", "name": "one"},
-        {"id": 5, "image": "./images/Wang_PitcherPlant.jpg", "name": "one"},
-        {"id": 6, "image": "./images/Wang_SuperHot1.jpg", "name": "one"},
-        {"id": 7, "image": "./images/Wang_SuperHot2.jpg", "name": "one"},
-        {"id": 8, "image": "./images/Wang_YuanYuan3.jpg", "name": "one"},
-        {"id": 9, "image": "./images/Wang_YuanYuan6.jpg", "name": "one"}
+        {
+            "id": 1, 
+            "image": "./images/Wang_Chickenofthewoods.jpg", 
+            "title": "Chicken of the Woods", 
+            "binomial": "Laetiporus cincinnatus", 
+            "name": "", 
+            "medium": "Watercolor on paper, 2020", 
+            "size": "15 x 18 in", 
+            "status": "Currently not for sale"
+        },
+        {
+            "id": 2, 
+            "image": "./images/Wang_LeafMeditation.jpg", 
+            "title": "Leaf Meditation", 
+            "binomial": "Acer saccharum", 
+            "name": "", 
+            "medium": "Graphite on paper, 2019", 
+            "size": "9.5 x 7.5 in", 
+            "status": "Available for Purchase"
+        },
+        {
+            "id": 3, 
+            "image": "./images/Wang_OrnamentalGourd1.jpg", 
+            "title": "Ornamental Gourd 1", 
+            "binomial": "Curcubita pepo", 
+            "name": "", 
+            "medium": "Watercolor on paper, 2018", 
+            "size": "7 x 5 in", 
+            "status": "Available for Purchase"
+        },
+        {
+            "id": 4, 
+            "image": "./images/Wang_OrnamentalGourd2.jpg", 
+            "title": "Ornamental Gourd 2", 
+            "binomial": "Curcubita pepo", 
+            "name": "", 
+            "medium": "Watercolor on paper, 2018", 
+            "size": "7 x 5 in", 
+            "status": "Sold Out"
+        },
+        {
+            "id": 5, 
+            "image": "./images/Wang_PitcherPlant.jpg", 
+            "title": "Pitcher Plant Portrait", 
+            "binomial": "Sarracenia leucophylla", 
+            "name": "", 
+            "medium": "Watercolor on paper, 2019", 
+            "size": "10.5 x 8.5 in", 
+            "status": "Available for Purchase"
+        },
+        {
+            "id": 6, 
+            "image": "./images/Wang_SuperHot1.jpg", 
+            "title": "Super Hot 1", 
+            "binomial": "Capsicum chinense", 
+            "name": "Apocalypse Scorpion", 
+            "medium": "Color pencil on paper, 2020", 
+            "size": "7 x 5 in", 
+            "status": "Available for Purchase"
+        },
+        {
+            "id": 7, 
+            "image": "./images/Wang_SuperHot2.jpg", 
+            "title": "Super Hot 2", 
+            "binomial": "Capsicum chinense", 
+            "name": "Chocolate Champion", 
+            "medium": "Color pencil on paper, 2020", 
+            "size": "7.5 x 7.5 in", 
+            "status": "Available for Purchase"
+        },
+        {
+            "id": 8, 
+            "image": "./images/Wang_YuanYuan3.jpg", 
+            "title": "The Story of an Iris", 
+            "binomial": "Iris versicolor", 
+            "name": "", 
+            "medium": "Watercolor on paper, 2019", 
+            "size": "17 x 14 in", 
+            "status": "Available for Purchase"
+        },
+        {
+            "id": 9, 
+            "image": "./images/Wang_YuanYuan6.jpg", 
+            "title": "Pitcher Plant in Bloom", 
+            "binomial": "Sarracenia purpurea", 
+            "name": "", 
+            "medium": "Watercolor on paper, 2019", 
+            "size": "13 x 10 in", 
+            "status": "Available for Purchase"
+        },
+        {
+            "id": 10, 
+            "image": "./images/birdnest.jpg", 
+            "title": "Bird’s Nest Fungi on Woodchips", 
+            "binomial": "Nidulariaceae sp.", 
+            "name": "", 
+            "medium": "Watercolor on paper, 2020", 
+            "size": "6 x 6 in", 
+            "status": "Currently not for sale"
+        }
     ],
     "exhibitions": [
         {
