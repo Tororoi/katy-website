@@ -188,12 +188,26 @@ main {
 
 }
 
+/* Exhibitions Display */
+
+.exhibitions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.exhibition {
+  text-align: justify; /* For Edge */
+  -moz-text-align-last: left; /* For Firefox prior 58.0 */
+  text-align-last: left;
+}
+
 /* Media Adjust */
 
 @media (max-width: 768px) {
   .project-card {
     width: 50%;
-    border: 1em solid pink;
+    border: 0.5em solid transparent;
   }
 
   .site-content {
@@ -218,6 +232,6 @@ main {
 @media (max-width: 540px) {
   .project-card {
     width: 100%;
-    border: 1em solid pink;
+    border: 0.5em solid transparent;
   }
 }

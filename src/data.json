@@ -11,6 +11,31 @@
         {"id": 9, "image": "./images/Wang_YuanYuan6.jpg", "name": "one"}
     ],
     "exhibitions": [
-        {"name": "exhibition 1", "description": "this is the description"}
+        {
+            "name": "23rd Annual International Exhibition by American Society of Botanical Artists and Wave Hill", 
+            "description": "September 5 – December 6, 2020, Wave Hill, Bronx, NY",
+            "status": "Upcoming"
+        },
+        {
+            "name": "The Horticultual Society of New York, Solo Exhibition", 
+            "description": "Expected Fall 2020, New York, NY",
+            "status": "Upcoming"
+        },
+        {
+            "name": "21st Annual International Exhibition by American Society of Botanical Artists and Wave Hill", 
+            "description": "September 8 – December 2, 2018, Wave Hill, Bronx, NY",
+            "status": "Over"
+        },
+        {
+            "name": "Gallery 122 Group Arts Show", 
+            "description": "February 2018, New York, NY",
+            "status": "Over"
+        }
+    ],
+    "residencies": [
+        {
+            "name": "Jessica Tcherepnine Artist-in-Residence Program", 
+            "description": "Spring 2020, Greenhouse at Denny Farrell Riverbank State Park – Horticultural Society of New York, New York, NY"
+        }
     ]
 }

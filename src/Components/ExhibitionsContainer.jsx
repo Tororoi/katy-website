@@ -1,5 +1,6 @@
 import React from 'react';
 import Exhibition from './Exhibition'
+import Residency from './Residency'
 
 import {connect} from 'react-redux'
 
@@ -14,10 +15,22 @@ const ExhibitionContainer = (props) => {
             />
     })
 
+    const residencyArray = props.residencies.map((residency) => {
+        return <Residency
+            key={residency.id}
+            residency={residency}
+            />
+    })
+
     return (
         <>
+        <h3><u>Exhibitions</u></h3>
         <div className="exhibitions">
             {exhibitionArray}
+        </div>
+        <h3><u>Artist Residency</u></h3>
+        <div className="residencies">
+            {residencyArray}
         </div>
         </>
     )
@@ -25,7 +38,8 @@ const ExhibitionContainer = (props) => {
 
 let mapStateToProps = (reduxState) => {
     return {
-      exhibitions: reduxState.exhibitions
+      exhibitions: reduxState.exhibitions,
+      residencies: reduxState.residencies
     }
   }
 

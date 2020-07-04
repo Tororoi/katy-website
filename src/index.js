@@ -18,7 +18,8 @@ let initialState = {
   hello: "From inside the state",
   projects: [...data.artwork],
   project: data.artwork[0],
-  exhibitions: [...data.exhibitions]
+  exhibitions: [...data.exhibitions],
+  residencies: [...data.residencies]
 }
 
 // if an action gets dispatched, that action will be ran through all of the reducers

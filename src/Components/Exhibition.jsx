@@ -8,9 +8,8 @@ const Exhibition = (props) => {
 
     return (
         <>
-        <div className="exhibitions">
-        <h1>{props.exhibition.name}</h1>
-        <p>{props.exhibition.description}</p>
+        <div className="exhibition">
+        <p><i>{props.exhibition.status === "Upcoming" ? "(Upcoming) " : ""}</i><strong>{props.exhibition.name}, </strong>{props.exhibition.description}</p>
         </div>
         </>
     )
