@@ -213,6 +213,12 @@ main {
   text-align-last: left;
 }
 
+/* About Page */
+
+.profile-pic {
+  width: 40%;
+}
+
 /* Media Adjust */
 
 @media (max-width: 768px) {

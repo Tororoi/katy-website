@@ -10,7 +10,8 @@ const Project = (props) => {
         <>
         <div className="about-page">
             <img
-                src="artist pic"
+                className="profile-pic"
+                src="./images/KatyBioPhoto.jpg"
                 alt="artist pic"
             />
             <p>
