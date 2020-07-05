@@ -39,6 +39,7 @@ header {
   background-color: rgb(255, 255, 255);
   top: 0;
   width: 100%;
+  user-select: none; /* Standard */
 }
 
 .nav {
@@ -195,6 +196,7 @@ main {
   text-align: center;
   line-height: 1.6em;
   box-sizing: content-box;
+  user-select: none; /* Standard */
 }
 
 .project-full img {
@@ -209,6 +211,9 @@ main {
 .description {
 
 }
+
+/* Project Page Transitions */
+
 
 /* Exhibitions Display */
 
