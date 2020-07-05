@@ -1,7 +1,7 @@
 {
     "artwork": [
         {
-            "id": 1, 
+            "id": 0, 
             "image": "./images/Wang_Chickenofthewoods.jpg", 
             "title": "Chicken of the Woods", 
             "binomial": "Laetiporus cincinnatus", 
@@ -11,7 +11,7 @@
             "status": "Currently not for sale"
         },
         {
-            "id": 2, 
+            "id": 1, 
             "image": "./images/Wang_LeafMeditation.jpg", 
             "title": "Leaf Meditation", 
             "binomial": "Acer saccharum", 
@@ -21,7 +21,7 @@
             "status": "Available for Purchase"
         },
         {
-            "id": 3, 
+            "id": 2, 
             "image": "./images/Wang_OrnamentalGourd1.jpg", 
             "title": "Ornamental Gourd 1", 
             "binomial": "Curcubita pepo", 
@@ -31,7 +31,7 @@
             "status": "Available for Purchase"
         },
         {
-            "id": 4, 
+            "id": 3, 
             "image": "./images/Wang_OrnamentalGourd2.jpg", 
             "title": "Ornamental Gourd 2", 
             "binomial": "Curcubita pepo", 
@@ -41,7 +41,7 @@
             "status": "Sold Out"
         },
         {
-            "id": 5, 
+            "id": 4, 
             "image": "./images/Wang_PitcherPlant.jpg", 
             "title": "Pitcher Plant Portrait", 
             "binomial": "Sarracenia leucophylla", 
@@ -51,7 +51,7 @@
             "status": "Available for Purchase"
         },
         {
-            "id": 6, 
+            "id": 5, 
             "image": "./images/Wang_SuperHot1.jpg", 
             "title": "Super Hot 1", 
             "binomial": "Capsicum chinense", 
@@ -61,7 +61,7 @@
             "status": "Available for Purchase"
         },
         {
-            "id": 7, 
+            "id": 6, 
             "image": "./images/Wang_SuperHot2.jpg", 
             "title": "Super Hot 2", 
             "binomial": "Capsicum chinense", 
@@ -71,7 +71,7 @@
             "status": "Available for Purchase"
         },
         {
-            "id": 8, 
+            "id": 7, 
             "image": "./images/Wang_YuanYuan3.jpg", 
             "title": "The Story of an Iris", 
             "binomial": "Iris versicolor", 
@@ -81,7 +81,7 @@
             "status": "Available for Purchase"
         },
         {
-            "id": 9, 
+            "id": 8, 
             "image": "./images/Wang_YuanYuan6.jpg", 
             "title": "Pitcher Plant in Bloom", 
             "binomial": "Sarracenia purpurea", 
@@ -91,7 +91,7 @@
             "status": "Available for Purchase"
         },
         {
-            "id": 10, 
+            "id": 9, 
             "image": "./images/birdnest.jpg", 
             "title": "Bird’s Nest Fungi on Woodchips", 
             "binomial": "Nidulariaceae sp.", 

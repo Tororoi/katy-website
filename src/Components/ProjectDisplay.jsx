@@ -8,18 +8,22 @@ import {connect} from 'react-redux'
 const ProjectDisplay = (props) => {
 
     const handleClick = (e) => {
-        console.log("dispatch much?")
+        console.log(e.target)
+        props.prevNext(e.target.innerText)
     }
 
     return (
         <>
         <div className="project-display">
             <div className="project-full">
-                <img
-                    src={props.project.image}
-                    alt={props.project.title}
-                    onClick={handleClick}
-                />
+                <div className="project-nav">
+                    <p onClick={handleClick}>{"<"}</p>
+                    <img
+                        src={props.project.image}
+                        alt={props.project.title}
+                    />
+                    <p onClick={handleClick}>{">"}</p>
+                </div>
                 <div className="project-details">
                     <p className="title">{props.project.title}</p>
                     <p className="binomial"><i>{props.project.binomial}</i>{props.project.name !== "" ? `, '${props.project.name}'` : ""}</p>
@@ -33,10 +37,17 @@ const ProjectDisplay = (props) => {
     )
 };
 
+let prevNext = (sign) => {
+    return {
+      type: "PREV_NEXT",
+      payload: sign
+    }
+}
+
 let mapStateToProps = (reduxState) => {
     return {
         project: reduxState.project
     }
 }
 
-export default connect(mapStateToProps)(ProjectDisplay);
+export default connect(mapStateToProps, {prevNext})(ProjectDisplay);

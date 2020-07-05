@@ -15,7 +15,6 @@ import {BrowserRouter} from 'react-router-dom'
 let initialState = {
   // Change the key-value pairs here
   night: false,
-  hello: "From inside the state",
   projects: [...data.artwork],
   project: data.artwork[0],
   exhibitions: [...data.exhibitions],
@@ -39,6 +38,17 @@ let theReducer = (state = initialState, action) => {
       return {
         ...state,
         project: action.payload
+      }
+    
+    case "PREV_NEXT":
+      let projIndex = state.project.id
+      const dir = action.payload;
+      dir === "<" ? projIndex -= 1 : projIndex += 1
+      if (projIndex < 0) {projIndex = 9;} else if (state.projects[projIndex] === undefined) {projIndex = 0;}
+
+      return {
+        ...state,
+        project: state.projects[projIndex]
       }
     default:
       return state

@@ -175,6 +175,16 @@ main {
   width: 100%;
 }
 
+.project-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.project-nav p {
+  font-size: 35px;
+}
+
 .project-full img {
   width: 75%;
   object-fit: contain;
