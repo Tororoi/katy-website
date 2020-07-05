@@ -183,6 +183,18 @@ main {
 
 .project-nav p {
   font-size: 35px;
+  align-self: flex-start;
+  position: sticky;
+  top: 30%;
+  width: 1.6em;
+  height: 1.6em;
+  box-sizing: initial;
+  color: white;
+  background-color: rgb(223, 223, 223);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.6em;
+  box-sizing: content-box;
 }
 
 .project-full img {

@@ -17,12 +17,12 @@ const ProjectDisplay = (props) => {
         <div className="project-display">
             <div className="project-full">
                 <div className="project-nav">
-                    <p onClick={handleClick}>{"<"}</p>
+                    <p onClick={handleClick}>{"◀"}</p>
                     <img
                         src={props.project.image}
                         alt={props.project.title}
                     />
-                    <p onClick={handleClick}>{">"}</p>
+                    <p onClick={handleClick}>{"▶"}</p>
                 </div>
                 <div className="project-details">
                     <p className="title">{props.project.title}</p>

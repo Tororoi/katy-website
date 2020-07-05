@@ -43,7 +43,7 @@ let theReducer = (state = initialState, action) => {
     case "PREV_NEXT":
       let projIndex = state.project.id
       const dir = action.payload;
-      dir === "<" ? projIndex -= 1 : projIndex += 1
+      dir === "◀" ? projIndex -= 1 : projIndex += 1
       if (projIndex < 0) {projIndex = 9;} else if (state.projects[projIndex] === undefined) {projIndex = 0;}
 
       return {
