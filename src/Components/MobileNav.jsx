@@ -14,7 +14,7 @@ const MobileNav = (props) => {
 
     return(
         <>
-        <div className="mob-cont" style={props.mobileNav ? {height: "300px", transition: "height 0.5s"} : {height: "0px", transition: "height 0s"}}>
+        <div className="mob-cont" style={props.mobileNav ? {height: "300px", transition: "height 0.3s"} : {height: "0px", transition: "height 0s"}}>
             <ul className="mobilenav" style={props.mobileNav ? {marginTop: "0px"} : {marginTop: "300px"}} onClick={displayMobileNav}>
                 <li>
                 <NavLink className="navlink" to="/gallery">Gallery</NavLink>

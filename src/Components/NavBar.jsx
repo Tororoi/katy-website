@@ -7,6 +7,7 @@ import {connect} from 'react-redux'
 const NavBar = (props) => {
 
     const displayMobileNav = (e) => {
+        console.log("hello")
         props.toggleNav()
     }
 
@@ -32,9 +33,9 @@ const NavBar = (props) => {
             </ul>
             <div class="hamburger-click-area" onClick={displayMobileNav}>    
                 <div class="hamburger">
-                    <i id="top-bun" style={props.mobileNav ? {transform: "matrix(1, -1, 1, 1, 0, 7)"} : {transform: "rotate(0deg)"}} onClick={displayMobileNav}></i>
-                    <i id="patty" style={props.mobileNav ? {width: "0px", marginLeft: "12px"} : {width: "24px", marginLeft: "0px"}} onClick={displayMobileNav}></i>
-                    <i id="bottom-bun" style={props.mobileNav ? {transform: "matrix(1, 1, -1, 1, 0, -7)"} : {transform: "rotate(0deg)"}} onClick={displayMobileNav}></i>
+                    <i id="top-bun" style={props.mobileNav ? {transform: "matrix(1, -1, 1, 1, 0, 7)"} : {transform: "rotate(0deg)"}}></i>
+                    <i id="patty" style={props.mobileNav ? {width: "0px", marginLeft: "12px"} : {width: "24px", marginLeft: "0px"}}></i>
+                    <i id="bottom-bun" style={props.mobileNav ? {transform: "matrix(1, 1, -1, 1, 0, -7)"} : {transform: "rotate(0deg)"}}></i>
                 </div>
             </div>
         </div>
