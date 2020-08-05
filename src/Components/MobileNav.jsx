@@ -2,14 +2,12 @@ import React from 'react';
 import {NavLink} from 'react-router-dom'
 import {connect} from 'react-redux'
 
-import MobileNav from './MobileNav'
+//Parents: NavBar
 
-//Parents: App
+const MobileNav = (props) => {
 
-const NavBar = (props) => {
-
-    const displayMobileNav = (e) => {
-        return <MobileNav/>
+    const exitDisplay = (e) => {
+        return <NavBar/>
     }
 
     return(
@@ -46,4 +44,4 @@ const NavBar = (props) => {
     )
   };
 
-export default connect()(NavBar)
+export default connect()(MobileNav)
