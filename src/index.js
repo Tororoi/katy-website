@@ -14,7 +14,7 @@ import {BrowserRouter} from 'react-router-dom'
 //Initial State
 let initialState = {
   // Change the key-value pairs here
-  night: false,
+  mobileNav: false,
   projects: [...data.artwork],
   project: data.artwork[0],
   exhibitions: [...data.exhibitions],
@@ -26,11 +26,11 @@ let theReducer = (state = initialState, action) => {
 
   switch (action.type) {
 
-    case "TOGGLE_NIGHT":
+    case "TOGGLE_NAV":
 
       return {
         ...state,
-        night: !state.night
+        mobileNav: !state.mobileNav
       }
 
     case "CHOOSE_PROJECT":

@@ -31,6 +31,7 @@
 header {
   list-style-type: none;
   display: flex;
+  flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
   margin: 0;
@@ -40,6 +41,21 @@ header {
   top: 0;
   width: 100%;
   user-select: none; /* Standard */
+  position: sticky;
+  z-index: 99;
+}
+
+.nav-cont {
+  display: flex;
+  float: left;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  top: 0;
+  width: 100%;
 }
 
 .nav {
@@ -48,6 +64,27 @@ header {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  overflow: hidden;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  margin: 0;
+}
+
+.mob-cont {
+  transition: height 1s;
+  overflow: hidden;
+  align-items: center;
+  width: 100%;
+}
+
+.mobilenav {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column wrap;
   overflow: hidden;
   padding-right: 10px;
   padding-left: 10px;
@@ -78,9 +115,10 @@ header {
 
 }
 
-.nav .navlink {
+.navlink {
   float: left;
-  display: block;
+  display: flex;
+  flex-flow: row wrap;
   color: gray;
   text-align: center;
   text-transform: uppercase;
@@ -91,13 +129,14 @@ header {
   transition: 0.2s ease-out;
 }
 
-.nav .navlink:hover {
+.navlink:hover {
   color: rgb(0, 0, 0);
 }
 
 .hamburger-click-area {
   padding: 24px;
   display: none;
+  opacity: 0.5;
 }
 
 .hamburger {
@@ -113,11 +152,7 @@ header {
 }
 
 .hamburger-click-area:hover {
-  background-color: lightblue;
-}
-
-.mobilenav {
-  
+  opacity: 1;
 }
 
 /* Projects */

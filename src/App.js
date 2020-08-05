@@ -25,7 +25,8 @@ class App extends React.Component {
         <Router>
           <div className="site-content">
             <header>
-              <NavBar/>
+                <NavBar toggleNav={this.props.toggleNav}/>
+                <MobileNav/>
             </header>
             <main>
               <Route path="/exhibitions" exact render={() =>
@@ -40,9 +41,6 @@ class App extends React.Component {
               <Route path="/gallery" exact render={() =>
                 <ProjectContainer/>
               } />
-              <Route path="/nav" exact render={() =>
-                <MobileNav/>
-              } />
               <Route path="/" exact render={() =>
                 <ProjectContainer/>
               } />
@@ -56,15 +54,15 @@ class App extends React.Component {
   }
 }
 
-let toggleNight = (boolean) => {
+let toggleNav = (boolean) => {
   return {
-    type: "TOGGLE_NIGHT",
+    type: "TOGGLE_NAV",
     payload: boolean
   }
 }
 
 let sendThisInformation = {
-  toggleNight
+  toggleNav
 }
 
 export default withRouter(
