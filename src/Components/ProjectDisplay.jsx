@@ -8,7 +8,6 @@ import {connect} from 'react-redux'
 const ProjectDisplay = (props) => {
 
     const handleClick = (e) => {
-        console.log(e.target)
         props.prevNext(e.target.innerText)
     }
 

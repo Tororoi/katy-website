@@ -26,7 +26,7 @@ class App extends React.Component {
           <div className="site-content">
             <header>
                 <NavBar toggleNav={this.props.toggleNav}/>
-                <MobileNav/>
+                <MobileNav toggleNav={this.props.toggleNav}/>
             </header>
             <main>
               <Route path="/exhibitions" exact render={() =>
