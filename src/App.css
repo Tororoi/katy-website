@@ -72,6 +72,7 @@ header {
 }
 
 .mob-cont {
+  display: none;
   transition: height 0.5s;
   overflow: hidden;
   align-items: center;
@@ -90,6 +91,8 @@ header {
   background-color: rgb(255, 255, 255);
   width: 100%;
   margin: 0;
+  transition: margin 0.5s;
+  font-size: 24px;
 }
 
 .artist {
@@ -311,6 +314,10 @@ main {
 
   .nav {
     display: none;
+  }
+
+  .mob-cont {
+    display: flex;
   }
 }
 

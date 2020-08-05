@@ -10,8 +10,8 @@ const MobileNav = (props) => {
 
     return(
         <>
-        <div className="mob-cont" style={props.mobileNav ? {height: "250px"} : {height: "0px"}}>
-            <ul className="mobilenav" style={props.mobileNav ? {display: "flex"} : {display: "flex"}}>
+        <div className="mob-cont" style={props.mobileNav ? {height: "300px"} : {height: "0px"}}>
+            <ul className="mobilenav" style={props.mobileNav ? {marginTop: "0px"} : {marginTop: "300px"}}>
                 <li>
                 <NavLink className="navlink" to="/gallery">Gallery</NavLink>
                 </li>
