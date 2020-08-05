@@ -8,10 +8,6 @@ import MobileNav from './MobileNav'
 
 const NavBar = (props) => {
 
-    const displayMobileNav = (e) => {
-        return <MobileNav/>
-    }
-
     return(
         <>
         <NavLink className="artist" to="/">
@@ -35,12 +31,14 @@ const NavBar = (props) => {
             <NavLink className="navlink" to="/contact">Contact</NavLink>
             </li>
         </ul>
-        <div class="hamburger-click-area" onClick={displayMobileNav}>
+        <div class="hamburger-click-area">
+            <NavLink className="navlink" to="/nav">
             <div class="hamburger">
                 <i></i>
                 <i></i>
                 <i></i>
             </div>
+            </NavLink>
         </div>
         </>
     )

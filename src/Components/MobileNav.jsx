@@ -2,21 +2,15 @@ import React from 'react';
 import {NavLink} from 'react-router-dom'
 import {connect} from 'react-redux'
 
+import NavBar from './NavBar'
+
 //Parents: NavBar
 
 const MobileNav = (props) => {
 
-    const exitDisplay = (e) => {
-        return <NavBar/>
-    }
-
     return(
         <>
-        <NavLink className="artist" to="/">
-            <div>Yuan Yuan Wang</div>
-            <div className="nickname">'Katy'</div>
-        </NavLink>
-        <ul className="nav">
+        <ul className="mobilenav">
             {/* <li>
             <NavLink className="artist" to="/">Yuan Yuan Wang</NavLink>
             </li> */}
@@ -33,7 +27,7 @@ const MobileNav = (props) => {
             <NavLink className="navlink" to="/contact">Contact</NavLink>
             </li>
         </ul>
-        <div class="hamburger-click-area" onClick={displayMobileNav}>
+        <div class="hamburger-click-area">
             <div class="hamburger">
                 <i></i>
                 <i></i>

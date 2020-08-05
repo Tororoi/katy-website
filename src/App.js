@@ -5,6 +5,7 @@ import ProjectContainer from './Components/ProjectContainer'
 import ProjectDisplay from './Components/ProjectDisplay'
 import AboutPage from './Components/AboutPage'
 import ExhibitionsContainer from './Components/ExhibitionsContainer'
+import MobileNav from './Components/MobileNav'
 import Media from './Components/Media'
 
 import {connect} from 'react-redux'
@@ -38,6 +39,9 @@ class App extends React.Component {
               } />
               <Route path="/gallery" exact render={() =>
                 <ProjectContainer/>
+              } />
+              <Route path="/nav" exact render={() =>
+                <MobileNav/>
               } />
               <Route path="/" exact render={() =>
                 <ProjectContainer/>
