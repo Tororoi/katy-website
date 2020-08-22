@@ -18,7 +18,7 @@ const Project = (props) => {
             <NavLink to="/project">
             <div className="project">
                 <img
-                    src={props.project.image}
+                    src={props.project.thumb}
                     alt={props.project.title}
                     onClick={handleClick}
                 />
