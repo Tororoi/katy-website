@@ -182,7 +182,6 @@ main {
   position: relative;
   overflow: hidden;
   width: 33.3333%;
-  /* padding: 1em; */
   border: 0.5em solid transparent;
   box-sizing: border-box;
 }
@@ -309,10 +308,6 @@ main {
     width: 100%
   }
 
-  .artist {
-
-  }
-
   .hamburger-click-area {
     display: flex;
   }
@@ -329,6 +324,5 @@ main {
 @media (max-width: 540px) {
   .project-card {
     width: 100%;
-    border: 0.5em solid transparent;
   }
 }
