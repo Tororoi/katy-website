@@ -288,11 +288,26 @@ main {
 }
 
 /* About Page */
-
-.profile-pic {
-  width: 40%;
+.about-page {
+  font-size: 21px;
+  text-indent: 64px;
+  text-align: left;
+  width: 80%;
+  margin-left: 10%;
 }
 
+.profile-pic {
+  width: 400px;
+  height: 488px;
+  float: left;
+  margin: 25px;
+  border: 1px solid black;
+}
+
+.text p {
+  margin: 0;
+  line-height: 1.5;
+}
 /* Media Adjust */
 /*768px?*/
 
