@@ -9,7 +9,29 @@ const Contact = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(props.contact)
-        // this.props.handleSubmit(this.state)
+        // fetch('http://localhost:3002/send', {
+        //     method: "POST",
+        //     body: JSON.stringify(props.contact),
+        //     headers: {
+        //       'Accept': 'application/json',
+        //       'Content-Type': 'application/json'
+        //     },
+        //   }).then(
+        //   (response) => (response.json())
+        //     ).then((response)=> {
+        //   if (response.status === 'success') {
+        //     alert("Message Sent."); 
+        //     resetForm()
+        //   } else if(response.status === 'fail') {
+        //     alert("Message failed to send.")
+        //   }
+        // })
+    }
+
+    const resetForm = () => {
+        props.contactDispatch({name: "name", value: ''});
+        props.contactDispatch({name: "email", value: ''});
+        props.contactDispatch({name: "message", value: ''});
     }
     
     const handleChange = (e) => {
@@ -27,8 +49,8 @@ const Contact = (props) => {
           <label htmlFor="email">Email:</label>
           <input type="email" autoComplete="off" name="email" value={props.contact.email} onChange={handleChange}/>
           <label htmlFor="message">Message:</label>
-          <textarea className="message" value={props.contact.message} onChange={handleChange}/>
-          <input type="submit" value="Send"/>
+          <textarea className="message" name="message" value={props.contact.message} onChange={handleChange}/>
+          <input className="submit-btn" type="submit" value="Send"/>
         </form>
       </div>
     );

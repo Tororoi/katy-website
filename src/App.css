@@ -344,7 +344,43 @@ main {
 
 /* Contact Page */
 
+.contact-page {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  width: 80%;
+  margin-top: 64px;
+  margin-left: 10%;
+}
+
 .contact-form {
+  width: 450px;
   display: flex;
   flex-flow: column wrap;
+}
+
+.contact-form h1 {
+  color: rgb(0, 0, 0);
+  font-size: 28px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.contact-form input {
+  outline: none;
+  height: 40px;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.contact-form textarea {
+  height: 150px;
+  outline: none;
+  resize: vertical;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.submit-btn {
+
 }
