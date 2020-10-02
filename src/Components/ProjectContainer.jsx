@@ -26,6 +26,6 @@ let mapStateToProps = (reduxState) => {
     return {
       projects: reduxState.projects
     }
-  }
+}
   
 export default connect(mapStateToProps)(ProjectContainer)

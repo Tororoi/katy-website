@@ -31,8 +31,8 @@ const NavBar = (props) => {
                 <NavLink className="navlink" to="/contact">Contact</NavLink>
                 </li>
             </ul>
-            <div class="hamburger-click-area" onClick={displayMobileNav}>    
-                <div class="hamburger">
+            <div className="hamburger-click-area" onClick={displayMobileNav}>    
+                <div className="hamburger">
                     <i id="top-bun" style={props.mobileNav ? {transform: "matrix(1, -1, 1, 1, 0, 7)"} : {transform: "rotate(0deg)"}}></i>
                     <i id="patty" style={props.mobileNav ? {width: "0px", marginLeft: "12px"} : {width: "24px", marginLeft: "0px"}}></i>
                     <i id="bottom-bun" style={props.mobileNav ? {transform: "matrix(1, 1, -1, 1, 0, -7)"} : {transform: "rotate(0deg)"}}></i>

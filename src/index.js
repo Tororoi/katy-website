@@ -18,7 +18,8 @@ let initialState = {
   projects: [...data.artwork],
   project: data.artwork[0],
   exhibitions: [...data.exhibitions],
-  residencies: [...data.residencies]
+  residencies: [...data.residencies],
+  contact: {name: '', email: '', message: ''}
 }
 
 // if an action gets dispatched, that action will be ran through all of the reducers
@@ -49,6 +50,16 @@ let theReducer = (state = initialState, action) => {
       return {
         ...state,
         project: state.projects[projIndex]
+      }
+    case "UPDATE_CONTACT":
+      let name = action.payload.name;
+      let value = action.payload.value;
+      return {
+        ...state,
+        contact: {
+          ...state.contact,
+          [name]: value
+        }
       }
     default:
       return state

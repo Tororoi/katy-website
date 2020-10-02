@@ -341,3 +341,10 @@ main {
     width: 100%;
   }
 }
+
+/* Contact Page */
+
+.contact-form {
+  display: flex;
+  flex-flow: column wrap;
+}
