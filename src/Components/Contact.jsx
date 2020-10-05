@@ -17,23 +17,24 @@ const Contact = (props) => {
 
         if (errors.name) {
           nameField.style.boxShadow= "0 0 0 2pt red";
+          nameField.style.backgroundColor = "pink"
           nameField.className = "shake";
-          let error = document.createElement("p");
-          error.innerText = errors.name
-          e.target.insertBefore(error, nameField)
-          // console.log(error)
+          nameField.previousSibling.previousSibling.innerText = errors.name;
         }
         if (errors.email) {
           emailField.style.boxShadow= "0 0 0 2pt red";
           emailField.className = "shake";
+          emailField.previousSibling.previousSibling.innerText = errors.email;
         }
         if (errors.subject) {
           subjectField.style.boxShadow= "0 0 0 2pt red";
           subjectField.className = "shake";
+          subjectField.previousSibling.previousSibling.innerText = errors.subject;
         }
         if (errors.message) {
           messageField.style.boxShadow= "0 0 0 2pt red";
           messageField.className = "shake";
+          messageField.previousSibling.previousSibling.innerText = errors.message;
         }
 
         window.setTimeout(() => {
@@ -79,6 +80,7 @@ const Contact = (props) => {
     
     const handleChange = (e) => {
         e.target.style.boxShadow = "0 0 0 3pt transparent";
+        e.target.previousSibling.previousSibling.innerText = "";
         let {name, value} = e.target
         let contactObj = {name, value}
         props.contactDispatch(contactObj);
@@ -124,13 +126,17 @@ const Contact = (props) => {
       <div className="contact-page">
         <form className="contact-form" onSubmit={handleSubmit}>
           <h1>Contact</h1>
-          <label htmlFor="name">Name:</label>
+          <div className="error"></div>
+          <label htmlFor="name">Name</label>
           <input type="text" name="name" value={props.contact.name} onChange={handleChange}/>
-          <label htmlFor="email">Email:</label>
+          <div className="error"></div>
+          <label htmlFor="email">Email</label>
           <input type="text" autoComplete="off" name="email" value={props.contact.email} onChange={handleChange}/>
-          <label htmlFor="subject">Subject:</label>
+          <div className="error"></div>
+          <label htmlFor="subject">Subject</label>
           <input type="text" autoComplete="off" name="subject" value={props.contact.subject} onChange={handleChange}/>
-          <label htmlFor="message">Message:</label>
+          <div className="error"></div>
+          <label htmlFor="message">Message</label>
           <textarea name="message" value={props.contact.message} onChange={handleChange}/>
           <input className="submit-btn" type="submit" value="Send"/>
         </form>

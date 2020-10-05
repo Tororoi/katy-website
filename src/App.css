@@ -371,6 +371,7 @@ main {
   height: 40px;
   font-size: 24px;
   margin-bottom: 16px;
+  border-radius: 4px;
 }
 
 .contact-form textarea {
@@ -379,6 +380,7 @@ main {
   resize: vertical;
   font-size: 18px;
   margin-bottom: 16px;
+  border-radius: 4px;
 }
 
 .shake {
@@ -393,6 +395,11 @@ main {
 60% { transform: translate(-3px, 0px); }
 80% { transform: translate(-1px, 0px); }
 100% { transform: translate(1px, 0px); }
+}
+
+.error {
+  background-color: rgb(221, 221, 221);
+  border-radius: 4px;
 }
 
 .submit-btn {
