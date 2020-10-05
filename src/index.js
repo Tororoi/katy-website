@@ -19,7 +19,7 @@ let initialState = {
   project: data.artwork[0],
   exhibitions: [...data.exhibitions],
   residencies: [...data.residencies],
-  contact: {name: '', email: '', message: ''}
+  contact: {name: '', email: '', subject: '', message: ''}
 }
 
 // if an action gets dispatched, that action will be ran through all of the reducers

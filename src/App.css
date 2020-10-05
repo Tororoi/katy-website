@@ -374,11 +374,25 @@ main {
 }
 
 .contact-form textarea {
-  height: 150px;
+  height: 200px;
   outline: none;
   resize: vertical;
   font-size: 18px;
   margin-bottom: 16px;
+}
+
+.shake {
+  animation: shake 0.2s; 
+  animation-iteration-count: infinite; 
+}
+  
+@keyframes shake {
+0% { transform: translate(1px, 0px); }
+20% { transform: translate(-3px, 0px); }
+40% { transform: translate(1px, 0px); }
+60% { transform: translate(-3px, 0px); }
+80% { transform: translate(-1px, 0px); }
+100% { transform: translate(1px, 0px); }
 }
 
 .submit-btn {
