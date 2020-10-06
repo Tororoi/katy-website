@@ -18,6 +18,7 @@ const Contact = (props) => {
         if (errors.name) {
           nameField.style.boxShadow= "0 0 0 2pt red";
           nameField.className = "shake";
+          nameField.previousSibling.previousSibling.innerHTML = "";
           let nameErrorLi = document.createElement("li");
           nameErrorLi.innerText = errors.name;
           nameField.previousSibling.previousSibling.appendChild(nameErrorLi);
@@ -26,6 +27,7 @@ const Contact = (props) => {
         if (errors.email) {
           emailField.style.boxShadow= "0 0 0 2pt red";
           emailField.className = "shake";
+          emailField.previousSibling.previousSibling.innerHTML = "";
           errors.email.forEach(e => {
             let errorLi = document.createElement("li");
             errorLi.innerText = e;
@@ -36,6 +38,7 @@ const Contact = (props) => {
         if (errors.subject) {
           subjectField.style.boxShadow= "0 0 0 2pt red";
           subjectField.className = "shake";
+          subjectField.previousSibling.previousSibling.innerHTML = "";
           let subjectErrorLi = document.createElement("li");
           subjectErrorLi.innerText = errors.subject;
           subjectField.previousSibling.previousSibling.appendChild(subjectErrorLi);
@@ -44,6 +47,7 @@ const Contact = (props) => {
         if (errors.message) {
           messageField.style.boxShadow= "0 0 0 2pt red";
           messageField.className = "shake";
+          messageField.previousSibling.previousSibling.innerHTML = "";
           let messageErrorLi = document.createElement("li");
           messageErrorLi.innerText = errors.message;
           messageField.previousSibling.previousSibling.appendChild(messageErrorLi);
