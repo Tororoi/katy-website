@@ -17,24 +17,37 @@ const Contact = (props) => {
 
         if (errors.name) {
           nameField.style.boxShadow= "0 0 0 2pt red";
-          nameField.style.backgroundColor = "pink"
           nameField.className = "shake";
-          nameField.previousSibling.previousSibling.innerText = errors.name;
+          let nameErrorLi = document.createElement("li");
+          nameErrorLi.innerText = errors.name;
+          nameField.previousSibling.previousSibling.appendChild(nameErrorLi);
+          nameField.previousSibling.previousSibling.style.display = "block";
         }
         if (errors.email) {
           emailField.style.boxShadow= "0 0 0 2pt red";
           emailField.className = "shake";
-          emailField.previousSibling.previousSibling.innerText = errors.email;
+          errors.email.forEach(e => {
+            let errorLi = document.createElement("li");
+            errorLi.innerText = e;
+            emailField.previousSibling.previousSibling.appendChild(errorLi);
+          })
+          emailField.previousSibling.previousSibling.style.display = "block";
         }
         if (errors.subject) {
           subjectField.style.boxShadow= "0 0 0 2pt red";
           subjectField.className = "shake";
-          subjectField.previousSibling.previousSibling.innerText = errors.subject;
+          let subjectErrorLi = document.createElement("li");
+          subjectErrorLi.innerText = errors.subject;
+          subjectField.previousSibling.previousSibling.appendChild(subjectErrorLi);
+          subjectField.previousSibling.previousSibling.style.display = "block";
         }
         if (errors.message) {
           messageField.style.boxShadow= "0 0 0 2pt red";
           messageField.className = "shake";
-          messageField.previousSibling.previousSibling.innerText = errors.message;
+          let messageErrorLi = document.createElement("li");
+          messageErrorLi.innerText = errors.message;
+          messageField.previousSibling.previousSibling.appendChild(messageErrorLi);
+          messageField.previousSibling.previousSibling.style.display = "block";
         }
 
         window.setTimeout(() => {
@@ -43,7 +56,6 @@ const Contact = (props) => {
           subjectField.className = "stop-shake";
           messageField.className = "stop-shake";
         }, 200)
-        console.log(nameField.style)
         // if (props.contact.email === '') {
         //     alert("Please enter an email address")
         // }
@@ -81,6 +93,7 @@ const Contact = (props) => {
     const handleChange = (e) => {
         e.target.style.boxShadow = "0 0 0 3pt transparent";
         e.target.previousSibling.previousSibling.innerText = "";
+        e.target.previousSibling.previousSibling.style.display = "none";
         let {name, value} = e.target
         let contactObj = {name, value}
         props.contactDispatch(contactObj);
@@ -103,7 +116,7 @@ const Contact = (props) => {
         }
         if (email.split("").filter(x => x === "@").length !== 1) {
           if (!errors.email) {errors.email = [];}
-          errors.email.push("Email should contain a @");
+          errors.email.push("Email should contain an @");
         }
         if (email.indexOf(".") === -1) {
           if (!errors.email) {errors.email = [];}

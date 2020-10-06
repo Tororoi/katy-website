@@ -383,6 +383,10 @@ main {
   border-radius: 4px;
 }
 
+.contact-form label {
+  font-size: 18px;
+}
+
 .shake {
   animation: shake 0.2s; 
   animation-iteration-count: infinite; 
@@ -398,8 +402,29 @@ main {
 }
 
 .error {
-  background-color: rgb(221, 221, 221);
+  /* background-color: rgb(221, 221, 221); */
+  display: none;
+  box-sizing: border-box;
   border-radius: 4px;
+  position: relative;
+	list-style: none;
+  background: rgb(255, 216, 222);
+  border: 1px solid rgb(158, 54, 71);
+  padding: 1px;
+}
+
+.error li {
+  padding-left: 1.2em;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+}
+
+.error li:before {
+  content: "❌";
+  font-size: 9px;
+  margin-top: 1px;
+	position: absolute;
+	left: 0;
 }
 
 .submit-btn {
