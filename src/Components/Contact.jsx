@@ -60,31 +60,24 @@ const Contact = (props) => {
           subjectField.className = "stop-shake";
           messageField.className = "stop-shake";
         }, 200)
-        // if (props.contact.email === '') {
-        //     alert("Please enter an email address")
-        // }
 
-        // fetch('https://stormy-wildwood-98268.herokuapp.com/send', {
-        //     method: "POST",
-        //     body: JSON.stringify(props.contact),
-        //     headers: {
-        //       'Accept': 'application/json',
-        //       'Content-Type': 'application/json'
-        //     },
-        //   }).then(
-        //   (response) => (
-        //       console.log(response)
-        //   ));
-
-            // .then((response)=> {
-            //     console.log(response)
-        //   if (response.status === 'success') {
-        //     alert("Message Sent."); 
-        //     resetForm()
-        //   } else if(response.status === 'fail') {
-        //     alert("Message failed to send.")
-        //   }
-        // })
+        fetch('https://stormy-wildwood-98268.herokuapp.com/send', {
+            method: "POST",
+            body: JSON.stringify(props.contact),
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+          })
+            .then(r => r.json())
+            .then(response => {
+              if (response.message === 'ok') {
+                alert("Message Sent."); 
+                resetForm()
+              } else {
+                alert("Message failed to send.")
+              }
+            })
     }
 
     const resetForm = () => {
