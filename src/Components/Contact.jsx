@@ -72,7 +72,7 @@ const Contact = (props) => {
             .then(r => r.json())
             .then(response => {
               if (response.message === 'ok') {
-                alert("Message Sent."); 
+                alert("Message Sent. You should receive a confirmation email that your message was sent."); 
                 resetForm()
               } else {
                 alert("Message failed to send.")
