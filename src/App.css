@@ -206,6 +206,7 @@ main {
   object-fit: cover;
   /* transform: scale(2); */
   position: absolute;
+  /* color: rgb(219, 126, 20); */
 }
 
 .project:hover {

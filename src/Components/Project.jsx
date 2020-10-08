@@ -23,6 +23,12 @@ const Project = (props) => {
                     onClick={handleClick}
                 />
             </div>
+            <div style={display: "none"}>
+            <img
+                    src={props.project.image}
+                    alt={props.project.title}
+                />
+            </div>
             </NavLink>
         </div>
         </>
