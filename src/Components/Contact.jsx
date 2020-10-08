@@ -61,23 +61,25 @@ const Contact = (props) => {
           messageField.className = "stop-shake";
         }, 200)
 
-        fetch('https://stormy-wildwood-98268.herokuapp.com/send', {
-            method: "POST",
-            body: JSON.stringify(props.contact),
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
-            },
-          })
-            .then(r => r.json())
-            .then(response => {
-              if (response.message === 'ok') {
-                alert("Message Sent. You should receive a confirmation email that your message was sent."); 
-                resetForm()
-              } else {
-                alert("Message failed to send.")
-              }
+        if (errors.number === 0) {
+          fetch('https://stormy-wildwood-98268.herokuapp.com/send', {
+              method: "POST",
+              body: JSON.stringify(props.contact),
+              headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
             })
+              .then(r => r.json())
+              .then(response => {
+                if (response.message === 'ok') {
+                  alert("Message Sent. You should receive a confirmation email that your message was sent."); 
+                  resetForm()
+                } else {
+                  alert("Message failed to send.")
+                }
+              })
+        }
     }
 
     const resetForm = () => {
@@ -99,35 +101,41 @@ const Contact = (props) => {
     const validate = (name, email, subject, message) => {
         // we are going to store errors for all fields
         // in a signle array
-        const errors = {};
+        const errors = {number: 0};
       
         //Name
         if (name.length === 0) {
           errors.name = "Name cannot be empty";
+          errors.number += 1;
         }
         
         //Email
         if (email.length < 5) {
           if (!errors.email) {errors.email = [];}
           errors.email.push("Email should be at least 5 characters long");
+          errors.number += 1;
         }
         if (email.split("").filter(x => x === "@").length !== 1) {
           if (!errors.email) {errors.email = [];}
           errors.email.push("Email should contain an @");
+          errors.number += 1;
         }
         if (email.indexOf(".") === -1) {
           if (!errors.email) {errors.email = [];}
           errors.email.push("Email should contain at least one dot");
+          errors.number += 1;
         }
 
         //Subject
         if (subject.length === 0) {
           errors.subject = "Subject cannot be empty";
+          errors.number += 1;
         }
         
         //Message
         if (message.length === 0) {
             errors.message = "Message cannot be empty";
+            errors.number += 1;
         }
         return errors;
     }
