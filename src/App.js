@@ -7,13 +7,12 @@ import AboutPage from './Components/AboutPage'
 import ExhibitionsContainer from './Components/ExhibitionsContainer'
 import MobileNav from './Components/MobileNav'
 import Contact from './Components/Contact'
-import Media from './Components/Media'
+// import Media from './Components/Media'
 
 import {connect} from 'react-redux'
 
 import {
   BrowserRouter as Router,
-  Redirect,
   Route,
   withRouter
 } from "react-router-dom";

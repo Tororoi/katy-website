@@ -5,7 +5,7 @@ import App from './App';
 import data from './data'
 
 // redux dependencies
-import { createStore, combineReducers } from 'redux'
+import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 // routing dependencies

@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom'
 import {connect} from 'react-redux'
 
-import NavBar from './NavBar'
+// import NavBar from './NavBar'
 
 //Parents: NavBar
 
