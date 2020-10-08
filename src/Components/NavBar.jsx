@@ -28,6 +28,9 @@ const NavBar = (props) => {
                 <NavLink className="navlink" to="/bio">Bio</NavLink>
                 </li>
                 <li>
+                <NavLink className="navlink" to="/shop">Shop</NavLink>
+                </li>
+                <li>
                 <NavLink className="navlink" to="/contact">Contact</NavLink>
                 </li>
             </ul>

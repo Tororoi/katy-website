@@ -300,8 +300,8 @@ main {
 }
 
 .profile-pic {
-  width: 484px;
-  height: 363px;
+  width: 480px;
+  height: 360px;
   /* float: left; */
   align-self: center;
   margin: 25px;
@@ -433,4 +433,17 @@ main {
 
 .submit-btn {
 
+}
+
+.shop-page {
+  display: flex;
+  margin-left: 40%;
+}
+
+.shop-page h1 {
+  color: rgb(0, 0, 0);
+  font-size: 28px;
+  font-weight: 500;
+  text-transform: uppercase;
+  align-self: center;
 }
