@@ -291,16 +291,19 @@ main {
 /* About Page */
 .about-page {
   font-size: 21px;
-  text-indent: 64px;
+  /* text-indent: 64px; */
   text-align: left;
   width: 80%;
   margin-left: 10%;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .profile-pic {
-  width: 400px;
-  height: 488px;
-  float: left;
+  width: 484px;
+  height: 363px;
+  /* float: left; */
+  align-self: center;
   margin: 25px;
   border: 1px solid black;
 }
