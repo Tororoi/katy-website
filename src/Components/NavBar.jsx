@@ -7,7 +7,6 @@ import {connect} from 'react-redux'
 const NavBar = (props) => {
 
     const displayMobileNav = (e) => {
-        console.log("hello")
         props.toggleNav()
     }
 

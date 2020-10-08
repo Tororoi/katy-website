@@ -315,7 +315,7 @@ main {
 /* Media Adjust */
 /*768px?*/
 
-@media (max-width: 832px) {
+@media (max-width: 900px) {
   .project-card {
     width: 50%;
     border: 0.5em solid transparent;
@@ -340,7 +340,7 @@ main {
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 700px) {
   .project-card {
     width: 100%;
   }
