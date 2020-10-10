@@ -8,7 +8,7 @@ import {connect} from 'react-redux'
 const ProjectDisplay = (props) => {
 
     const handleClick = (e) => {
-        props.prevNext(e.target.innerText)
+        props.prevNext(e.target.getAttribute("name"))
     }
 
     return (
@@ -16,12 +16,16 @@ const ProjectDisplay = (props) => {
         <div className="project-display">
             <div className="project-full">
                 <div className="project-nav">
-                    <p onClick={handleClick}>{"◀"}</p>
+                    <div className="prev-next" name="◀" onClick={handleClick}>
+                        <div className="arrow-left"></div>
+                    </div>
                     <img
                         src={props.project.image}
                         alt={props.project.title}
                     />
-                    <p onClick={handleClick}>{"▶"}</p>
+                    <div className="prev-next" name="▶" onClick={handleClick}>
+                        <div className="arrow-right"></div>
+                    </div>
                 </div>
                 <div className="project-details">
                     <p className="title">{props.project.title}</p>
