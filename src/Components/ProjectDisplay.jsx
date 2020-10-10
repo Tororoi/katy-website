@@ -8,7 +8,6 @@ import {connect} from 'react-redux'
 const ProjectDisplay = (props) => {
 
     const handleClick = (e) => {
-        console.log(e.target.getAttribute("name"))
         props.prevNext(e.target.getAttribute("name"))
     }
 
