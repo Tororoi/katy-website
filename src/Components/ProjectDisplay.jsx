@@ -11,23 +11,31 @@ const ProjectDisplay = (props) => {
         props.prevNext(e.target.getAttribute("name"))
     }
 
+    const displayFullImage = (e) => {
+        console.log(e.target.style);
+        props.displayFullImage(true);
+        // e.target.style.width = "100%";
+    }
+
     return (
         <>
         <div className="project-display">
             <div className="project-full">
                 <div className="project-nav">
-                    <div className="prev-next" name="◀" onClick={handleClick}>
+                    <div className="prev-next" name="◀" style={props.fullImage ? {display: "none"} : {display: "flex"}} onClick={handleClick}>
                         <div className="arrow-left" name="◀"></div>
                     </div>
                     <img
+                        onClick={displayFullImage}
+                        style={props.fullImage ? {width: "100%", maxHeight: "100vh"} : {width: "75%", maxHeight: "75vh"}}
                         src={props.project.image}
                         alt={props.project.title}
                     />
-                    <div className="prev-next" name="▶" onClick={handleClick}>
+                    <div className="prev-next" name="▶" style={props.fullImage ? {display: "none"} : {display: "flex"}} onClick={handleClick}>
                         <div className="arrow-right" name="▶"></div>
                     </div>
                 </div>
-                <div className="project-details">
+                <div className="project-details" style={props.fullImage ? {display: "none"} : {display: "block"}}>
                     <p className="title">{props.project.title}</p>
                     <p className="binomial"><i>{props.project.binomial}</i>{props.project.name !== "" ? `, '${props.project.name}'` : ""}</p>
                     <p>{props.project.medium}</p>
@@ -47,10 +55,18 @@ let prevNext = (sign) => {
     }
 }
 
-let mapStateToProps = (reduxState) => {
+let displayFullImage = (boolean) => {
     return {
-        project: reduxState.project
+      type: "DISPLAY_FULL_IMAGE",
+      payload: boolean
     }
 }
 
-export default connect(mapStateToProps, {prevNext})(ProjectDisplay);
+let mapStateToProps = (reduxState) => {
+    return {
+        project: reduxState.project,
+        fullImage: reduxState.fullImage
+    }
+}
+
+export default connect(mapStateToProps, {prevNext, displayFullImage})(ProjectDisplay);

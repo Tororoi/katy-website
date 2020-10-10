@@ -19,7 +19,8 @@ let initialState = {
   project: data.artwork[0],
   exhibitions: [...data.exhibitions],
   residencies: [...data.residencies],
-  contact: {name: '', email: '', subject: '', message: ''}
+  contact: {name: '', email: '', subject: '', message: ''},
+  fullImage: false
 }
 
 // if an action gets dispatched, that action will be ran through all of the reducers
@@ -60,6 +61,15 @@ let theReducer = (state = initialState, action) => {
           ...state.contact,
           [name]: value
         }
+      }
+    case "DISPLAY_FULL_IMAGE":
+      let newState = !state.fullImage;
+      let color = "black";
+      newState ? color = "black" : color = "white";
+      document.body.style.backgroundColor = color;
+      return {
+        ...state,
+        fullImage: newState
       }
     default:
       return state

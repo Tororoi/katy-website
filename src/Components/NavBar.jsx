@@ -11,7 +11,7 @@ const NavBar = (props) => {
     }
 
     return(
-        <div className="nav-cont">
+        <div className="nav-cont" style={props.fullImage ? {display: "none"} : {display: "flex"}}>
             <NavLink className="artist" to="/">
                 <div>Yuan Yuan Wang</div>
                 <div className="nickname">'Katy'</div>
@@ -46,7 +46,8 @@ const NavBar = (props) => {
 
   let mapStateToProps = (reduxState) => {
     return {
-      mobileNav: reduxState.mobileNav
+      mobileNav: reduxState.mobileNav,
+      fullImage: reduxState.fullImage
     }
   }
 

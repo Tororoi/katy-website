@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
+
 .App {
   text-align: center;
 }
@@ -14,7 +18,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #fbdf61;
 }
 
 /* Navigation */
@@ -23,9 +27,6 @@
   display: flex;
   position: relative;
   flex-wrap: wrap;
-  /* margin-left: 15%;
-  margin-right: 15%;
-  width: 70% */
 }
 
 header {
