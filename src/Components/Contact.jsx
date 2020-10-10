@@ -62,11 +62,12 @@ const Contact = (props) => {
         }, 200)
 
         if (errors.number === 0) {
-          alert("Message Sent. You should receive a confirmation email that your message was sent."); 
+          alert("Message Sent. You should receive a confirmation email that your message was sent.");
+          let mailObj = props.contact; 
           resetForm()
           fetch('https://stormy-wildwood-98268.herokuapp.com/send', {
               method: "POST",
-              body: JSON.stringify(props.contact),
+              body: JSON.stringify(mailObj),
               headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
