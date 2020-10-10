@@ -222,6 +222,7 @@ main {
 
 .project-display {
   width: 100%;
+  /* height: 100vh; */
 }
 
 .project-nav {
@@ -239,7 +240,8 @@ main {
   /* align-items: center; */
   flex-direction: column;
   position: sticky;
-  top: calc(50% - (20vh) - (80px));
+  /* top: calc(50% - (20vh) - (80px)); */
+  top: 30%;
   opacity: 1;
   transition: opacity 0.1s;
 }
@@ -250,7 +252,8 @@ main {
 
 .arrow-left {
   align-self: flex-start;
-  margin-left: 50px;
+  margin-left: 40px;
+  margin-right: 10px;
   width: 0; 
   height: 0;
   border-top: 80px solid transparent;
@@ -261,7 +264,8 @@ main {
 
 .arrow-right {
   align-self: flex-end;
-  margin-right: 50px;
+  margin-right: 40px;
+  margin-left: 10px;
   width: 0; 
   height: 0; 
   border-top: 80px solid transparent;
@@ -345,7 +349,13 @@ main {
     border: 0.5em solid transparent;
   }
 
-  .site-content {
+  .nav-cont {
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 100%
+  }
+
+  .project-container {
     margin-left: 0%;
     margin-right: 0%;
     width: 100%
