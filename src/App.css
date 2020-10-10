@@ -336,7 +336,8 @@ main {
   max-height: 360px;
   /* float: left; */
   align-self: center;
-  margin: 25px;
+  margin-bottom: 25px;
+  margin-top: 25px;
   border: 1px solid black;
 }
 
