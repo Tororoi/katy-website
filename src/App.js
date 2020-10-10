@@ -25,7 +25,7 @@ class App extends React.Component {
       <div className="App">
         <Router>
           <div className="site-content">
-            <header>
+            <header style={props.fullImage ? {display: "none"} : {display: "flex"}}>
                 <NavBar toggleNav={this.props.toggleNav}/>
                 <MobileNav toggleNav={this.props.toggleNav}/>
             </header>
