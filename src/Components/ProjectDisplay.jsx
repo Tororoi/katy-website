@@ -12,9 +12,7 @@ const ProjectDisplay = (props) => {
     }
 
     const displayFullImage = (e) => {
-        console.log(e.target.style);
         props.displayFullImage(true);
-        // e.target.style.width = "100%";
     }
 
     return (
@@ -27,6 +25,7 @@ const ProjectDisplay = (props) => {
                     </div>
                     <img
                         onClick={displayFullImage}
+                        onTouchEnd={displayFullImage}
                         style={props.fullImage ? {width: "100%", maxHeight: "100vh"} : {width: "75%", maxHeight: "75vh"}}
                         src={props.project.image}
                         alt={props.project.title}
