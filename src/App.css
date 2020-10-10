@@ -323,13 +323,17 @@ main {
   text-align: left;
   width: 80%;
   margin-left: 10%;
+  margin-right: 10%;
   display: flex;
   flex-flow: column wrap;
 }
 
 .profile-pic {
-  width: 480px;
-  height: 360px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  max-width: 480px;
+  max-height: 360px;
   /* float: left; */
   align-self: center;
   margin: 25px;
