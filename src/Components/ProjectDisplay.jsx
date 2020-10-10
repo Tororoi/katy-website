@@ -8,6 +8,7 @@ import {connect} from 'react-redux'
 const ProjectDisplay = (props) => {
 
     const handleClick = (e) => {
+        console.log(e.target.getAttribute("name"))
         props.prevNext(e.target.getAttribute("name"))
     }
 
@@ -17,14 +18,14 @@ const ProjectDisplay = (props) => {
             <div className="project-full">
                 <div className="project-nav">
                     <div className="prev-next" name="◀" onClick={handleClick}>
-                        <div className="arrow-left"></div>
+                        <div className="arrow-left" name="◀"></div>
                     </div>
                     <img
                         src={props.project.image}
                         alt={props.project.title}
                     />
                     <div className="prev-next" name="▶" onClick={handleClick}>
-                        <div className="arrow-right"></div>
+                        <div className="arrow-right" name="▶"></div>
                     </div>
                 </div>
                 <div className="project-details">
