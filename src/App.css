@@ -241,7 +241,7 @@ main {
   flex-direction: column;
   position: sticky;
   /* top: calc(50% - (20vh) - (80px)); */
-  top: 30%;
+  top: 100px;
   opacity: 1;
   transition: opacity 0.1s;
 }
