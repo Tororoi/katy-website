@@ -36,7 +36,7 @@ const MobileNav = (props) => {
 
   let mapStateToProps = (reduxState) => {
     return {
-      mobileNav: reduxState.mobileNav
+      mobileNav: reduxState.mobileNav,
     }
   }
 

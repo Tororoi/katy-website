@@ -13,6 +13,7 @@ const ProjectDisplay = (props) => {
 
     const displayFullImage = (e) => {
         props.displayFullImage(true);
+        if (props.mobileNav) {props.toggleNav()}; 
     }
 
     return (
@@ -63,6 +64,7 @@ let displayFullImage = (boolean) => {
 
 let mapStateToProps = (reduxState) => {
     return {
+        mobileNav: reduxState.mobileNav,
         project: reduxState.project,
         fullImage: reduxState.fullImage
     }

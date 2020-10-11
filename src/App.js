@@ -25,7 +25,7 @@ class App extends React.Component {
       <div className="App">
         <Router>
           <div className="site-content">
-            <header style={props.fullImage ? {display: "none"} : {display: "flex"}}>
+            <header>
                 <NavBar toggleNav={this.props.toggleNav}/>
                 <MobileNav toggleNav={this.props.toggleNav}/>
             </header>
@@ -37,7 +37,7 @@ class App extends React.Component {
                 <AboutPage/>
               } />
               <Route path="/project" exact render={() =>
-                <ProjectDisplay/>
+                <ProjectDisplay toggleNav={this.props.toggleNav}/>
               } />
               <Route path="/gallery" exact render={() =>
                 <ProjectContainer/>
