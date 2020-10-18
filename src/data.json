@@ -2,17 +2,6 @@
     "artwork": [
         {
             "id": 0, 
-            "image": "./images/Wang_Chickenofthewoods.png", 
-            "thumb": "./images/Wang_Chickenofthewoods_thumb.png", 
-            "title": "Chicken of the Woods", 
-            "binomial": "Laetiporus cincinnatus", 
-            "name": "", 
-            "medium": "Watercolor on paper, 2020", 
-            "size": "15 x 18 in", 
-            "status": "Work in Progress"
-        },
-        {
-            "id": 1, 
             "image": "./images/birdnest.png", 
             "thumb": "./images/birdnest_thumb.png", 
             "title": "Bird’s Nest Fungi on Woodchips", 
@@ -21,6 +10,17 @@
             "medium": "Watercolor on paper, 2020", 
             "size": "6 x 6 in", 
             "status": "Currently not for sale"
+        },
+        {
+            "id": 1, 
+            "image": "./images/Wang_Chickenofthewoods.png", 
+            "thumb": "./images/Wang_Chickenofthewoods_thumb.png", 
+            "title": "Chicken of the Woods", 
+            "binomial": "Laetiporus cincinnatus", 
+            "name": "", 
+            "medium": "Watercolor on paper, 2020", 
+            "size": "15 x 18 in", 
+            "status": "Work in Progress"
         },
         {
             "id": 2, 
