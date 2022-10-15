@@ -1,6 +1,5 @@
 import React from "react"
 import Project from "./Project"
-import { NavLink } from "react-router-dom"
 
 import { connect } from "react-redux"
 
