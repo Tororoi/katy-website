@@ -56,9 +56,12 @@ header {
   overflow: hidden;
   background-color: rgb(255, 255, 255);
   top: 0;
+  /* padding-left: 15%;
+  padding-right: 15%; */
   margin-left: 15%;
   margin-right: 15%;
-  width: 70%
+  width: 70%;
+  /* border-bottom: 1px solid black; */
 }
 
 .nav {
@@ -117,7 +120,6 @@ header {
 
 .nickname {
   font-weight: 300;
-
 }
 
 .navlink {
@@ -182,7 +184,7 @@ main {
   flex: 1;
   margin-left: 15%;
   margin-right: 15%;
-  width: 70%
+  width: 70%;
 }
 
 .project-card {
@@ -250,29 +252,30 @@ main {
 
 .prev-next:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .arrow-left {
   align-self: flex-start;
   margin-left: 40px;
   margin-right: 10px;
-  width: 0; 
+  width: 0;
   height: 0;
   border-top: 80px solid transparent;
-  border-bottom: 80px solid transparent; 
-  
-  border-right:20px solid rgb(0, 0, 0); 
+  border-bottom: 80px solid transparent;
+
+  border-right: 20px solid rgb(0, 0, 0);
 }
 
 .arrow-right {
   align-self: flex-end;
   margin-right: 40px;
   margin-left: 10px;
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-top: 80px solid transparent;
   border-bottom: 80px solid transparent;
-  
+
   border-left: 20px solid rgb(0, 0, 0);
 }
 
@@ -280,7 +283,7 @@ main {
   width: 75%;
   max-height: 75vh;
   object-fit: contain;
-  cursor: pointer;
+  cursor: zoom-in;
 }
 
 .title {
@@ -288,11 +291,9 @@ main {
 }
 
 .description {
-
 }
 
 /* Project Page Transitions */
-
 
 /* Exhibitions Display */
 
@@ -360,13 +361,13 @@ main {
   .nav-cont {
     margin-left: 0%;
     margin-right: 0%;
-    width: 100%
+    width: 100%;
   }
 
   .project-container {
     margin-left: 0%;
     margin-right: 0%;
-    width: 100%
+    width: 100%;
   }
 
   .hamburger-click-area {
@@ -434,17 +435,29 @@ main {
 }
 
 .shake {
-  animation: shake 0.2s; 
-  animation-iteration-count: infinite; 
+  animation: shake 0.2s;
+  animation-iteration-count: infinite;
 }
-  
+
 @keyframes shake {
-0% { transform: translate(1px, 0px); }
-20% { transform: translate(-3px, 0px); }
-40% { transform: translate(1px, 0px); }
-60% { transform: translate(-3px, 0px); }
-80% { transform: translate(-1px, 0px); }
-100% { transform: translate(1px, 0px); }
+  0% {
+    transform: translate(1px, 0px);
+  }
+  20% {
+    transform: translate(-3px, 0px);
+  }
+  40% {
+    transform: translate(1px, 0px);
+  }
+  60% {
+    transform: translate(-3px, 0px);
+  }
+  80% {
+    transform: translate(-1px, 0px);
+  }
+  100% {
+    transform: translate(1px, 0px);
+  }
 }
 
 .error {
@@ -453,7 +466,7 @@ main {
   box-sizing: border-box;
   border-radius: 4px;
   position: relative;
-	list-style: none;
+  list-style: none;
   background: rgb(255, 216, 222);
   border: 1px solid rgb(158, 54, 71);
   padding: 1px;
@@ -469,12 +482,11 @@ main {
   content: "❌";
   font-size: 9px;
   margin-top: 1px;
-	position: absolute;
-	left: 0;
+  position: absolute;
+  left: 0;
 }
 
 .submit-btn {
-
 }
 
 .shop-page {

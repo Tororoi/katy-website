@@ -1,153 +1,148 @@
 {
-    "artwork": [
-        {
-            "id": 0, 
-            "image": "./images/birdnest.png", 
-            "thumb": "./images/birdnest_thumb.png", 
-            "title": "Bird’s Nest Fungi on Woodchips", 
-            "binomial": "Nidulariaceae sp.", 
-            "name": "", 
-            "medium": "Watercolor on paper, 2020", 
-            "size": "6 x 6 in", 
-            "status": "Currently not for sale"
-        },
-        {
-            "id": 1, 
-            "image": "./images/Wang_Chickenofthewoods.png", 
-            "thumb": "./images/Wang_Chickenofthewoods_thumb.png", 
-            "title": "Chicken of the Woods", 
-            "binomial": "Laetiporus cincinnatus", 
-            "name": "", 
-            "medium": "Watercolor on paper, 2020", 
-            "size": "15 x 18 in", 
-            "status": "Work in Progress"
-        },
-        {
-            "id": 2, 
-            "image": "./images/Wang_SuperHot2.png", 
-            "thumb": "./images/Wang_SuperHot2_thumb.png", 
-            "title": "Super Hot 2", 
-            "binomial": "Capsicum chinense", 
-            "name": "Chocolate Champion", 
-            "medium": "Color pencil on paper, 2020", 
-            "size": "7.5 x 7.5 in", 
-            "status": "In Exhibition at Wave Hill"
-        },
-        {
-            "id": 3, 
-            "image": "./images/Wang_SuperHot1.png", 
-            "thumb": "./images/Wang_SuperHot1_thumb.png", 
-            "title": "Super Hot 1", 
-            "binomial": "Capsicum chinense", 
-            "name": "Apocalypse Scorpion", 
-            "medium": "Color pencil on paper, 2020", 
-            "size": "7 x 5 in", 
-            "status": "Available for Purchase"
-        },
-        {
-            "id": 4, 
-            "image": "./images/Wang_PitcherPlant.png", 
-            "thumb": "./images/Wang_PitcherPlant_thumb.png", 
-            "title": "Pitcher Plant Portrait", 
-            "binomial": "Sarracenia leucophylla", 
-            "name": "", 
-            "medium": "Watercolor on paper, 2019", 
-            "size": "10.5 x 8.5 in", 
-            "status": "Available for Purchase"
-        },
-        {
-            "id": 5, 
-            "image": "./images/Wang_YuanYuan6.png", 
-            "thumb": "./images/Wang_YuanYuan6_thumb.png", 
-            "title": "Pitcher Plant in Bloom", 
-            "binomial": "Sarracenia purpurea", 
-            "name": "", 
-            "medium": "Watercolor on paper, 2019", 
-            "size": "13 x 10 in", 
-            "status": "Available for Purchase"
-        },
-        {
-            "id": 6, 
-            "image": "./images/Wang_LeafMeditation.png", 
-            "thumb": "./images/Wang_LeafMeditation_thumb.png", 
-            "title": "Leaf Meditation", 
-            "binomial": "Acer saccharum", 
-            "name": "", 
-            "medium": "Graphite on paper, 2019", 
-            "size": "9.5 x 7.5 in", 
-            "status": "Available for Purchase"
-        },
-        {
-            "id": 7, 
-            "image": "./images/Wang_OrnamentalGourd2.png", 
-            "thumb": "./images/Wang_OrnamentalGourd2_thumb.png", 
-            "title": "Ornamental Gourd 2", 
-            "binomial": "Curcubita pepo", 
-            "name": "", 
-            "medium": "Watercolor on paper, 2018", 
-            "size": "7 x 5 in", 
-            "status": "Sold Out"
-        },
-        {
-            "id": 8, 
-            "image": "./images/Wang_YuanYuan3.png", 
-            "thumb": "./images/Wang_YuanYuan3_thumb.png", 
-            "title": "The Story of an Iris", 
-            "binomial": "Iris versicolor", 
-            "name": "", 
-            "medium": "Watercolor on paper, 2019", 
-            "size": "17 x 14 in", 
-            "status": "Available for Purchase"
-        },
-        {
-            "id": 9, 
-            "image": "./images/Wang_OrnamentalGourd1.png", 
-            "thumb": "./images/Wang_OrnamentalGourd1_thumb.png", 
-            "title": "Ornamental Gourd 1", 
-            "binomial": "Curcubita pepo", 
-            "name": "", 
-            "medium": "Watercolor on paper, 2018", 
-            "size": "7 x 5 in", 
-            "status": "Available for Purchase"
-        },
-        {
-            "id": 10, 
-            "image": "./images/Wang_Monterey_Pine.png", 
-            "thumb": "./images/Wang_Monterey_Pine_thumb.png", 
-            "title": "Monterey Pine Cones", 
-            "binomial": "Pinus radiata", 
-            "name": "", 
-            "medium": "Watercolor on paper, 2019", 
-            "size": "11 x 11 in", 
-            "status": "Work in Progress"
-        }
-    ],
-    "exhibitions": [
-        {
-            "name": "23rd Annual International Exhibition by American Society of Botanical Artists and Wave Hill", 
-            "description": "September 5 – December 6, 2020, Wave Hill, Bronx, NY",
-            "status": "On now!"
-        },
-        {
-            "name": "The Horticultural Society of New York, Solo Exhibition", 
-            "description": "Expected Fall 2020, New York, NY",
-            "status": "Upcoming"
-        },
-        {
-            "name": "21st Annual International Exhibition by American Society of Botanical Artists and Wave Hill", 
-            "description": "September 8 – December 2, 2018, Wave Hill, Bronx, NY",
-            "status": "Over"
-        },
-        {
-            "name": "Gallery 122 Group Arts Show", 
-            "description": "February 2018, New York, NY",
-            "status": "Over"
-        }
-    ],
-    "residencies": [
-        {
-            "name": "Jessica Tcherepnine Artist-in-Residence Program", 
-            "description": "Spring 2020, Greenhouse at Denny Farrell Riverbank State Park – Horticultural Society of New York, New York, NY"
-        }
-    ]
+  "artwork": [
+    {
+      "id": 0,
+      "image": "./images/birdnest.png",
+      "thumb": "./images/birdnest_thumb.png",
+      "title": "Bird’s Nest Fungi on Woodchips",
+      "binomial": "Nidulariaceae sp.",
+      "name": "",
+      "medium": "Watercolor on paper, 2020",
+      "size": "6 x 6 in",
+      "status": "Currently not for sale"
+    },
+    {
+      "id": 1,
+      "image": "./images/Wang_Chickenofthewoods.png",
+      "thumb": "./images/Wang_Chickenofthewoods_thumb.png",
+      "title": "Chicken of the Woods",
+      "binomial": "Laetiporus cincinnatus",
+      "name": "",
+      "medium": "Watercolor on paper, 2020",
+      "size": "15 x 18 in",
+      "status": "Work in Progress"
+    },
+    {
+      "id": 2,
+      "image": "./images/Wang_SuperHot2.png",
+      "thumb": "./images/Wang_SuperHot2_thumb.png",
+      "title": "Super Hot 2",
+      "binomial": "Capsicum chinense",
+      "name": "Chocolate Champion",
+      "medium": "Color pencil on paper, 2020",
+      "size": "7.5 x 7.5 in",
+      "status": "In Exhibition at Wave Hill"
+    },
+    {
+      "id": 3,
+      "image": "./images/Wang_SuperHot1.png",
+      "thumb": "./images/Wang_SuperHot1_thumb.png",
+      "title": "Super Hot 1",
+      "binomial": "Capsicum chinense",
+      "name": "Apocalypse Scorpion",
+      "medium": "Color pencil on paper, 2020",
+      "size": "7 x 5 in",
+      "status": "Available for Purchase"
+    },
+    {
+      "id": 4,
+      "image": "./images/Wang_PitcherPlant.png",
+      "thumb": "./images/Wang_PitcherPlant_thumb.png",
+      "title": "Pitcher Plant Portrait",
+      "binomial": "Sarracenia leucophylla",
+      "name": "",
+      "medium": "Watercolor on paper, 2019",
+      "size": "10.5 x 8.5 in",
+      "status": "Available for Purchase"
+    },
+    {
+      "id": 5,
+      "image": "./images/Wang_YuanYuan6.png",
+      "thumb": "./images/Wang_YuanYuan6_thumb.png",
+      "title": "Pitcher Plant in Bloom",
+      "binomial": "Sarracenia purpurea",
+      "name": "",
+      "medium": "Watercolor on paper, 2019",
+      "size": "13 x 10 in",
+      "status": "Available for Purchase"
+    },
+    {
+      "id": 6,
+      "image": "./images/Wang_LeafMeditation.png",
+      "thumb": "./images/Wang_LeafMeditation_thumb.png",
+      "title": "Leaf Meditation",
+      "binomial": "Acer saccharum",
+      "name": "",
+      "medium": "Graphite on paper, 2019",
+      "size": "9.5 x 7.5 in",
+      "status": "Available for Purchase"
+    },
+    {
+      "id": 7,
+      "image": "./images/Wang_OrnamentalGourd2.png",
+      "thumb": "./images/Wang_OrnamentalGourd2_thumb.png",
+      "title": "Ornamental Gourd 2",
+      "binomial": "Curcubita pepo",
+      "name": "",
+      "medium": "Watercolor on paper, 2018",
+      "size": "7 x 5 in",
+      "status": "Sold Out"
+    },
+    {
+      "id": 8,
+      "image": "./images/Wang_YuanYuan3.png",
+      "thumb": "./images/Wang_YuanYuan3_thumb.png",
+      "title": "The Story of an Iris",
+      "binomial": "Iris versicolor",
+      "name": "",
+      "medium": "Watercolor on paper, 2019",
+      "size": "17 x 14 in",
+      "status": "Available for Purchase"
+    },
+    {
+      "id": 9,
+      "image": "./images/Wang_OrnamentalGourd1.png",
+      "thumb": "./images/Wang_OrnamentalGourd1_thumb.png",
+      "title": "Ornamental Gourd 1",
+      "binomial": "Curcubita pepo",
+      "name": "",
+      "medium": "Watercolor on paper, 2018",
+      "size": "7 x 5 in",
+      "status": "Available for Purchase"
+    },
+    {
+      "id": 10,
+      "image": "./images/Wang_Monterey_Pine.png",
+      "thumb": "./images/Wang_Monterey_Pine_thumb.png",
+      "title": "Monterey Pine Cones",
+      "binomial": "Pinus radiata",
+      "name": "",
+      "medium": "Watercolor on paper, 2019",
+      "size": "11 x 11 in",
+      "status": "Work in Progress"
+    }
+  ],
+  "exhibitions": [
+    {
+      "name": "23rd Annual International Exhibition by American Society of Botanical Artists and Wave Hill",
+      "description": "September 5 – December 6, 2020, Wave Hill, Bronx, NY",
+      "status": "Over"
+    },
+    {
+      "name": "The Horticultural Society of New York, Solo Online Exhibition",
+      "description": "Spring 2021, New York, NY",
+      "status": "Over"
+    },
+    {
+      "name": "21st Annual International Exhibition by American Society of Botanical Artists and Wave Hill",
+      "description": "September 8 – December 2, 2018, Wave Hill, Bronx, NY",
+      "status": "Over"
+    }
+  ],
+  "residencies": [
+    {
+      "name": "Jessica Tcherepnine Artist-in-Residence Program",
+      "description": "Spring 2020, Greenhouse at Denny Farrell Riverbank State Park – Horticultural Society of New York, New York, NY"
+    }
+  ]
 }
