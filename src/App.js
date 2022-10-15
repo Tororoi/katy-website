@@ -1,7 +1,6 @@
 import React from "react"
 import "./App.css"
 import NavBar from "./Components/NavBar"
-import GalleryContainer from "./Components/GalleryContainer"
 import ProjectContainer from "./Components/ProjectContainer"
 import ProjectDisplay from "./Components/ProjectDisplay"
 import AboutPage from "./Components/AboutPage"
