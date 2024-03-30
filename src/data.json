@@ -2,6 +2,39 @@
   "artwork": [
     {
       "id": 0,
+      "image": "./images/Wang_Porcini.jpg",
+      "thumb": "./images/Wang_Porcini_thumb.jpg",
+      "title": "Porcini",
+      "binomial": "Porcini",
+      "name": "",
+      "medium": "Watercolor on paper, 2024",
+      "size": "8 x 12 in",
+      "status": "Currently not for sale"
+    },
+    {
+      "id": 1,
+      "image": "./images/Wang_Phellinus_robiniae.jpg",
+      "thumb": "./images/Wang_Phellinus_robiniae_thumb.jpg",
+      "title": "Cracked Cap Polypore Displaying Gravitropism on Fallen Tree",
+      "binomial": "Phellinus robiniae",
+      "name": "",
+      "medium": "Watercolor on paper, 2023",
+      "size": "9 x 13-1/2 in",
+      "status": "In Exhibition at New York Botanical Gardens"
+    },
+    {
+      "id": 2,
+      "image": "./images/Wang_Laetiporus_cincinnatus.jpg",
+      "thumb": "./images/Wang_Laetiporus_cincinnatus_thumb.jpg",
+      "title": "Chicken of the Woods",
+      "binomial": "Laetiporus cincinnatus",
+      "name": "",
+      "medium": "Watercolor on paper, 2022",
+      "size": "12 x 16 in",
+      "status": "In Exhibition at New York Botanical Gardens"
+    },
+    {
+      "id": 3,
       "image": "./images/birdnest.png",
       "thumb": "./images/birdnest_thumb.png",
       "title": "Bird’s Nest Fungi on Woodchips",
@@ -12,18 +45,7 @@
       "status": "Currently not for sale"
     },
     {
-      "id": 1,
-      "image": "./images/Wang_Chickenofthewoods.png",
-      "thumb": "./images/Wang_Chickenofthewoods_thumb.png",
-      "title": "Chicken of the Woods",
-      "binomial": "Laetiporus cincinnatus",
-      "name": "",
-      "medium": "Watercolor on paper, 2020",
-      "size": "15 x 18 in",
-      "status": "Work in Progress"
-    },
-    {
-      "id": 2,
+      "id": 4,
       "image": "./images/Wang_SuperHot2.png",
       "thumb": "./images/Wang_SuperHot2_thumb.png",
       "title": "Super Hot 2",
@@ -34,7 +56,7 @@
       "status": "In Exhibition at Wave Hill"
     },
     {
-      "id": 3,
+      "id": 5,
       "image": "./images/Wang_SuperHot1.png",
       "thumb": "./images/Wang_SuperHot1_thumb.png",
       "title": "Super Hot 1",
@@ -45,7 +67,7 @@
       "status": "Available for Purchase"
     },
     {
-      "id": 4,
+      "id": 6,
       "image": "./images/Wang_PitcherPlant.png",
       "thumb": "./images/Wang_PitcherPlant_thumb.png",
       "title": "Pitcher Plant Portrait",
@@ -56,7 +78,7 @@
       "status": "Available for Purchase"
     },
     {
-      "id": 5,
+      "id": 7,
       "image": "./images/Wang_YuanYuan6.png",
       "thumb": "./images/Wang_YuanYuan6_thumb.png",
       "title": "Pitcher Plant in Bloom",
@@ -67,7 +89,7 @@
       "status": "Available for Purchase"
     },
     {
-      "id": 6,
+      "id": 8,
       "image": "./images/Wang_LeafMeditation.png",
       "thumb": "./images/Wang_LeafMeditation_thumb.png",
       "title": "Leaf Meditation",
@@ -78,7 +100,7 @@
       "status": "Available for Purchase"
     },
     {
-      "id": 7,
+      "id": 9,
       "image": "./images/Wang_OrnamentalGourd2.png",
       "thumb": "./images/Wang_OrnamentalGourd2_thumb.png",
       "title": "Ornamental Gourd 2",
@@ -89,7 +111,7 @@
       "status": "Sold Out"
     },
     {
-      "id": 8,
+      "id": 10,
       "image": "./images/Wang_YuanYuan3.png",
       "thumb": "./images/Wang_YuanYuan3_thumb.png",
       "title": "The Story of an Iris",
@@ -100,7 +122,7 @@
       "status": "Available for Purchase"
     },
     {
-      "id": 9,
+      "id": 11,
       "image": "./images/Wang_OrnamentalGourd1.png",
       "thumb": "./images/Wang_OrnamentalGourd1_thumb.png",
       "title": "Ornamental Gourd 1",
@@ -111,7 +133,7 @@
       "status": "Available for Purchase"
     },
     {
-      "id": 10,
+      "id": 12,
       "image": "./images/Wang_Monterey_Pine.png",
       "thumb": "./images/Wang_Monterey_Pine_thumb.png",
       "title": "Monterey Pine Cones",
