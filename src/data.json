@@ -2,17 +2,6 @@
   "artwork": [
     {
       "id": 0,
-      "image": "./images/Wang_Porcini.jpg",
-      "thumb": "./images/Wang_Porcini_thumb.jpg",
-      "title": "Porcini",
-      "binomial": "Porcini",
-      "name": "",
-      "medium": "Watercolor on paper, 2024",
-      "size": "8 x 12 in",
-      "status": "Currently not for sale"
-    },
-    {
-      "id": 1,
       "image": "./images/Wang_Phellinus_robiniae.jpg",
       "thumb": "./images/Wang_Phellinus_robiniae_thumb.jpg",
       "title": "Cracked Cap Polypore Displaying Gravitropism on Fallen Tree",
@@ -23,7 +12,7 @@
       "status": "In Exhibition at New York Botanical Gardens"
     },
     {
-      "id": 2,
+      "id": 1,
       "image": "./images/Wang_Laetiporus_cincinnatus.jpg",
       "thumb": "./images/Wang_Laetiporus_cincinnatus_thumb.jpg",
       "title": "Chicken of the Woods",
@@ -32,6 +21,17 @@
       "medium": "Watercolor on paper, 2022",
       "size": "12 x 16 in",
       "status": "In Exhibition at New York Botanical Gardens"
+    },
+    {
+      "id": 2,
+      "image": "./images/Wang_Porcini.jpg",
+      "thumb": "./images/Wang_Porcini_thumb.jpg",
+      "title": "Porcini",
+      "binomial": "Porcini",
+      "name": "",
+      "medium": "Watercolor on paper, 2024",
+      "size": "8 x 12 in",
+      "status": "Currently not for sale"
     },
     {
       "id": 3,
