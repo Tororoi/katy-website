@@ -9,7 +9,7 @@
       "name": "",
       "medium": "Watercolor on paper, 2023",
       "size": "9 x 13-1/2 in",
-      "status": "In Exhibition at New York Botanical Gardens"
+      "status": "In upcoming exhibition at New York Botanical Garden"
     },
     {
       "id": 1,
@@ -20,7 +20,7 @@
       "name": "",
       "medium": "Watercolor on paper, 2022",
       "size": "12 x 16 in",
-      "status": "In Exhibition at New York Botanical Gardens"
+      "status": "In upcoming exhibition at New York Botanical Garden"
     },
     {
       "id": 2,
@@ -145,6 +145,11 @@
     }
   ],
   "exhibitions": [
+    {
+      "name": "5th New York Botanical Garden Triennial",
+      "description": "May 18 – October 27, 2024, New York Botanical Garden, Bronx, NY",
+      "status": "Upcoming"
+    },
     {
       "name": "23rd Annual International Exhibition by American Society of Botanical Artists and Wave Hill",
       "description": "September 5 – December 6, 2020, Wave Hill, Bronx, NY",
