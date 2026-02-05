@@ -171,5 +171,37 @@
       "name": "Jessica Tcherepnine Artist-in-Residence Program",
       "description": "Spring 2020, Greenhouse at Denny Farrell Riverbank State Park – Horticultural Society of New York, New York, NY"
     }
+  ],
+  "classes": [
+    {
+      "id": 0,
+      "title": "Introduction to Botanical Watercolor",
+      "description": "Learn the fundamentals of botanical illustration using traditional watercolor techniques. Perfect for beginners interested in painting plants with scientific accuracy and artistic beauty.",
+      "schedule": "Saturdays, 10:00 AM - 1:00 PM",
+      "duration": "6 weeks",
+      "price": "$450",
+      "level": "Beginner",
+      "registrationLink": ""
+    },
+    {
+      "id": 1,
+      "title": "Fungi & Mushroom Illustration",
+      "description": "Explore the fascinating world of mycological illustration. Students will learn to capture the unique textures, forms, and colors of mushrooms and other fungi.",
+      "schedule": "Thursdays, 2:00 PM - 5:00 PM",
+      "duration": "4 weeks",
+      "price": "$350",
+      "level": "Intermediate",
+      "registrationLink": ""
+    },
+    {
+      "id": 2,
+      "title": "Advanced Botanical Techniques",
+      "description": "Refine your skills with advanced watercolor methods including layering, wet-on-wet techniques, and achieving photorealistic detail in botanical subjects.",
+      "schedule": "Sundays, 1:00 PM - 4:00 PM",
+      "duration": "8 weeks",
+      "price": "$600",
+      "level": "Advanced",
+      "registrationLink": ""
+    }
   ]
 }

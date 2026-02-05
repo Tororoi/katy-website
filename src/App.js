@@ -8,23 +8,20 @@ import ExhibitionsContainer from './Components/ExhibitionsContainer'
 import MobileNav from './Components/MobileNav'
 import Contact from './Components/Contact'
 import ShopPage from './Components/ShopPage'
+import SplashPage from './Components/SplashPage'
+import ClassesContainer from './Components/ClassesContainer'
 // import Media from './Components/Media'
 
-import { connect } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { Routes, Route } from 'react-router-dom'
 
-const toggleNav = (boolean) => {
-  return {
-    type: 'TOGGLE_NAV',
-    payload: boolean,
+const App = () => {
+  const dispatch = useDispatch()
+
+  const toggleNav = () => {
+    dispatch({ type: 'TOGGLE_NAV' })
   }
-}
 
-const sendThisInformation = {
-  toggleNav,
-}
-
-const AppContent = ({ toggleNav }) => {
   return (
     <div className="App">
       <div className="site-content">
@@ -34,16 +31,17 @@ const AppContent = ({ toggleNav }) => {
         </header>
         <main>
           <Routes>
-            <Route path="/exhibitions" element={<ExhibitionsContainer />} />
-            <Route path="/bio" element={<AboutPage />} />
+            <Route path="/" element={<SplashPage />} />
+            <Route path="/gallery" element={<ProjectContainer />} />
             <Route
               path="/project"
               element={<ProjectDisplay toggleNav={toggleNav} />}
             />
-            <Route path="/gallery" element={<ProjectContainer />} />
+            <Route path="/classes" element={<ClassesContainer />} />
+            <Route path="/exhibitions" element={<ExhibitionsContainer />} />
+            <Route path="/bio" element={<AboutPage />} />
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/" element={<ProjectContainer />} />
             {/* <Media/> */}
           </Routes>
         </main>
@@ -52,8 +50,4 @@ const AppContent = ({ toggleNav }) => {
   )
 }
 
-const App = ({ toggleNav }) => {
-  return <AppContent toggleNav={toggleNav} />
-}
-
-export default connect(null, sendThisInformation)(App)
+export default App

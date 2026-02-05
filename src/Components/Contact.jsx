@@ -1,10 +1,13 @@
-import React from "react"
+import React from 'react'
 
-import { connect } from "react-redux"
+import { useSelector, useDispatch } from 'react-redux'
 
 //Parents: App
 
 const Contact = (props) => {
+  const dispatch = useDispatch()
+  const contact = useSelector((state) => state.contact)
+
   const handleSubmit = (e) => {
     e.preventDefault()
     // console.log(props.contact)
@@ -69,7 +72,7 @@ const Contact = (props) => {
     // alert(
     //   "Message Sent. You should receive a confirmation email that your message was sent."
     // )
-    let mailObj = props.contact
+    let mailObj = contact
     resetForm()
     // fetch("https://stormy-wildwood-98268.herokuapp.com/send", {
     //   method: "POST",
@@ -89,9 +92,9 @@ const Contact = (props) => {
     //     }
     //   })
     const mailtoLink =
-      "mailto:katywangwebsite@gmail.com?subject=" +
+      'mailto:katywangwebsite@gmail.com?subject=' +
       encodeURIComponent(mailObj.subject) +
-      "&body=" +
+      '&body=' +
       encodeURIComponent(mailObj.message)
 
     window.location.href = mailtoLink
@@ -99,19 +102,25 @@ const Contact = (props) => {
   }
 
   const resetForm = () => {
-    props.contactDispatch({ name: "name", value: "" })
-    props.contactDispatch({ name: "email", value: "" })
-    props.contactDispatch({ name: "subject", value: "" })
-    props.contactDispatch({ name: "message", value: "" })
+    dispatch({ type: 'UPDATE_CONTACT', payload: { name: 'name', value: '' } })
+    dispatch({ type: 'UPDATE_CONTACT', payload: { name: 'email', value: '' } })
+    dispatch({
+      type: 'UPDATE_CONTACT',
+      payload: { name: 'subject', value: '' },
+    })
+    dispatch({
+      type: 'UPDATE_CONTACT',
+      payload: { name: 'message', value: '' },
+    })
   }
 
   const handleChange = (e) => {
-    e.target.style.boxShadow = "0 0 0 3pt transparent"
-    e.target.previousSibling.previousSibling.innerText = ""
-    e.target.previousSibling.previousSibling.style.display = "none"
+    e.target.style.boxShadow = '0 0 0 3pt transparent'
+    e.target.previousSibling.previousSibling.innerText = ''
+    e.target.previousSibling.previousSibling.style.display = 'none'
     let { name, value } = e.target
     let contactObj = { name, value }
-    props.contactDispatch(contactObj)
+    dispatch({ type: 'UPDATE_CONTACT', payload: contactObj })
   }
 
   // const validate = (name, email, subject, message) => {
@@ -163,69 +172,74 @@ const Contact = (props) => {
   // }
 
   return (
-    <div className="contact-page">
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <h1>Contact</h1>
-        {/* <div className="error"></div>
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          name="name"
-          value={props.contact.name}
-          onChange={handleChange}
-        /> */}
-        {/* <div className="error"></div>
-        <label htmlFor="email">Email</label>
-        <input
-          type="text"
-          autoComplete="off"
-          name="email"
-          value={props.contact.email}
-          onChange={handleChange}
-        /> */}
-        <div className="error"></div>
-        <label htmlFor="subject">Subject</label>
-        <input
-          type="text"
-          autoComplete="off"
-          name="subject"
-          value={props.contact.subject}
-          onChange={handleChange}
-        />
-        <div className="error"></div>
-        <label htmlFor="message">Message</label>
-        <textarea
-          name="message"
-          value={props.contact.message}
-          onChange={handleChange}
-        />
-        <input className="submit-btn" type="submit" value="Submit" />
-      </form>
-      {/* <div className="contact-form">
-        <h1>Contact</h1>
-        <p>
-          <a href="mailto:katywangwebsite@gmail.com">Send email</a>
-        </p>
-      </div> */}
+    <div className="min-h-screen bg-cream py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-2xl mx-auto">
+        <form
+          className="bg-white rounded-lg shadow-xl p-8 md:p-12"
+          onSubmit={handleSubmit}
+        >
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-center text-gray-900 mb-8">
+            Get in Touch
+          </h1>
+          <p className="text-center text-gray-600 mb-8">
+            Have a question or interested in commissioning a piece? Send me a
+            message.
+          </p>
+
+          <div className="space-y-6">
+            <div>
+              <div className="error text-red-600 text-sm mb-2"></div>
+              <label
+                htmlFor="subject"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Subject
+              </label>
+              <input
+                type="text"
+                autoComplete="off"
+                name="subject"
+                value={contact.subject}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-sage-green focus:border-transparent transition-all duration-200"
+                placeholder="What is this regarding?"
+              />
+            </div>
+
+            <div>
+              <div className="error text-red-600 text-sm mb-2"></div>
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Message
+              </label>
+              <textarea
+                name="message"
+                value={contact.message}
+                onChange={handleChange}
+                rows="6"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-sage-green focus:border-transparent transition-all duration-200 resize-none"
+                placeholder="Tell me more..."
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-forest-green text-white font-medium py-3 px-6 rounded-md hover:bg-sage-green transition-colors duration-300 text-lg"
+            >
+              Send Message
+            </button>
+
+            <p className="text-center text-sm text-gray-500 mt-4">
+              This will open your email client with a pre-filled message to
+              katywangwebsite@gmail.com
+            </p>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }
 
-let updateContact = (contactObj) => {
-  return {
-    type: "UPDATE_CONTACT",
-    payload: contactObj,
-  }
-}
-
-const mapDispatchToProps = {
-  contactDispatch: updateContact,
-}
-
-let mapStateToProps = (reduxState) => {
-  return {
-    contact: reduxState.contact,
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Contact)
+export default Contact
