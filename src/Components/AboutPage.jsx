@@ -1,5 +1,3 @@
-import React from 'react'
-
 //Parents: ProjectContainer
 
 const Project = (props) => {
