@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f0eee9;font-family:system-ui,sans-serif}
+a{color:inherit}a:hover{color:#4A5D3E}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}
+.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}
+.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}
+.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t3">
+<div class="dv-thd"><a class="dv-tid" href="#t3">3</a><span class="dv-tname">Mobile (390px) for the remaining pages — joins <a class="dv-oid" href="#2g">2g</a> Gallery and <a class="dv-oid" href="#2h">2h</a> Classes</span></div>
+<div class="dv-opts">
+
+<!-- ============ 3a MOBILE HOME ============ -->
+<div class="dv-opt" id="3a">
+<div class="dv-olabel"><a class="dv-oid" href="#3a">3a</a>Mobile Home — <a class="dv-oid" href="#1b">1b</a> direction</div>
+<div class="dv-card" style="width:390px" data-screen-label="3a Mobile Home">
+  <div style="background:#FFFFFF;color:#26261F;font-family:'Source Sans 3',sans-serif">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px">
+      <div style="font-family:'Playfair Display',serif;font-size:21px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;flex-direction:column;gap:5px;padding:6px"><span style="display:block;width:22px;height:1.5px;background:#26261F"></span><span style="display:block;width:22px;height:1.5px;background:#26261F"></span></div>
+    </div>
+    <div style="position:relative;height:440px">
+      <img src="images/Wang_Phellinus_robiniae.jpg" alt="Watercolor painting of cracked cap polypore mushrooms on a fallen tree" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,16,0) 35%,rgba(20,24,16,.66) 100%)"></div>
+      <div style="position:absolute;left:20px;right:20px;bottom:24px;color:#FDFCF8">
+        <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:500;line-height:1.1;margin-bottom:8px">Katy Wang</div>
+        <div style="font-size:15px;opacity:.92;margin-bottom:18px">Botanical &amp; mushroom watercolors · Classes in the Bay Area</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="background:#FDFCF8;color:#33402A;padding:14px;font-size:15px;font-weight:600;border-radius:3px;text-align:center">Take a class</div>
+          <div style="border:1.5px solid rgba(253,252,248,.75);padding:14px;font-size:15px;font-weight:600;border-radius:3px;text-align:center">View the work</div>
+        </div>
+      </div>
+    </div>
+    <div style="padding:32px 20px 8px">
+      <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:18px">
+        <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:500">Selected work</div>
+        <div style="flex:1;height:1px;background:#E6E4DC"></div>
+        <div style="font-size:13.5px;font-weight:600;color:#4A5D3E">All →</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr;gap:20px">
+        <div><div style="aspect-ratio:1/1;overflow:hidden"><img src="images/Wang_Laetiporus_cincinnatus_thumb.jpg" alt="Watercolor of chicken of the woods mushroom" style="width:100%;height:100%;object-fit:cover;display:block"></div><div style="font-size:13.5px;color:#6b6a5f;padding:8px 0 0;font-style:italic;text-align:center">Laetiporus cincinnatus, 2022</div></div>
+        <div><div style="aspect-ratio:1/1;overflow:hidden"><img src="images/Wang_PitcherPlant_thumb.png" alt="Watercolor portrait of a white-topped pitcher plant" style="width:100%;height:100%;object-fit:cover;display:block"></div><div style="font-size:13.5px;color:#6b6a5f;padding:8px 0 0;font-style:italic;text-align:center">Sarracenia leucophylla, 2019</div></div>
+        <div><div style="aspect-ratio:1/1;overflow:hidden"><img src="images/Wang_Porcini_thumb.jpg" alt="Watercolor of porcini mushrooms" style="width:100%;height:100%;object-fit:cover;display:block"></div><div style="font-size:13.5px;color:#6b6a5f;padding:8px 0 0;font-style:italic;text-align:center">Porcini, 2024</div></div>
+      </div>
+    </div>
+    <div style="background:#4A5D3E;color:#F4F2E9;padding:32px 20px;margin-top:28px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:18px">
+        <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:500">Upcoming classes</div>
+        <div style="font-size:13.5px;font-weight:600;color:#CBD6B8">All →</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:18px 20px;border-radius:4px">
+          <div style="font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#CBD6B8;margin-bottom:7px">CSMA · Mountain View</div>
+          <div style="font-family:'Playfair Display',serif;font-size:19px;font-weight:500;margin-bottom:7px">Mini Session: Watercolor Painting</div>
+          <div style="font-size:13.5px;color:#DDDACB;margin-bottom:12px">Wednesdays, Jul 8 – 29 · 6:30 – 8:30 PM</div>
+          <div style="font-size:13.5px;font-weight:600;border-bottom:1px solid rgba(255,255,255,.4);display:inline-block;padding-bottom:2px">Register at CSMA ↗</div>
+        </div>
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:18px 20px;border-radius:4px">
+          <div style="font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#CBD6B8;margin-bottom:7px">Pacific Art League · Palo Alto</div>
+          <div style="font-family:'Playfair Display',serif;font-size:19px;font-weight:500;margin-bottom:7px">Watercolor Mushrooms Workshop</div>
+          <div style="font-size:13.5px;color:#DDDACB;margin-bottom:12px">Saturday, Sep 12 · 1:00 – 4:00 PM</div>
+          <div style="font-size:13.5px;font-weight:600;border-bottom:1px solid rgba(255,255,255,.4);display:inline-block;padding-bottom:2px">Register at Pacific Art League ↗</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;padding:20px;font-size:12.5px;color:#8a897d">© 2026 Katy Wang · katywangwebsite@gmail.com</div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 3b MOBILE ABOUT ============ -->
+<div class="dv-opt" id="3b">
+<div class="dv-olabel"><a class="dv-oid" href="#3b">3b</a>Mobile About</div>
+<div class="dv-card" style="width:390px" data-screen-label="3b Mobile About">
+  <div style="background:#FFFFFF;color:#26261F;font-family:'Source Sans 3',sans-serif">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #EDEBE3">
+      <div style="font-family:'Playfair Display',serif;font-size:21px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;flex-direction:column;gap:5px;padding:6px"><span style="display:block;width:22px;height:1.5px;background:#26261F"></span><span style="display:block;width:22px;height:1.5px;background:#26261F"></span></div>
+    </div>
+    <img src="images/KatyBioPhoto.png" alt="Katy Wang at work on a botanical watercolor" style="width:100%;display:block">
+    <div style="padding:28px 20px 32px">
+      <div style="font-family:'Playfair Display',serif;font-size:30px;font-weight:500;margin-bottom:14px">About the artist</div>
+      <div style="font-size:15px;line-height:1.7;color:#44443c;display:flex;flex-direction:column;gap:14px">
+        <div>Katy Wang first became drawn to plants while exploring the cloud forests of South America with her husband.</div>
+        <div>Back at home in New York City, she went on to study botanical art at the New York Botanical Garden and exhibit her work in the American Society of Botanical Artists' Annual International shows.</div>
+        <div>In 2019, she became involved with the New York Mycological Society, which launched her interest in the diverse and enigmatic world of fungi.</div>
+        <div>She currently resides in the San Francisco Bay Area, where she continues to work on botanical artwork with a focus on the fascinating kingdom of Fungi — and teaches watercolor and botanical drawing in person across the Peninsula.</div>
+      </div>
+    </div>
+    <div style="background:#F5F4EC;padding:28px 20px">
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#7d8a68;margin-bottom:16px">Selected exhibitions &amp; residencies</div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div><div style="font-family:'Playfair Display',serif;font-size:16.5px;font-weight:500;margin-bottom:3px">New York Botanical Garden</div><div style="font-size:13.5px;color:#5f5e53">5th NYBG Triennial, 2024</div></div>
+        <div><div style="font-family:'Playfair Display',serif;font-size:16.5px;font-weight:500;margin-bottom:3px">Wave Hill</div><div style="font-size:13.5px;color:#5f5e53">ASBA Annual International, 2018 &amp; 2020</div></div>
+        <div><div style="font-family:'Playfair Display',serif;font-size:16.5px;font-weight:500;margin-bottom:3px">Horticultural Society of New York</div><div style="font-size:13.5px;color:#5f5e53">Solo exhibition 2021 · Artist-in-Residence 2020</div></div>
+      </div>
+      <div style="font-size:13.5px;font-weight:600;color:#4A5D3E;margin-top:18px">Full exhibitions &amp; projects record →</div>
+    </div>
+    <div style="text-align:center;padding:20px;border-top:1px solid #EDEBE3;font-size:12.5px;color:#8a897d">© 2026 Katy Wang</div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 3c MOBILE EXHIBITIONS ============ -->
+<div class="dv-opt" id="3c">
+<div class="dv-olabel"><a class="dv-oid" href="#3c">3c</a>Mobile Exhibitions &amp; Projects</div>
+<div class="dv-card" style="width:390px" data-screen-label="3c Mobile Exhibitions">
+  <div style="background:#FFFFFF;color:#26261F;font-family:'Source Sans 3',sans-serif">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #EDEBE3">
+      <div style="font-family:'Playfair Display',serif;font-size:21px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;flex-direction:column;gap:5px;padding:6px"><span style="display:block;width:22px;height:1.5px;background:#26261F"></span><span style="display:block;width:22px;height:1.5px;background:#26261F"></span></div>
+    </div>
+    <div style="padding:28px 20px 36px">
+      <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:500;margin-bottom:6px">Exhibitions &amp; Projects</div>
+      <div style="font-size:13.5px;font-weight:600;color:#4A5D3E;margin-bottom:26px">Download CV (PDF)</div>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#7d8a68;border-bottom:1px solid #26261F;padding-bottom:8px">Selected exhibitions</div>
+      <div style="padding:16px 0;border-bottom:1px solid #EDEBE3">
+        <div style="font-family:'Playfair Display',serif;font-size:15px;color:#7d8a68;margin-bottom:4px">2024</div>
+        <div style="font-size:15px;font-weight:600;margin-bottom:3px">5th New York Botanical Garden Triennial</div>
+        <div style="font-size:13.5px;color:#5f5e53">May 18 – Oct 27 · NYBG, Bronx, NY</div>
+      </div>
+      <div style="padding:16px 0;border-bottom:1px solid #EDEBE3">
+        <div style="font-family:'Playfair Display',serif;font-size:15px;color:#7d8a68;margin-bottom:4px">2021</div>
+        <div style="font-size:15px;font-weight:600;margin-bottom:3px">Horticultural Society of New York — Solo Online Exhibition</div>
+        <div style="font-size:13.5px;color:#5f5e53">Spring 2021 · New York, NY</div>
+      </div>
+      <div style="padding:16px 0;border-bottom:1px solid #EDEBE3">
+        <div style="font-family:'Playfair Display',serif;font-size:15px;color:#7d8a68;margin-bottom:4px">2020</div>
+        <div style="font-size:15px;font-weight:600;margin-bottom:3px">23rd Annual International Exhibition — ASBA &amp; Wave Hill</div>
+        <div style="font-size:13.5px;color:#5f5e53">Sep 5 – Dec 6, 2020 · Wave Hill, Bronx, NY</div>
+      </div>
+      <div style="padding:16px 0;border-bottom:1px solid #EDEBE3">
+        <div style="font-family:'Playfair Display',serif;font-size:15px;color:#7d8a68;margin-bottom:4px">2018</div>
+        <div style="font-size:15px;font-weight:600;margin-bottom:3px">21st Annual International Exhibition — ASBA &amp; Wave Hill</div>
+        <div style="font-size:13.5px;color:#5f5e53">Sep 8 – Dec 2, 2018 · Wave Hill, Bronx, NY</div>
+      </div>
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#7d8a68;border-bottom:1px solid #26261F;padding-bottom:8px;margin-top:32px">Residencies</div>
+      <div style="padding:16px 0;border-bottom:1px solid #EDEBE3">
+        <div style="font-family:'Playfair Display',serif;font-size:15px;color:#7d8a68;margin-bottom:4px">2020</div>
+        <div style="font-size:15px;font-weight:600;margin-bottom:3px">Jessica Tcherepnine Artist-in-Residence Program</div>
+        <div style="font-size:13.5px;color:#5f5e53">Spring 2020 · Riverbank State Park Greenhouse — Hort. Society of NY</div>
+      </div>
+    </div>
+    <div style="text-align:center;padding:20px;border-top:1px solid #EDEBE3;font-size:12.5px;color:#8a897d">© 2026 Katy Wang</div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 3d MOBILE CONTACT ============ -->
+<div class="dv-opt" id="3d">
+<div class="dv-olabel"><a class="dv-oid" href="#3d">3d</a>Mobile Contact</div>
+<div class="dv-card" style="width:390px" data-screen-label="3d Mobile Contact">
+  <div style="background:#FFFFFF;color:#26261F;font-family:'Source Sans 3',sans-serif">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #EDEBE3">
+      <div style="font-family:'Playfair Display',serif;font-size:21px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;flex-direction:column;gap:5px;padding:6px"><span style="display:block;width:22px;height:1.5px;background:#26261F"></span><span style="display:block;width:22px;height:1.5px;background:#26261F"></span></div>
+    </div>
+    <div style="padding:28px 20px 36px">
+      <div style="font-family:'Playfair Display',serif;font-size:30px;font-weight:500;margin-bottom:10px">Get in touch</div>
+      <div style="font-size:15px;line-height:1.65;color:#5f5e53;margin-bottom:24px">Questions about classes, artwork, commissions, or anything else — send a note.</div>
+      <div style="background:#F5F4EC;padding:24px 20px;border-radius:4px;margin-bottom:24px">
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#44443c">Name</div><div style="background:#fff;border:1px solid #DDDACB;border-radius:3px;padding:13px 14px;font-size:14.5px;color:#9a9889">Your name</div></div>
+          <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#44443c">Email</div><div style="background:#fff;border:1px solid #DDDACB;border-radius:3px;padding:13px 14px;font-size:14.5px;color:#9a9889">you@email.com</div></div>
+          <div><div style="font-size:13px;font-weight:600;margin-bottom:6px;color:#44443c">Message</div><div style="background:#fff;border:1px solid #DDDACB;border-radius:3px;padding:13px 14px;font-size:14.5px;color:#9a9889;min-height:100px">Tell me more…</div></div>
+          <div style="background:#4A5D3E;color:#F4F2E9;padding:15px 0;text-align:center;font-size:15px;font-weight:600;border-radius:3px">Send message</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;font-size:14.5px">
+        <div><span style="color:#8a897d">Email</span> &nbsp; katywangwebsite@gmail.com</div>
+        <div><span style="color:#8a897d">Studio</span> &nbsp; San Francisco Bay Area, CA</div>
+        <div><span style="color:#8a897d">Instagram</span> &nbsp; @katywangstudio</div>
+      </div>
+    </div>
+    <div style="text-align:center;padding:20px;border-top:1px solid #EDEBE3;font-size:12.5px;color:#8a897d">© 2026 Katy Wang</div>
+  </div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "open the mobile nav menu on one screen" · "make the mobile home hero taller/shorter" · "combine everything into one clickable prototype"</p>
+</section>
+
+<section class="dv-turn" id="t2">
+<div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">Full site in the <a class="dv-oid" href="#1b">1b</a> direction — working lightbox &amp; filters</span></div>
+<div class="dv-opts">
+
+<!-- ============ 2a GALLERY ============ -->
+<div class="dv-opt" id="2a">
+<div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>Gallery — masonry, collection filter, click any work for lightbox</div>
+<div class="dv-card" style="width:1200px" data-screen-label="2a Gallery">
+  <div style="position:relative;background:#FFFFFF;color:#26261F;font-family:'Source Sans 3',sans-serif;overflow:hidden">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:22px 56px;border-bottom:1px solid #EDEBE3">
+      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;gap:34px;font-size:14px;font-weight:500;color:#44443c">
+        <span style="color:#4A5D3E;border-bottom:2px solid #4A5D3E;padding-bottom:3px">Gallery</span><span>Classes</span><span>About</span><span>Contact</span>
+      </div>
+    </div>
+    <div style="padding:52px 56px 64px">
+      <div style="font-family:'Playfair Display',serif;font-size:40px;font-weight:500;margin-bottom:26px">Gallery</div>
+      <div style="columns:3;column-gap:22px">
+        <sc-if value="{{ galleryReady }}" hint-placeholder-val="{{ false }}">
+        <sc-for list="{{ artworks }}" as="art" hint-placeholder-count="0">
+          <div onClick="{{ art.open }}" style="break-inside:avoid;margin-bottom:26px;cursor:zoom-in">
+            <div role="img" aria-label="{{ art.alt }}" style="{{ art.thumbStyle }}"></div>
+            <div style="font-size:14px;color:#6b6a5f;padding:9px 0 0;font-style:italic;text-align:center">{{ art.caption }}</div>
+          </div>
+        </sc-for>
+        </sc-if>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:26px 56px;border-top:1px solid #EDEBE3;font-size:13px;color:#8a897d">
+      <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;gap:24px"><span>Exhibitions &amp; Projects</span><span>Instagram</span><span>katywangwebsite@gmail.com</span></div>
+      <div>© 2026 Katy Wang</div>
+    </div>
+    <!-- lightbox overlay -->
+    <sc-if value="{{ lightboxOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="position:absolute;inset:0;background:rgba(20,22,17,.94);z-index:20;display:flex;flex-direction:column;color:#F4F2E9">
+        <div style="display:flex;justify-content:flex-end;padding:20px 28px 0">
+          <div onClick="{{ closeLightbox }}" style="cursor:pointer;font-size:15px;font-weight:600;letter-spacing:.06em;color:#DDDACB;padding:8px 12px">Close ✕</div>
+        </div>
+        <div style="flex:1;display:flex;align-items:center;gap:12px;padding:0 28px;min-height:0">
+          <div onClick="{{ lightboxPrev }}" style="cursor:pointer;font-size:34px;color:#DDDACB;padding:16px;user-select:none">‹</div>
+          <div role="img" aria-label="{{ lightboxAlt }}" style="{{ lightboxImgStyle }}"></div>
+          <div onClick="{{ lightboxNext }}" style="cursor:pointer;font-size:34px;color:#DDDACB;padding:16px;user-select:none">›</div>
+        </div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:20px 72px 26px">
+          <div>
+            <span style="font-family:'Playfair Display',serif;font-size:21px;font-weight:500">{{ lightboxTitle }}</span>
+            <span style="font-style:italic;font-size:15px;color:#CBD6B8;margin-left:12px">{{ lightboxBinomial }}</span>
+          </div>
+          <div style="font-size:14px;color:#DDDACB;white-space:nowrap">{{ lightboxMeta }}</div>
+        </div>
+        <div style="text-align:center;font-size:13px;color:#9aa588;padding-bottom:18px">{{ lightboxStatus }} · {{ lightboxCount }}</div>
+      </div>
+    </sc-if>
+  </div>
+</div>
+</div>
+
+<!-- ============ 2b CLASSES ============ -->
+<div class="dv-opt" id="2b">
+<div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a>Classes — date-ordered rows, live location filter, labeled external registration</div>
+<div class="dv-card" style="width:1200px" data-screen-label="2b Classes">
+  <div style="background:#FFFFFF;color:#26261F;font-family:'Source Sans 3',sans-serif">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:22px 56px;border-bottom:1px solid #EDEBE3">
+      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;gap:34px;font-size:14px;font-weight:500;color:#44443c">
+        <span>Gallery</span><span style="color:#4A5D3E;border-bottom:2px solid #4A5D3E;padding-bottom:3px">Classes</span><span>About</span><span>Contact</span>
+      </div>
+    </div>
+    <div style="padding:52px 56px 24px">
+      <div style="font-family:'Playfair Display',serif;font-size:40px;font-weight:500;margin-bottom:10px">Classes &amp; Workshops</div>
+      <div style="font-size:16.5px;line-height:1.6;color:#5f5e53;max-width:640px;margin-bottom:30px">In-person watercolor and botanical drawing classes for adults across the Bay Area. Registration is handled by each venue — the Register button opens the venue's site in a new tab.</div>
+      <div style="display:flex;gap:10px;margin-bottom:8px">
+        <sc-for list="{{ classFilters }}" as="f" hint-placeholder-count="4">
+          <div onClick="{{ f.onClick }}" style="{{ f.style }}">{{ f.label }}</div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="padding:0 56px 56px">
+      <sc-for list="{{ classes }}" as="c" hint-placeholder-count="5">
+        <div style="display:grid;grid-template-columns:200px 1fr 250px 190px;gap:24px;align-items:center;padding:22px 0;border-top:1px solid #EDEBE3">
+          <div>
+            <div style="font-size:14.5px;font-weight:600;color:#26261F">{{ c.dates }}</div>
+            <div style="font-size:13.5px;color:#8a897d">{{ c.time }}</div>
+          </div>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:500;margin-bottom:6px">{{ c.title }}</div>
+            <div style="{{ c.badgeStyle }}">{{ c.badge }}</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:14.5px;color:#5f5e53"><span style="{{ c.dotStyle }}"></span>{{ c.location }}</div>
+          <a href="{{ c.link }}" target="_blank" rel="noopener" style="text-decoration:none;background:#4A5D3E;color:#F4F2E9;padding:12px 10px;font-size:14.5px;font-weight:600;line-height:1.35;text-align:center;border-radius:3px" style-hover="background:#5c7350;color:#F4F2E9">{{ c.registerLabel }}</a>
+        </div>
+      </sc-for>
+      <div style="border-top:1px solid #EDEBE3"></div>
+      <div style="margin-top:40px;background:#F5F4EC;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:32px;border-radius:4px">
+        <div>
+          <div style="font-family:'Playfair Display',serif;font-size:23px;font-weight:500;margin-bottom:6px">Private lessons</div>
+          <div style="font-size:15px;color:#5f5e53">One-on-one instruction in botanical illustration and watercolor technique.</div>
+        </div>
+        <div style="border:1.5px solid #4A5D3E;color:#4A5D3E;padding:12px 26px;font-size:14.5px;font-weight:600;border-radius:3px;white-space:nowrap">Get in touch</div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:26px 56px;border-top:1px solid #EDEBE3;font-size:13px;color:#8a897d">
+      <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;gap:24px"><span>Exhibitions &amp; Projects</span><span>Instagram</span><span>katywangwebsite@gmail.com</span></div>
+      <div>© 2026 Katy Wang</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 2d ABOUT ============ -->
+<div class="dv-opt" id="2d">
+<div class="dv-olabel"><a class="dv-oid" href="#2d">2d</a>About — bio + credibility strip from real CV, clear next steps</div>
+<div class="dv-card" style="width:1200px" data-screen-label="2d About">
+  <div style="background:#FFFFFF;color:#26261F;font-family:'Source Sans 3',sans-serif">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:22px 56px;border-bottom:1px solid #EDEBE3">
+      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;gap:34px;font-size:14px;font-weight:500;color:#44443c">
+        <span>Gallery</span><span>Classes</span><span style="color:#4A5D3E;border-bottom:2px solid #4A5D3E;padding-bottom:3px">About</span><span>Contact</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:440px 1fr;gap:64px;padding:52px 56px 56px;align-items:start">
+      <img src="images/KatyBioPhoto.png" alt="Katy Wang at work on a botanical watercolor" style="width:100%;display:block">
+      <div>
+        <div style="font-family:'Playfair Display',serif;font-size:40px;font-weight:500;margin-bottom:20px">About the artist</div>
+        <div style="font-size:16.5px;line-height:1.7;color:#44443c;display:flex;flex-direction:column;gap:16px">
+          <div>Katy Wang first became drawn to plants while exploring the cloud forests of South America with her husband.</div>
+          <div>Back at home in New York City, she went on to study botanical art at the New York Botanical Garden and exhibit her work in the American Society of Botanical Artists' Annual International shows.</div>
+          <div>In 2019, she became involved with the New York Mycological Society, which launched her interest in the diverse and enigmatic world of fungi.</div>
+          <div>She currently resides in the San Francisco Bay Area, where she continues to work on botanical artwork with a focus on the fascinating kingdom of Fungi — and teaches watercolor and botanical drawing in person across the Peninsula.</div>
+        </div>
+      </div>
+    </div>
+    <div style="background:#F5F4EC;padding:44px 56px">
+      <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#7d8a68;margin-bottom:20px">Selected exhibitions &amp; residencies</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px">
+        <div><div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;margin-bottom:4px">New York Botanical Garden</div><div style="font-size:14px;color:#5f5e53">5th NYBG Triennial, 2024</div></div>
+        <div><div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;margin-bottom:4px">Wave Hill</div><div style="font-size:14px;color:#5f5e53">ASBA Annual International, 2018 &amp; 2020</div></div>
+        <div><div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:500;margin-bottom:4px">Horticultural Society of New York</div><div style="font-size:14px;color:#5f5e53">Solo exhibition 2021 · Artist-in-Residence 2020</div></div>
+      </div>
+      <div style="font-size:14px;font-weight:600;color:#4A5D3E;margin-top:24px">Full exhibitions &amp; projects record →</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:26px 56px;border-top:1px solid #EDEBE3;font-size:13px;color:#8a897d">
+      <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;gap:24px"><span>Exhibitions &amp; Projects</span><span>Instagram</span><span>katywangwebsite@gmail.com</span></div>
+      <div>© 2026 Katy Wang</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 2e EXHIBITIONS & PROJECTS ============ -->
+<div class="dv-opt" id="2e">
+<div class="dv-olabel"><a class="dv-oid" href="#2e">2e</a>Exhibitions &amp; Projects — merged CV page (Projects + Exhibitions + Residencies), reverse-chronological</div>
+<div class="dv-card" style="width:1200px" data-screen-label="2e Exhibitions and Projects">
+  <div style="background:#FFFFFF;color:#26261F;font-family:'Source Sans 3',sans-serif">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:22px 56px;border-bottom:1px solid #EDEBE3">
+      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;gap:34px;font-size:14px;font-weight:500;color:#44443c">
+        <span>Gallery</span><span>Classes</span><span>About</span><span>Contact</span>
+      </div>
+    </div>
+    <div style="max-width:820px;margin:0 auto;padding:52px 56px 64px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:36px">
+        <div style="font-family:'Playfair Display',serif;font-size:40px;font-weight:500">Exhibitions &amp; Projects</div>
+        <div style="font-size:14px;font-weight:600;color:#4A5D3E">Download CV (PDF)</div>
+      </div>
+      <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#7d8a68;border-bottom:1px solid #26261F;padding-bottom:10px;margin-bottom:4px">Selected exhibitions</div>
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:6px 28px;align-items:baseline;padding:18px 0;border-bottom:1px solid #EDEBE3">
+        <div style="font-family:'Playfair Display',serif;font-size:18px;color:#7d8a68">2024</div>
+        <div><div style="font-size:16.5px;font-weight:600;margin-bottom:3px">5th New York Botanical Garden Triennial</div><div style="font-size:14.5px;color:#5f5e53">May 18 – October 27, 2024 · New York Botanical Garden, Bronx, NY</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:6px 28px;align-items:baseline;padding:18px 0;border-bottom:1px solid #EDEBE3">
+        <div style="font-family:'Playfair Display',serif;font-size:18px;color:#7d8a68">2021</div>
+        <div><div style="font-size:16.5px;font-weight:600;margin-bottom:3px">The Horticultural Society of New York — Solo Online Exhibition</div><div style="font-size:14.5px;color:#5f5e53">Spring 2021 · New York, NY</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:6px 28px;align-items:baseline;padding:18px 0;border-bottom:1px solid #EDEBE3">
+        <div style="font-family:'Playfair Display',serif;font-size:18px;color:#7d8a68">2020</div>
+        <div><div style="font-size:16.5px;font-weight:600;margin-bottom:3px">23rd Annual International Exhibition — ASBA &amp; Wave Hill</div><div style="font-size:14.5px;color:#5f5e53">September 5 – December 6, 2020 · Wave Hill, Bronx, NY</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:6px 28px;align-items:baseline;padding:18px 0;border-bottom:1px solid #EDEBE3">
+        <div style="font-family:'Playfair Display',serif;font-size:18px;color:#7d8a68">2018</div>
+        <div><div style="font-size:16.5px;font-weight:600;margin-bottom:3px">21st Annual International Exhibition — ASBA &amp; Wave Hill</div><div style="font-size:14.5px;color:#5f5e53">September 8 – December 2, 2018 · Wave Hill, Bronx, NY</div></div>
+      </div>
+      <div style="font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#7d8a68;border-bottom:1px solid #26261F;padding-bottom:10px;margin:44px 0 4px">Residencies</div>
+      <div style="display:grid;grid-template-columns:64px 1fr;gap:6px 28px;align-items:baseline;padding:18px 0;border-bottom:1px solid #EDEBE3">
+        <div style="font-family:'Playfair Display',serif;font-size:18px;color:#7d8a68">2020</div>
+        <div><div style="font-size:16.5px;font-weight:600;margin-bottom:3px">Jessica Tcherepnine Artist-in-Residence Program</div><div style="font-size:14.5px;color:#5f5e53">Spring 2020 · Greenhouse at Denny Farrell Riverbank State Park — Horticultural Society of New York, NY</div></div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:26px 56px;border-top:1px solid #EDEBE3;font-size:13px;color:#8a897d">
+      <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;gap:24px"><span>Exhibitions &amp; Projects</span><span>Instagram</span><span>katywangwebsite@gmail.com</span></div>
+      <div>© 2026 Katy Wang</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 2f CONTACT ============ -->
+<div class="dv-opt" id="2f">
+<div class="dv-olabel"><a class="dv-oid" href="#2f">2f</a>Contact — minimal, low-friction</div>
+<div class="dv-card" style="width:1200px" data-screen-label="2f Contact">
+  <div style="background:#FFFFFF;color:#26261F;font-family:'Source Sans 3',sans-serif">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:22px 56px;border-bottom:1px solid #EDEBE3">
+      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;gap:34px;font-size:14px;font-weight:500;color:#44443c">
+        <span>Gallery</span><span>Classes</span><span>About</span><span style="color:#4A5D3E;border-bottom:2px solid #4A5D3E;padding-bottom:3px">Contact</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 520px;gap:72px;padding:64px 120px 80px;align-items:start">
+      <div>
+        <div style="font-family:'Playfair Display',serif;font-size:40px;font-weight:500;margin-bottom:16px">Get in touch</div>
+        <div style="font-size:16.5px;line-height:1.65;color:#5f5e53;margin-bottom:32px">Questions about classes, artwork, commissions, or anything else — send a note.</div>
+        <div style="display:flex;flex-direction:column;gap:14px;font-size:15px">
+          <div><span style="color:#8a897d">Email</span> &nbsp; katywangwebsite@gmail.com</div>
+          <div><span style="color:#8a897d">Studio</span> &nbsp; San Francisco Bay Area, CA</div>
+          <div><span style="color:#8a897d">Instagram</span> &nbsp; @katywangstudio</div>
+        </div>
+      </div>
+      <div style="background:#F5F4EC;padding:36px;border-radius:4px">
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div><div style="font-size:13.5px;font-weight:600;margin-bottom:7px;color:#44443c">Name</div><div style="background:#fff;border:1px solid #DDDACB;border-radius:3px;padding:13px 14px;font-size:14.5px;color:#9a9889">Your name</div></div>
+          <div><div style="font-size:13.5px;font-weight:600;margin-bottom:7px;color:#44443c">Email</div><div style="background:#fff;border:1px solid #DDDACB;border-radius:3px;padding:13px 14px;font-size:14.5px;color:#9a9889">you@email.com</div></div>
+          <div><div style="font-size:13.5px;font-weight:600;margin-bottom:7px;color:#44443c">Message</div><div style="background:#fff;border:1px solid #DDDACB;border-radius:3px;padding:13px 14px;font-size:14.5px;color:#9a9889;min-height:120px">Tell me more…</div></div>
+          <div style="background:#4A5D3E;color:#F4F2E9;padding:15px 0;text-align:center;font-size:15px;font-weight:600;border-radius:3px">Send message</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:26px 56px;border-top:1px solid #EDEBE3;font-size:13px;color:#8a897d">
+      <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;gap:24px"><span>Exhibitions &amp; Projects</span><span>Instagram</span><span>katywangwebsite@gmail.com</span></div>
+      <div>© 2026 Katy Wang</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 2g MOBILE GALLERY ============ -->
+<div class="dv-opt" id="2g">
+<div class="dv-olabel"><a class="dv-oid" href="#2g">2g</a>Mobile Gallery (390px)</div>
+<div class="dv-card" style="width:390px" data-screen-label="2g Mobile Gallery">
+  <div style="background:#FFFFFF;color:#26261F;font-family:'Source Sans 3',sans-serif">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #EDEBE3">
+      <div style="font-family:'Playfair Display',serif;font-size:21px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;flex-direction:column;gap:5px;padding:6px"><span style="display:block;width:22px;height:1.5px;background:#26261F"></span><span style="display:block;width:22px;height:1.5px;background:#26261F"></span></div>
+    </div>
+    <div style="padding:28px 20px 8px">
+      <div style="font-family:'Playfair Display',serif;font-size:30px;font-weight:500;margin-bottom:20px">Gallery</div>
+    </div>
+    <div style="padding:0 20px 32px">
+      <div style="columns:2;column-gap:12px">
+        <div style="break-inside:avoid;margin-bottom:16px"><img src="images/Wang_Phellinus_robiniae_thumb.jpg" alt="Watercolor of cracked cap polypore" style="width:100%;display:block"><div style="font-size:12px;font-style:italic;color:#6b6a5f;text-align:center;padding-top:6px">Phellinus robiniae</div></div>
+        <div style="break-inside:avoid;margin-bottom:16px"><img src="images/Wang_PitcherPlant_thumb.png" alt="Watercolor of a pitcher plant" style="width:100%;display:block"><div style="font-size:12px;font-style:italic;color:#6b6a5f;text-align:center;padding-top:6px">Sarracenia leucophylla</div></div>
+        <div style="break-inside:avoid;margin-bottom:16px"><img src="images/Wang_Laetiporus_cincinnatus_thumb.jpg" alt="Watercolor of chicken of the woods" style="width:100%;display:block"><div style="font-size:12px;font-style:italic;color:#6b6a5f;text-align:center;padding-top:6px">Laetiporus cincinnatus</div></div>
+        <div style="break-inside:avoid;margin-bottom:16px"><img src="images/Wang_YuanYuan3_thumb.png" alt="Watercolor of an iris" style="width:100%;display:block"><div style="font-size:12px;font-style:italic;color:#6b6a5f;text-align:center;padding-top:6px">Iris versicolor</div></div>
+        <div style="break-inside:avoid;margin-bottom:16px"><img src="images/Wang_Porcini_thumb.jpg" alt="Watercolor of porcini mushrooms" style="width:100%;display:block"><div style="font-size:12px;font-style:italic;color:#6b6a5f;text-align:center;padding-top:6px">Porcini</div></div>
+        <div style="break-inside:avoid;margin-bottom:16px"><img src="images/birdnest_thumb.png" alt="Watercolor of bird's nest fungi" style="width:100%;display:block"><div style="font-size:12px;font-style:italic;color:#6b6a5f;text-align:center;padding-top:6px">Nidulariaceae sp.</div></div>
+      </div>
+    </div>
+    <div style="text-align:center;padding:20px;border-top:1px solid #EDEBE3;font-size:12.5px;color:#8a897d">© 2026 Katy Wang</div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 2h MOBILE CLASSES ============ -->
+<div class="dv-opt" id="2h">
+<div class="dv-olabel"><a class="dv-oid" href="#2h">2h</a>Mobile Classes (390px) — thumb-reachable register buttons</div>
+<div class="dv-card" style="width:390px" data-screen-label="2h Mobile Classes">
+  <div style="background:#FFFFFF;color:#26261F;font-family:'Source Sans 3',sans-serif">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #EDEBE3">
+      <div style="font-family:'Playfair Display',serif;font-size:21px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;flex-direction:column;gap:5px;padding:6px"><span style="display:block;width:22px;height:1.5px;background:#26261F"></span><span style="display:block;width:22px;height:1.5px;background:#26261F"></span></div>
+    </div>
+    <div style="padding:28px 20px 4px">
+      <div style="font-family:'Playfair Display',serif;font-size:30px;font-weight:500;margin-bottom:8px">Classes &amp; Workshops</div>
+      <div style="font-size:14.5px;line-height:1.6;color:#5f5e53;margin-bottom:18px">In-person classes across the Bay Area. Registration opens on the venue's site in a new tab.</div>
+      <div style="display:flex;gap:8px;margin-bottom:8px">
+        <div style="background:#4A5D3E;color:#F4F2E9;padding:9px 16px;font-size:13px;font-weight:600;border-radius:99px;white-space:nowrap">All venues</div>
+        <div style="border:1px solid #DDDACB;color:#5f5e53;padding:9px 16px;font-size:13px;border-radius:99px;white-space:nowrap">CSMA</div>
+        <div style="border:1px solid #DDDACB;color:#5f5e53;padding:9px 16px;font-size:13px;border-radius:99px;white-space:nowrap">Pacific Art League</div>
+      </div>
+    </div>
+    <div style="padding:0 20px 32px">
+      <div style="border-top:1px solid #EDEBE3;padding:18px 0">
+        <div style="display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:4px 10px;border-radius:3px;border:1px solid #A7B18C;color:#55603F;background:#F3F5EC;margin-bottom:8px">4-Week Series</div>
+        <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:500;margin-bottom:5px">Mini Session: Watercolor Painting</div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;color:#5f5e53;margin-bottom:4px"><span style="display:inline-block;width:8px;height:8px;border-radius:99px;background:#4A5D3E;flex:none"></span>CSMA · Mountain View</div>
+        <div style="font-size:13.5px;color:#5f5e53;margin-bottom:14px">Wednesdays, Jul 8 – 29 · 6:30 – 8:30 PM</div>
+        <div style="background:#4A5D3E;color:#F4F2E9;padding:14px 0;font-size:14.5px;font-weight:600;text-align:center;border-radius:3px">Register at CSMA ↗</div>
+      </div>
+      <div style="border-top:1px solid #EDEBE3;padding:18px 0">
+        <div style="display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:4px 10px;border-radius:3px;background:#A8683C;color:#FBF6EE;margin-bottom:8px">One-Day Workshop</div>
+        <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:500;margin-bottom:5px">Watercolor Mushrooms Workshop</div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;color:#5f5e53;margin-bottom:4px"><span style="display:inline-block;width:8px;height:8px;border-radius:99px;background:#9C6B48;flex:none"></span>Pacific Art League · Palo Alto</div>
+        <div style="font-size:13.5px;color:#5f5e53;margin-bottom:14px">Saturday, Sep 12 · 1:00 – 4:00 PM</div>
+        <div style="background:#4A5D3E;color:#F4F2E9;padding:14px 0;font-size:14.5px;font-weight:600;text-align:center;border-radius:3px">Register at Pacific Art League ↗</div>
+      </div>
+      <div style="border-top:1px solid #EDEBE3;padding:18px 0">
+        <div style="display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:4px 10px;border-radius:3px;border:1px solid #A7B18C;color:#55603F;background:#F3F5EC;margin-bottom:8px">6-Week Series</div>
+        <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:500;margin-bottom:5px">Botanical Drawing</div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;color:#5f5e53;margin-bottom:4px"><span style="display:inline-block;width:8px;height:8px;border-radius:99px;background:#4A5D3E;flex:none"></span>CSMA · Mountain View</div>
+        <div style="font-size:13.5px;color:#5f5e53;margin-bottom:14px">Sundays, Sep 6 – Oct 11 · 2:00 – 4:00 PM</div>
+        <div style="background:#4A5D3E;color:#F4F2E9;padding:14px 0;font-size:14.5px;font-weight:600;text-align:center;border-radius:3px">Register at CSMA ↗</div>
+      </div>
+    </div>
+    <div style="text-align:center;padding:20px;border-top:1px solid #EDEBE3;font-size:12.5px;color:#8a897d">© 2026 Katy Wang</div>
+  </div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "make the gallery captions smaller" · "show mobile versions of the other pages"</p>
+</section>
+
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Homepage — three directions (desktop) + mobile of 1a</span></div>
+<div class="dv-opts">
+
+<!-- ============ 1a GALLERY CREAM ============ -->
+<div class="dv-opt" id="1a">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Gallery Cream — brief-exact: cream base, olive accent, Cormorant + Source Sans</div>
+<div class="dv-card" style="width:1200px" data-screen-label="1a Home Gallery Cream">
+  <div style="background:#FAF8F3;color:#2B2B2B;font-family:'Source Sans 3',sans-serif">
+    <!-- nav -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:26px 56px;border-bottom:1px solid #E8E3D8">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:600;letter-spacing:.02em">Katy Wang</div>
+      <div style="display:flex;gap:36px;font-size:14.5px;color:#4b4b45">
+        <span>Gallery</span><span>Classes</span><span>About</span><span>Contact</span>
+      </div>
+    </div>
+    <!-- hero: text beside image, no scrim needed -->
+    <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:0;align-items:stretch">
+      <div style="display:flex;flex-direction:column;justify-content:center;padding:80px 64px">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:58px;line-height:1.08;font-weight:500;margin-bottom:22px">Botanical &amp; mushroom watercolors</div>
+        <div style="font-size:17px;line-height:1.65;color:#5a594f;max-width:400px;margin-bottom:36px">Detailed watercolor studies of fungi, carnivorous plants and botanical specimens. Classes taught in person across the San Francisco Bay Area.</div>
+        <div style="display:flex;gap:14px">
+          <div style="background:#66703F;color:#FAF8F3;padding:14px 28px;font-size:15px;font-weight:600;letter-spacing:.01em">See upcoming classes</div>
+          <div style="border:1px solid #B9B29E;color:#2B2B2B;padding:14px 28px;font-size:15px;font-weight:600">View the gallery</div>
+        </div>
+      </div>
+      <div style="position:relative;min-height:560px">
+        <img src="images/Wang_Phellinus_robiniae.jpg" alt="Watercolor painting of cracked cap polypore mushrooms growing on a fallen tree" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      </div>
+    </div>
+    <!-- three task blocks -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid #E8E3D8;border-bottom:1px solid #E8E3D8">
+      <div style="padding:36px 40px;border-right:1px solid #E8E3D8">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;margin-bottom:8px">Take a class</div>
+        <div style="font-size:14.5px;line-height:1.6;color:#5a594f;margin-bottom:14px">In-person watercolor and botanical drawing classes for adults, beginner-friendly.</div>
+        <div style="font-size:14px;font-weight:600;color:#66703F">Upcoming dates →</div>
+      </div>
+      <div style="padding:36px 40px;border-right:1px solid #E8E3D8">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;margin-bottom:8px">View the work</div>
+        <div style="font-size:14.5px;line-height:1.6;color:#5a594f;margin-bottom:14px">Watercolors of fungi, botanicals and carnivorous plants — exhibited at NYBG and Wave Hill.</div>
+        <div style="font-size:14px;font-weight:600;color:#66703F">Browse the gallery →</div>
+      </div>
+      <div style="padding:36px 40px">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;margin-bottom:8px">Commissions &amp; workshops</div>
+        <div style="font-size:14.5px;line-height:1.6;color:#5a594f;margin-bottom:14px">Private commissions and corporate botanical-art workshops.</div>
+        <div style="font-size:14px;font-weight:600;color:#66703F">Start a conversation →</div>
+      </div>
+    </div>
+    <!-- gallery slice -->
+    <div style="padding:64px 56px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:28px">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500">Selected work</div>
+        <div style="font-size:14px;font-weight:600;color:#66703F">All work →</div>
+      </div>
+      <div style="columns:3;column-gap:20px">
+        <div style="break-inside:avoid;margin-bottom:20px"><img src="images/Wang_Phellinus_robiniae_thumb.jpg" alt="Watercolor of cracked cap polypore fungi on a log" style="width:100%;display:block"><div style="font-size:13px;color:#5a594f;padding:8px 0 0"><span style="font-style:italic">Phellinus robiniae</span> · Watercolor, 2023</div></div>
+        <div style="break-inside:avoid;margin-bottom:20px"><img src="images/Wang_PitcherPlant_thumb.png" alt="Watercolor portrait of a white-topped pitcher plant" style="width:100%;display:block"><div style="font-size:13px;color:#5a594f;padding:8px 0 0"><span style="font-style:italic">Sarracenia leucophylla</span> · Watercolor, 2019</div></div>
+        <div style="break-inside:avoid;margin-bottom:20px"><img src="images/Wang_Laetiporus_cincinnatus_thumb.jpg" alt="Watercolor of chicken of the woods mushroom" style="width:100%;display:block"><div style="font-size:13px;color:#5a594f;padding:8px 0 0"><span style="font-style:italic">Laetiporus cincinnatus</span> · Watercolor, 2022</div></div>
+        <div style="break-inside:avoid;margin-bottom:20px"><img src="images/Wang_YuanYuan3_thumb.png" alt="Watercolor of a blue flag iris, The Story of an Iris" style="width:100%;display:block"><div style="font-size:13px;color:#5a594f;padding:8px 0 0"><span style="font-style:italic">Iris versicolor</span> · Watercolor, 2019</div></div>
+        <div style="break-inside:avoid;margin-bottom:20px"><img src="images/Wang_Porcini_thumb.jpg" alt="Watercolor of porcini mushrooms" style="width:100%;display:block"><div style="font-size:13px;color:#5a594f;padding:8px 0 0"><span style="font-style:italic">Porcini</span> · Watercolor, 2024</div></div>
+        <div style="break-inside:avoid;margin-bottom:20px"><img src="images/Wang_Monterey_Pine_thumb.png" alt="Watercolor of Monterey pine cones" style="width:100%;display:block"><div style="font-size:13px;color:#5a594f;padding:8px 0 0"><span style="font-style:italic">Pinus radiata</span> · Watercolor, 2019</div></div>
+      </div>
+    </div>
+    <!-- classes teaser -->
+    <div style="padding:0 56px 72px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:22px">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500">Upcoming classes</div>
+        <div style="font-size:14px;font-weight:600;color:#66703F">All classes →</div>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <div style="display:grid;grid-template-columns:170px 1fr 220px 160px;gap:24px;align-items:center;padding:20px 0;border-top:1px solid #E8E3D8">
+          <div style="font-size:14px;color:#5a594f">Wed · Jul 8 – 29</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600">Mini Session: Watercolor Painting</div>
+          <div style="font-size:14px;color:#5a594f">CSMA · Mountain View</div>
+          <div style="font-size:14px;font-weight:600;color:#66703F;text-align:right">Register at CSMA ↗</div>
+        </div>
+        <div style="display:grid;grid-template-columns:170px 1fr 220px 160px;gap:24px;align-items:center;padding:20px 0;border-top:1px solid #E8E3D8">
+          <div style="font-size:14px;color:#5a594f">Sat · Sep 12</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600">Watercolor Mushrooms Workshop</div>
+          <div style="font-size:14px;color:#5a594f">Pacific Art League · Palo Alto</div>
+          <div style="font-size:14px;font-weight:600;color:#66703F;text-align:right">Register at Pacific Art League ↗</div>
+        </div>
+        <div style="display:grid;grid-template-columns:170px 1fr 220px 160px;gap:24px;align-items:center;padding:20px 0;border-top:1px solid #E8E3D8;border-bottom:1px solid #E8E3D8">
+          <div style="font-size:14px;color:#5a594f">Sun · Sep 6 – Oct 11</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600">Botanical Drawing</div>
+          <div style="font-size:14px;color:#5a594f">CSMA · Mountain View</div>
+          <div style="font-size:14px;font-weight:600;color:#66703F;text-align:right">Register at CSMA ↗</div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:28px 56px;border-top:1px solid #E8E3D8;font-size:13px;color:#8a877b">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#2B2B2B">Katy Wang</div>
+      <div style="display:flex;gap:24px"><span>Exhibitions &amp; Projects</span><span>Instagram</span><span>katywangwebsite@gmail.com</span></div>
+      <div>© 2026 Katy Wang</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 1b FOREST REFINED ============ -->
+<div class="dv-opt" id="1b">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Forest Refined — keeps current forest-green identity; Playfair; full-bleed hero with scrim</div>
+<div class="dv-card" style="width:1200px" data-screen-label="1b Home Forest Refined">
+  <div style="background:#FFFFFF;color:#26261F;font-family:'Source Sans 3',sans-serif">
+    <!-- nav -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:22px 56px">
+      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;gap:34px;font-size:14px;font-weight:500;color:#44443c">
+        <span>Gallery</span><span>Classes</span><span>About</span><span>Contact</span>
+      </div>
+    </div>
+    <!-- full-bleed hero with bottom scrim -->
+    <div style="position:relative;height:600px">
+      <img src="images/Wang_Phellinus_robiniae.jpg" alt="Watercolor painting of cracked cap polypore mushrooms on a fallen tree" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,16,0) 40%,rgba(20,24,16,.62) 100%)"></div>
+      <div style="position:absolute;left:56px;right:56px;bottom:48px;color:#FDFCF8">
+        <div style="font-family:'Playfair Display',serif;font-size:54px;font-weight:500;line-height:1.1;margin-bottom:12px">Katy Wang</div>
+        <div style="font-size:18px;letter-spacing:.01em;opacity:.92;margin-bottom:28px">Botanical &amp; mushroom watercolors · Classes in the Bay Area</div>
+        <div style="display:flex;gap:14px">
+          <div style="background:#FDFCF8;color:#33402A;padding:13px 26px;font-size:15px;font-weight:600;border-radius:3px">Take a class</div>
+          <div style="border:1.5px solid rgba(253,252,248,.75);padding:13px 26px;font-size:15px;font-weight:600;border-radius:3px">View the work</div>
+                  </div>
+      </div>
+    </div>
+    <!-- gallery slice: uniform rows -->
+    <div style="padding:64px 56px 56px">
+      <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:26px">
+        <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:500">Selected work</div>
+        <div style="flex:1;height:1px;background:#E6E4DC"></div>
+        <div style="font-size:14px;font-weight:600;color:#4A5D3E">All work →</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+        <div><div style="aspect-ratio:1/1;overflow:hidden"><img src="images/Wang_Laetiporus_cincinnatus_thumb.jpg" alt="Watercolor of chicken of the woods mushroom" style="width:100%;height:100%;object-fit:cover;display:block"></div><div style="font-size:14px;color:#6b6a5f;padding:10px 0 0;font-style:italic;text-align:center">Laetiporus cincinnatus, 2022</div></div>
+        <div><div style="aspect-ratio:1/1;overflow:hidden"><img src="images/Wang_PitcherPlant_thumb.png" alt="Watercolor portrait of a white-topped pitcher plant" style="width:100%;height:100%;object-fit:cover;display:block"></div><div style="font-size:14px;color:#6b6a5f;padding:10px 0 0;font-style:italic;text-align:center">Sarracenia leucophylla, 2019</div></div>
+        <div><div style="aspect-ratio:1/1;overflow:hidden"><img src="images/Wang_Porcini_thumb.jpg" alt="Watercolor of porcini mushrooms" style="width:100%;height:100%;object-fit:cover;display:block"></div><div style="font-size:14px;color:#6b6a5f;padding:10px 0 0;font-style:italic;text-align:center">Porcini, 2024</div></div>
+      </div>
+    </div>
+    <!-- classes band on green -->
+    <div style="background:#4A5D3E;color:#F4F2E9;padding:56px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:26px">
+        <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:500">Upcoming classes</div>
+        <div style="font-size:14px;font-weight:600;color:#CBD6B8">All classes →</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px">
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:26px 28px;border-radius:4px">
+          <div style="font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:#CBD6B8;margin-bottom:10px">CSMA · Mountain View</div>
+          <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:500;margin-bottom:10px">Mini Session: Watercolor Painting</div>
+          <div style="font-size:14.5px;color:#DDDACB;margin-bottom:18px">Wednesdays, Jul 8 – 29 · 6:30 – 8:30 PM</div>
+          <div style="font-size:14px;font-weight:600;color:#F4F2E9;border-bottom:1px solid rgba(255,255,255,.4);display:inline-block;padding-bottom:2px">Register at CSMA ↗</div>
+        </div>
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:26px 28px;border-radius:4px">
+          <div style="font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:#CBD6B8;margin-bottom:10px">Pacific Art League · Palo Alto</div>
+          <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:500;margin-bottom:10px">Watercolor Mushrooms Workshop</div>
+          <div style="font-size:14.5px;color:#DDDACB;margin-bottom:18px">Saturday, Sep 12 · 1:00 – 4:00 PM</div>
+          <div style="font-size:14px;font-weight:600;color:#F4F2E9;border-bottom:1px solid rgba(255,255,255,.4);display:inline-block;padding-bottom:2px">Register at Pacific Art League ↗</div>
+        </div>
+        <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:26px 28px;border-radius:4px">
+          <div style="font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:#CBD6B8;margin-bottom:10px">CSMA · Mountain View</div>
+          <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:500;margin-bottom:10px">Botanical Drawing</div>
+          <div style="font-size:14.5px;color:#DDDACB;margin-bottom:18px">Sundays, Sep 6 – Oct 11 · 2:00 – 4:00 PM</div>
+          <div style="font-size:14px;font-weight:600;color:#F4F2E9;border-bottom:1px solid rgba(255,255,255,.4);display:inline-block;padding-bottom:2px">Register at CSMA ↗</div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:26px 56px;font-size:13px;color:#8a897d">
+      <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:#4A5D3E">Katy Wang</div>
+      <div style="display:flex;gap:24px"><span>Exhibitions &amp; Projects</span><span>Instagram</span><span>katywangwebsite@gmail.com</span></div>
+      <div>© 2026 Katy Wang</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 1c TERRACOTTA EDITORIAL ============ -->
+<div class="dv-opt" id="1c">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Terracotta Editorial — all-serif EB Garamond, centered wordmark, hairline rhythm, mushroom-toned accent</div>
+<div class="dv-card" style="width:1200px" data-screen-label="1c Home Terracotta Editorial">
+  <div style="background:#FBF8F2;color:#2E2A24;font-family:'EB Garamond',serif">
+    <!-- centered masthead -->
+    <div style="text-align:center;padding:40px 56px 26px;border-bottom:1px solid #EAE3D5">
+      <div style="font-size:38px;font-weight:500;letter-spacing:.04em;margin-bottom:6px">KATY WANG</div>
+      <div style="font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:#9c6b48">Botanical Watercolors · Bay Area Classes</div>
+    </div>
+    <div style="display:flex;justify-content:center;gap:42px;padding:16px 0;border-bottom:1px solid #EAE3D5;font-size:15px;letter-spacing:.06em">
+      <span>Gallery</span><span>Classes</span><span>About</span><span>Contact</span>
+    </div>
+    <!-- hero: framed centered image -->
+    <div style="padding:64px 120px 48px;text-align:center">
+      <img src="images/Wang_Phellinus_robiniae.jpg" alt="Watercolor painting of cracked cap polypore mushrooms on a fallen tree" style="width:72%;display:block;margin:0 auto;box-shadow:0 24px 60px -30px rgba(60,40,20,.35)">
+      <div style="font-style:italic;font-size:16px;color:#7c7566;margin-top:18px">Cracked Cap Polypore Displaying Gravitropism — Phellinus robiniae, watercolor, 2023 · New York Botanical Garden Triennial</div>
+    </div>
+    <!-- three routes as text index -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin:0 120px 64px;border-top:1px solid #2E2A24">
+      <div style="padding:26px 24px 0 0;border-right:1px solid #EAE3D5">
+        <div style="font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#9c6b48;margin-bottom:10px">01 — Learn</div>
+        <div style="font-size:24px;font-weight:500;margin-bottom:8px">Take a class</div>
+        <div style="font-size:15.5px;line-height:1.6;color:#6d675b">Watercolor &amp; botanical drawing for adults, in person on the Peninsula.</div>
+      </div>
+      <div style="padding:26px 24px 0 28px;border-right:1px solid #EAE3D5">
+        <div style="font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#9c6b48;margin-bottom:10px">02 — Collect</div>
+        <div style="font-size:24px;font-weight:500;margin-bottom:8px">View the work</div>
+        <div style="font-size:15.5px;line-height:1.6;color:#6d675b">Fungi, carnivorous plants and botanical studies in watercolor.</div>
+      </div>
+      <div style="padding:26px 0 0 28px">
+        <div style="font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#9c6b48;margin-bottom:10px">03 — Commission</div>
+        <div style="font-size:24px;font-weight:500;margin-bottom:8px">Commissions &amp; workshops</div>
+        <div style="font-size:15.5px;line-height:1.6;color:#6d675b">Private botanical commissions and corporate team workshops.</div>
+      </div>
+    </div>
+    <!-- gallery slice: 3 wide -->
+    <div style="padding:0 120px 64px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid #2E2A24;padding-bottom:12px;margin-bottom:28px">
+        <div style="font-size:28px;font-weight:500">Selected Work</div>
+        <div style="font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#9c6b48">View all</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px">
+        <div><img src="images/Wang_Porcini_thumb.jpg" alt="Watercolor of porcini mushrooms" style="width:100%;display:block"><div style="font-size:14.5px;font-style:italic;color:#7c7566;margin-top:10px;text-align:center">Porcini, 2024</div></div>
+        <div><img src="images/Wang_Laetiporus_cincinnatus_thumb.jpg" alt="Watercolor of chicken of the woods mushroom" style="width:100%;display:block"><div style="font-size:14.5px;font-style:italic;color:#7c7566;margin-top:10px;text-align:center">Laetiporus cincinnatus, 2022</div></div>
+        <div><img src="images/Wang_PitcherPlant_thumb.png" alt="Watercolor portrait of a white-topped pitcher plant" style="width:100%;display:block"><div style="font-size:14.5px;font-style:italic;color:#7c7566;margin-top:10px;text-align:center">Sarracenia leucophylla, 2019</div></div>
+      </div>
+    </div>
+    <!-- classes as ledger rows -->
+    <div style="padding:0 120px 72px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid #2E2A24;padding-bottom:12px;margin-bottom:6px">
+        <div style="font-size:28px;font-weight:500">Upcoming Classes</div>
+        <div style="font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#9c6b48">All dates</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr auto;gap:12px 32px;align-items:baseline;padding:18px 0;border-bottom:1px solid #EAE3D5">
+        <div><span style="font-size:20px;font-weight:500">Mini Session: Watercolor Painting</span><span style="font-size:15px;color:#7c7566"> — CSMA Mountain View · Wednesdays, Jul 8 – 29</span></div>
+        <div style="font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#9c6b48;white-space:nowrap">Register ↗</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr auto;gap:12px 32px;align-items:baseline;padding:18px 0;border-bottom:1px solid #EAE3D5">
+        <div><span style="font-size:20px;font-weight:500">Watercolor Mushrooms Workshop</span><span style="font-size:15px;color:#7c7566"> — Pacific Art League · Saturday, Sep 12</span></div>
+        <div style="font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#9c6b48;white-space:nowrap">Register ↗</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr auto;gap:12px 32px;align-items:baseline;padding:18px 0;border-bottom:1px solid #EAE3D5">
+        <div><span style="font-size:20px;font-weight:500">Botanical Drawing</span><span style="font-size:15px;color:#7c7566"> — CSMA Mountain View · Sundays, Sep 6 – Oct 11</span></div>
+        <div style="font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#9c6b48;white-space:nowrap">Register ↗</div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div style="text-align:center;padding:30px 56px;border-top:1px solid #EAE3D5;font-size:14px;color:#8a8375">
+      Katy Wang Studio · San Francisco Bay Area · katywangwebsite@gmail.com · © 2026
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 1d MOBILE of 1a ============ -->
+<div class="dv-opt" id="1d">
+<div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>Mobile (390px) of <a class="dv-oid" href="#1a">1a</a></div>
+<div class="dv-card" style="width:390px" data-screen-label="1d Home Mobile">
+  <div style="background:#FAF8F3;color:#2B2B2B;font-family:'Source Sans 3',sans-serif">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #E8E3D8">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600">Katy Wang</div>
+      <div style="display:flex;flex-direction:column;gap:5px;padding:6px"><span style="display:block;width:22px;height:1.5px;background:#2B2B2B"></span><span style="display:block;width:22px;height:1.5px;background:#2B2B2B"></span></div>
+    </div>
+    <img src="images/Wang_Phellinus_robiniae.jpg" alt="Watercolor painting of cracked cap polypore mushrooms" style="width:100%;height:300px;object-fit:cover;display:block">
+    <div style="padding:32px 20px 8px">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.12;font-weight:500;margin-bottom:14px">Botanical &amp; mushroom watercolors</div>
+      <div style="font-size:15.5px;line-height:1.6;color:#5a594f;margin-bottom:24px">Detailed watercolor studies of fungi and botanicals. Classes taught in person across the Bay Area.</div>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px">
+        <div style="background:#66703F;color:#FAF8F3;padding:15px;font-size:15px;font-weight:600;text-align:center">See upcoming classes</div>
+        <div style="border:1px solid #B9B29E;padding:15px;font-size:15px;font-weight:600;text-align:center">View the gallery</div>
+              </div>
+    </div>
+    <div style="padding:0 20px 24px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:500">Selected work</div>
+        <div style="font-size:13.5px;font-weight:600;color:#66703F">All →</div>
+      </div>
+      <div style="columns:2;column-gap:12px">
+        <div style="break-inside:avoid;margin-bottom:12px"><img src="images/Wang_Porcini_thumb.jpg" alt="Watercolor of porcini mushrooms" style="width:100%;display:block"></div>
+        <div style="break-inside:avoid;margin-bottom:12px"><img src="images/Wang_PitcherPlant_thumb.png" alt="Watercolor of a pitcher plant" style="width:100%;display:block"></div>
+        <div style="break-inside:avoid;margin-bottom:12px"><img src="images/Wang_Laetiporus_cincinnatus_thumb.jpg" alt="Watercolor of chicken of the woods" style="width:100%;display:block"></div>
+        <div style="break-inside:avoid;margin-bottom:12px"><img src="images/Wang_YuanYuan3_thumb.png" alt="Watercolor of an iris" style="width:100%;display:block"></div>
+      </div>
+    </div>
+    <div style="padding:0 20px 36px">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:500;margin-bottom:12px">Upcoming classes</div>
+      <div style="border-top:1px solid #E8E3D8;padding:16px 0">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;margin-bottom:4px">Mini Session: Watercolor Painting</div>
+        <div style="font-size:13.5px;color:#5a594f;margin-bottom:10px">Wed · Jul 8 – 29 · CSMA Mountain View</div>
+        <div style="font-size:14px;font-weight:600;color:#66703F">Register at CSMA ↗</div>
+      </div>
+      <div style="border-top:1px solid #E8E3D8;padding:16px 0">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;margin-bottom:4px">Watercolor Mushrooms Workshop</div>
+        <div style="font-size:13.5px;color:#5a594f;margin-bottom:10px">Sat · Sep 12 · Pacific Art League</div>
+        <div style="font-size:14px;font-weight:600;color:#66703F">Register at Pacific Art League ↗</div>
+      </div>
+    </div>
+    <div style="text-align:center;padding:20px;border-top:1px solid #E8E3D8;font-size:12.5px;color:#8a877b">© 2026 Katy Wang · katywangwebsite@gmail.com</div>
+  </div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: "carry <a class="dv-oid" href="#1a">1a</a> through all pages" · "mix <a class="dv-oid" href="#1b">1b</a>'s hero with <a class="dv-oid" href="#1a">1a</a>'s palette" · "show the classes page in each direction"</p>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lightbox: null, galleryFilter: 'all', classLocation: 'all' }
+
+  data() {
+    const art = [
+      { thumb: 'images/Wang_Phellinus_robiniae_thumb.jpg', image: 'images/Wang_Phellinus_robiniae.jpg', title: 'Cracked Cap Polypore Displaying Gravitropism on Fallen Tree', binomial: 'Phellinus robiniae', medium: 'Watercolor on paper, 2023', size: '9 × 13½ in', status: 'In upcoming exhibition at New York Botanical Garden', col: 'fungi', alt: 'Watercolor of cracked cap polypore fungi on a fallen tree' },
+      { thumb: 'images/Wang_Laetiporus_cincinnatus_thumb.jpg', image: 'images/Wang_Laetiporus_cincinnatus.jpg', title: 'Chicken of the Woods', binomial: 'Laetiporus cincinnatus', medium: 'Watercolor on paper, 2022', size: '12 × 16 in', status: 'In upcoming exhibition at New York Botanical Garden', col: 'fungi', alt: 'Watercolor of a chicken of the woods mushroom' },
+      { thumb: 'images/Wang_Porcini_thumb.jpg', image: 'images/Wang_Porcini.jpg', title: 'Porcini', binomial: 'Porcini', medium: 'Watercolor on paper, 2024', size: '8 × 12 in', status: 'Currently not for sale', col: 'fungi', alt: 'Watercolor of porcini mushrooms' },
+      { thumb: 'images/birdnest_thumb.png', image: 'images/birdnest.png', title: "Bird's Nest Fungi on Woodchips", binomial: 'Nidulariaceae sp.', medium: 'Watercolor on paper, 2020', size: '6 × 6 in', status: 'Currently not for sale', col: 'fungi', alt: "Watercolor of bird's nest fungi on woodchips" },
+      { thumb: 'images/Wang_SuperHot2_thumb.png', image: 'images/Wang_SuperHot2.png', title: 'Super Hot 2', binomial: 'Capsicum chinense', medium: 'Color pencil on paper, 2020', size: '7.5 × 7.5 in', status: 'In Exhibition at Wave Hill', col: 'botanical', alt: 'Color pencil drawing of a chocolate champion super hot pepper' },
+      { thumb: 'images/Wang_SuperHot1_thumb.png', image: 'images/Wang_SuperHot1.png', title: 'Super Hot 1', binomial: 'Capsicum chinense', medium: 'Color pencil on paper, 2020', size: '7 × 5 in', status: 'Available for Purchase', col: 'botanical', alt: 'Color pencil drawing of an apocalypse scorpion pepper' },
+      { thumb: 'images/Wang_PitcherPlant_thumb.png', image: 'images/Wang_PitcherPlant.png', title: 'Pitcher Plant Portrait', binomial: 'Sarracenia leucophylla', medium: 'Watercolor on paper, 2019', size: '10.5 × 8.5 in', status: 'Available for Purchase', col: 'botanical', alt: 'Watercolor portrait of a white-topped pitcher plant' },
+      { thumb: 'images/Wang_YuanYuan6_thumb.png', image: 'images/Wang_YuanYuan6.png', title: 'Pitcher Plant in Bloom', binomial: 'Sarracenia purpurea', medium: 'Watercolor on paper, 2019', size: '13 × 10 in', status: 'Available for Purchase', col: 'botanical', alt: 'Watercolor of a pitcher plant in bloom' },
+      { thumb: 'images/Wang_LeafMeditation_thumb.png', image: 'images/Wang_LeafMeditation.png', title: 'Leaf Meditation', binomial: 'Acer saccharum', medium: 'Graphite on paper, 2019', size: '9.5 × 7.5 in', status: 'Available for Purchase', col: 'botanical', alt: 'Graphite drawing of a sugar maple leaf' },
+      { thumb: 'images/Wang_OrnamentalGourd2_thumb.png', image: 'images/Wang_OrnamentalGourd2.png', title: 'Ornamental Gourd 2', binomial: 'Curcubita pepo', medium: 'Watercolor on paper, 2018', size: '7 × 5 in', status: 'Sold Out', col: 'botanical', alt: 'Watercolor of an ornamental gourd' },
+      { thumb: 'images/Wang_YuanYuan3_thumb.png', image: 'images/Wang_YuanYuan3.png', title: 'The Story of an Iris', binomial: 'Iris versicolor', medium: 'Watercolor on paper, 2019', size: '17 × 14 in', status: 'Available for Purchase', col: 'botanical', alt: 'Watercolor of a blue flag iris' },
+      { thumb: 'images/Wang_OrnamentalGourd1_thumb.png', image: 'images/Wang_OrnamentalGourd1.png', title: 'Ornamental Gourd 1', binomial: 'Curcubita pepo', medium: 'Watercolor on paper, 2018', size: '7 × 5 in', status: 'Available for Purchase', col: 'botanical', alt: 'Watercolor of an ornamental gourd' },
+      { thumb: 'images/Wang_Monterey_Pine_thumb.png', image: 'images/Wang_Monterey_Pine.png', title: 'Monterey Pine Cones', binomial: 'Pinus radiata', medium: 'Watercolor on paper, 2019', size: '11 × 11 in', status: 'Work in Progress', col: 'botanical', alt: 'Watercolor of Monterey pine cones' },
+    ]
+    const classes = [
+      { title: 'Mini Session: Watercolor Painting', location: 'CSMA · Mountain View', dates: 'Wed, Jul 8 – 29', time: '6:30 – 8:30 PM', badge: '4-Week Series', type: 'series', platform: 'CSMA', venue: 'csma', link: 'https://arts4all.asapconnected.com/#CourseID=310945' },
+      { title: 'Mini Session: Intro to Linocut Printmaking', location: 'CSMA · Mountain View', dates: 'Thu, Jul 9 – 30', time: '6:30 – 8:30 PM', badge: '4-Week Series', type: 'series', platform: 'CSMA', venue: 'csma', link: 'https://arts4all.asapconnected.com/#EventID=2990978' },
+      { title: 'Watercolor Painting', location: 'CSMA · Belmont', dates: 'Tue, Aug 25 – Oct 13', time: '7:00 – 8:45 PM', badge: '8-Week Series', type: 'series', platform: 'CSMA', venue: 'csma', link: 'https://arts4all.asapconnected.com/#CourseID=295223' },
+      { title: 'Beginning Watercolor', location: 'Intel Corporation', dates: 'Tue, Sep 1 – Oct 13', time: '4:00 – 6:00 PM', badge: '7-Week Series · Corporate', type: 'corp', platform: 'Arts4All', venue: 'other', link: 'https://arts4all.org/community/corporate-arts-program/' },
+      { title: 'Botanical Drawing', location: 'CSMA · Mountain View', dates: 'Sun, Sep 6 – Oct 11', time: '2:00 – 4:00 PM', badge: '6-Week Series', type: 'series', platform: 'CSMA', venue: 'csma', link: 'https://arts4all.asapconnected.com/#CourseID=315625' },
+      { title: 'Botanical Drawing Class Series (6 Sessions)', location: 'Pacific Art League · Palo Alto', dates: 'Thu, Sep 10 – Oct 15', time: '2:00 – 4:00 PM', badge: '6-Week Series', type: 'series', platform: 'Pacific Art League', venue: 'pal', link: 'https://www.pacificartleague.org/class/?eventtemplate=1532-09-10-botanical-drawing' },
+      { title: 'Watercolor Mushrooms Workshop', location: 'Pacific Art League · Palo Alto', dates: 'Sat, Sep 12', time: '1:00 – 4:00 PM', badge: 'One-Day Workshop', type: 'day', platform: 'Pacific Art League', venue: 'pal', link: 'https://www.pacificartleague.org/class/?eventtemplate=1529-09-12-watercolor-mushrooms-workshop' },
+      { title: 'Botanical Painting Class Series (6 Sessions)', location: 'Pacific Art League · Palo Alto', dates: 'Thu, Oct 15 – Dec 3', time: '2:00 – 4:00 PM', badge: '6-Week Series', type: 'series', platform: 'Pacific Art League', venue: 'pal', link: 'https://www.pacificartleague.org/class/?eventtemplate=1533-10-22-botanical-painting-in-watercolor' },
+      { title: 'Botanical Painting', location: 'CSMA · Mountain View', dates: 'Sun, Oct 18 – Nov 22', time: '2:00 – 4:00 PM', badge: '6-Week Series', type: 'series', platform: 'CSMA', venue: 'csma', link: 'https://arts4all.asapconnected.com/#CourseID=327786' },
+    ]
+    return { art, classes }
+  }
+
+  pill(active) {
+    return active
+      ? { background: '#4A5D3E', color: '#F4F2E9', padding: '9px 18px', fontSize: '13.5px', fontWeight: 600, borderRadius: '99px', cursor: 'pointer', whiteSpace: 'nowrap' }
+      : { border: '1px solid #DDDACB', color: '#5f5e53', padding: '8px 17px', fontSize: '13.5px', borderRadius: '99px', cursor: 'pointer', whiteSpace: 'nowrap' }
+  }
+
+  renderVals() {
+    const { art, classes } = this.data()
+    const gf = this.state.galleryFilter
+    const filteredArt = art.filter((a) => gf === 'all' || a.col === gf)
+    const artworks = filteredArt.map((a, i) => ({
+      thumbStyle: {
+        width: '100%',
+        aspectRatio: '1 / 1',
+        backgroundImage: "url('" + a.thumb + "')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      },
+      alt: a.alt,
+      caption: a.binomial + ', ' + a.medium.slice(-4),
+      open: () => this.setState({ lightbox: i }),
+    }))
+    const lb = this.state.lightbox
+    const cur = lb === null ? null : filteredArt[lb]
+    const n = filteredArt.length
+
+    const badgeBase = { display: 'inline-block', fontSize: '12px', fontWeight: 600, letterSpacing: '.07em', textTransform: 'uppercase', padding: '4px 10px', borderRadius: '3px' }
+    const badgeStyles = {
+      series: Object.assign({}, badgeBase, { border: '1px solid #A7B18C', color: '#55603F', background: '#F3F5EC' }),
+      day: Object.assign({}, badgeBase, { background: '#A8683C', color: '#FBF6EE' }),
+      corp: Object.assign({}, badgeBase, { border: '1px solid #C4C7CE', color: '#5B616E', background: '#F4F5F7' }),
+    }
+    const venueColors = { csma: '#4A5D3E', pal: '#9C6B48', other: '#6E7480' }
+    const dotBase = { display: 'inline-block', width: '9px', height: '9px', borderRadius: '99px', flex: 'none' }
+
+    const cl = this.state.classLocation
+    const filteredClasses = classes
+      .filter((c) => cl === 'all' || c.venue === cl)
+      .map((c) => Object.assign({}, c, {
+        badgeStyle: badgeStyles[c.type],
+        dotStyle: Object.assign({}, dotBase, { background: venueColors[c.venue] }),
+        registerLabel: 'Register at ' + c.platform + '\u00A0↗',
+      }))
+    const classFilters = [
+      { key: 'all', label: 'All venues' },
+      { key: 'csma', label: 'CSMA' },
+      { key: 'pal', label: 'Pacific Art League' },
+      { key: 'other', label: 'Corporate' },
+    ].map((f) => ({
+      label: f.label,
+      style: this.pill(cl === f.key),
+      onClick: () => this.setState({ classLocation: f.key }),
+    }))
+
+    return {
+      galleryReady: true,
+      artworks,
+      classes: filteredClasses,
+      classFilters,
+      lightboxOpen: cur !== null,
+      lightboxImgStyle: {
+        flex: 1,
+        alignSelf: 'stretch',
+        minWidth: 0,
+        backgroundImage: cur ? "url('" + cur.image + "')" : 'none',
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+      },
+      lightboxAlt: cur ? cur.alt : '',
+      lightboxTitle: cur ? cur.title : '',
+      lightboxBinomial: cur ? cur.binomial : '',
+      lightboxMeta: cur ? cur.medium + ' · ' + cur.size : '',
+      lightboxStatus: cur ? cur.status : '',
+      lightboxCount: cur ? lb + 1 + ' of ' + n : '',
+      closeLightbox: () => this.setState({ lightbox: null }),
+      lightboxPrev: () => this.setState({ lightbox: (lb - 1 + n) % n }),
+      lightboxNext: () => this.setState({ lightbox: (lb + 1) % n }),
+    }
+  }
+}
+</script>
+</body>
+</html>

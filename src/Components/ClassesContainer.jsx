@@ -1,112 +1,158 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import data from '../data.json'
+import {
+  sortByStartDate,
+  durationLabel,
+  durationTagClass,
+  venueDotClass,
+  registerLabel,
+} from '../classInfo'
+import usePageMeta from '../usePageMeta'
+
+//Parents: App
+
+const filters = [
+  { key: 'all', label: 'All venues' },
+  { key: 'csma', label: 'CSMA' },
+  { key: 'pal', label: 'Pacific Art League' },
+  { key: 'other', label: 'Corporate' },
+]
+
+const DurationTag = ({ classItem }) => (
+  <span
+    className={`inline-block text-xs font-semibold tracking-[.07em] uppercase px-2.5 py-1 rounded-[3px] ${durationTagClass[classItem.type]}`}
+  >
+    {durationLabel(classItem)}
+  </span>
+)
+
+const RegisterButton = ({ classItem, className = '' }) => (
+  <a
+    href={classItem.registrationLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`block bg-forest-green text-paper text-center text-[14.5px] font-semibold leading-[1.35] rounded-[3px] hover:bg-forest-hover transition-colors duration-200 ${className}`}
+  >
+    {registerLabel(classItem)}
+  </a>
+)
+
+const VenueDot = ({ venue }) => (
+  <span
+    className={`inline-block w-2 md:w-[9px] h-2 md:h-[9px] rounded-full flex-none ${venueDotClass[venue]}`}
+  ></span>
+)
 
 const ClassesContainer = () => {
-  const classes = data.classes || []
+  usePageMeta(
+    'Classes & Workshops — Katy Wang Studio',
+    'In-person watercolor and botanical drawing classes for adults across the Bay Area, at CSMA and Pacific Art League.',
+  )
+
+  const [venueFilter, setVenueFilter] = useState('all')
+
+  const classes = sortByStartDate(data.classes).filter(
+    (c) => venueFilter === 'all' || c.venue === venueFilter,
+  )
 
   return (
-    <div className="min-h-screen bg-cream py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
-            Classes & Workshops
-          </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Learn the art of botanical illustration through hands-on workshops
-            led by Katy Wang. All materials are provided.
-          </p>
-        </div>
+    <div className="w-full px-5 pt-7 pb-8 md:px-14 md:pt-[52px] md:pb-14 text-left">
+      <h1 className="font-serif text-[30px] md:text-[40px] font-medium mb-2 md:mb-2.5">
+        Classes &amp; Workshops
+      </h1>
+      <p className="hidden md:block text-[16.5px] leading-[1.6] text-body-gray max-w-[640px] mb-[30px]">
+        In-person watercolor and botanical drawing classes for adults across
+        the Bay Area. Registration is handled by each venue — the Register
+        button opens the venue&rsquo;s site in a new tab.
+      </p>
+      <p className="md:hidden text-[14.5px] leading-[1.6] text-body-gray mb-[18px]">
+        In-person classes across the Bay Area. Registration opens on the
+        venue&rsquo;s site in a new tab.
+      </p>
 
-        {/* Classes Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {classes.map((classItem) => (
-            <div
-              key={classItem.id}
-              className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
-            >
-              <div className="p-6">
-                {/* Level Badge */}
-                <div className="inline-block mb-4">
-                  <span
-                    className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                      classItem.level === 'Beginner'
-                        ? 'bg-sage-green text-white'
-                        : classItem.level === 'Intermediate'
-                          ? 'bg-earth-brown text-white'
-                          : 'bg-forest-green text-white'
-                    }`}
-                  >
-                    {classItem.level}
-                  </span>
-                </div>
-
-                {/* Title */}
-                <h2 className="text-2xl font-serif font-semibold text-gray-900 mb-3">
-                  {classItem.title}
-                </h2>
-
-                {/* Description */}
-                <p className="text-gray-700 mb-4 leading-relaxed">
-                  {classItem.description}
-                </p>
-
-                {/* Details */}
-                <div className="space-y-2 mb-6 text-sm text-gray-600">
-                  <div className="flex items-start">
-                    <span className="font-semibold mr-2">Schedule:</span>
-                    <span>{classItem.schedule}</span>
-                  </div>
-                  <div className="flex items-start">
-                    <span className="font-semibold mr-2">Duration:</span>
-                    <span>{classItem.duration}</span>
-                  </div>
-                  <div className="flex items-start">
-                    <span className="font-semibold mr-2">Price:</span>
-                    <span>{classItem.price}</span>
-                  </div>
-                </div>
-
-                {/* Registration Button */}
-                {classItem.registrationLink ? (
-                  <a
-                    href={classItem.registrationLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center px-6 py-3 bg-forest-green text-white font-medium rounded-md hover:bg-sage-green transition-colors duration-300"
-                  >
-                    Register Now
-                  </a>
-                ) : (
-                  <button
-                    disabled
-                    className="block w-full text-center px-6 py-3 bg-gray-300 text-gray-500 font-medium rounded-md cursor-not-allowed"
-                  >
-                    Registration Coming Soon
-                  </button>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Contact for Private Lessons */}
-        <div className="mt-16 bg-white rounded-lg shadow-md p-8 max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-serif font-semibold text-gray-900 mb-4">
-            Interested in Private Lessons?
-          </h2>
-          <p className="text-gray-700 mb-6">
-            One-on-one instruction is available for students seeking
-            personalized guidance in botanical illustration and watercolor
-            techniques.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block px-8 py-3 bg-forest-green text-white font-medium rounded-md hover:bg-sage-green transition-colors duration-300"
+      {/* Venue filter pills */}
+      <div className="flex flex-wrap gap-2 md:gap-2.5 mb-2">
+        {filters.map((f) => (
+          <button
+            key={f.key}
+            type="button"
+            onClick={() => setVenueFilter(f.key)}
+            className={`rounded-full text-[13px] md:text-[13.5px] whitespace-nowrap px-4 py-[9px] md:px-[18px] transition-colors duration-200 ${
+              venueFilter === f.key
+                ? 'bg-forest-green text-paper font-semibold'
+                : 'border border-[#DDDACB] text-body-gray hover:border-forest-green hover:text-forest-green'
+            }`}
           >
-            Contact for Details
-          </a>
+            {f.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Class rows */}
+      <div className="mt-4 md:mt-6">
+        {classes.map((c) => (
+          <div key={c.id} className="border-t border-hairline">
+            {/* Desktop row */}
+            <div className="hidden md:grid grid-cols-[200px_1fr_250px_190px] gap-6 items-center py-[22px]">
+              <div>
+                <div className="text-[14.5px] font-semibold text-ink">
+                  {c.dates}
+                </div>
+                <div className="text-[13.5px] text-[#8a897d]">{c.time}</div>
+              </div>
+              <div>
+                <h2 className="font-serif text-[22px] font-medium mb-1.5">
+                  {c.title}
+                </h2>
+                <DurationTag classItem={c} />
+              </div>
+              <div className="flex items-center gap-[9px] text-[14.5px] text-body-gray">
+                <VenueDot venue={c.venue} />
+                {c.location}
+              </div>
+              <RegisterButton classItem={c} className="px-2.5 py-3" />
+            </div>
+
+            {/* Mobile card */}
+            <div className="md:hidden py-[18px]">
+              <div className="mb-2">
+                <DurationTag classItem={c} />
+              </div>
+              <h2 className="font-serif text-xl font-medium mb-[5px]">
+                {c.title}
+              </h2>
+              <div className="flex items-center gap-2 text-[13.5px] text-body-gray mb-1">
+                <VenueDot venue={c.venue} />
+                {c.location}
+              </div>
+              <div className="text-[13.5px] text-body-gray mb-3.5">
+                {c.datesLong} · {c.time}
+              </div>
+              <RegisterButton classItem={c} className="w-full py-3.5" />
+            </div>
+          </div>
+        ))}
+        <div className="border-t border-hairline"></div>
+      </div>
+
+      {/* Private lessons */}
+      <div className="mt-8 md:mt-10 bg-panel rounded p-6 md:py-8 md:px-9 flex flex-col md:flex-row md:items-center justify-between gap-5 md:gap-8">
+        <div>
+          <h2 className="font-serif text-[23px] font-medium mb-1.5">
+            Private lessons
+          </h2>
+          <p className="text-[15px] text-body-gray">
+            One-on-one instruction in botanical illustration and watercolor
+            technique.
+          </p>
         </div>
+        <Link
+          to="/contact"
+          className="border-[1.5px] border-forest-green text-forest-green px-[26px] py-3 text-[14.5px] font-semibold rounded-[3px] whitespace-nowrap text-center hover:bg-forest-green hover:text-paper transition-colors duration-200"
+        >
+          Get in touch
+        </Link>
       </div>
     </div>
   )

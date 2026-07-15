@@ -1,12 +1,18 @@
-import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { Link, NavLink, useLocation } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 //Parents: App
 
+const navLinks = [
+  { to: '/gallery', label: 'Gallery' },
+  { to: '/classes', label: 'Classes' },
+  { to: '/about', label: 'About' },
+  { to: '/contact', label: 'Contact' },
+]
+
 const NavBar = (props) => {
-  const dispatch = useDispatch()
   const mobileNav = useSelector((state) => state.mobileNav)
-  const fullImage = useSelector((state) => state.fullImage)
+  const { pathname } = useLocation()
 
   const displayMobileNav = (e) => {
     props.toggleNav()
@@ -14,69 +20,54 @@ const NavBar = (props) => {
 
   return (
     <nav
-      className={`w-full sticky top-0 z-50 bg-white shadow-sm ${fullImage ? 'hidden' : 'flex'} items-center justify-between px-6 py-2 lg:px-12`}
+      className={`w-full bg-white flex items-center justify-between px-5 py-4 md:px-14 md:py-[22px] ${
+        pathname === '/' ? '' : 'border-b border-hairline'
+      }`}
     >
-      {/* Artist Name - Left Side, Large and Prominent */}
-      <Link to="/" className="flex-1 text-left flex items-center">
-        <h1 className="text-3xl sm:text-5xl font-serif font-bold text-forest-green hover:text-sage-green transition-colors duration-200 leading-none -mt-1">
-          Katy Wang
-        </h1>
+      <Link
+        to="/"
+        className="font-serif text-[21px] md:text-[26px] font-semibold text-forest-green leading-none"
+      >
+        Katy Wang
       </Link>
 
-      {/* Navigation Links - Right Side, Hidden on Mobile */}
-      <div className="hidden md:flex items-center gap-8 ml-8">
-        <Link
-          to="/gallery"
-          className="text-sm font-medium text-gray-700 hover:text-forest-green transition-colors duration-200"
-        >
-          Gallery
-        </Link>
-        <Link
-          to="/classes"
-          className="text-sm font-medium text-gray-700 hover:text-forest-green transition-colors duration-200"
-        >
-          Classes
-        </Link>
-        <Link
-          to="/about"
-          className="text-sm font-medium text-gray-700 hover:text-forest-green transition-colors duration-200"
-        >
-          About
-        </Link>
-        <Link
-          to="/exhibitions"
-          className="text-sm font-medium text-gray-700 hover:text-forest-green transition-colors duration-200"
-        >
-          Exhibitions
-        </Link>
-        <Link
-          to="/contact"
-          className="text-sm font-medium text-gray-700 hover:text-forest-green transition-colors duration-200"
-        >
-          Contact
-        </Link>
+      <div className="hidden md:flex items-center gap-[34px] text-sm font-medium text-[#44443c]">
+        {navLinks.map((link) => (
+          <NavLink
+            key={link.to}
+            to={link.to}
+            className={({ isActive }) =>
+              `pb-[3px] border-b-2 transition-colors duration-200 hover:text-forest-green ${
+                isActive
+                  ? 'text-forest-green border-forest-green'
+                  : 'border-transparent'
+              }`
+            }
+          >
+            {link.label}
+          </NavLink>
+        ))}
       </div>
 
-      {/* Mobile Menu Button */}
-      <div className="md:hidden cursor-pointer p-2" onClick={displayMobileNav}>
-        <div className="w-6 h-5 flex flex-col justify-between">
-          <span
-            className={`block h-0.5 bg-gray-900 transition-all duration-300 ${
-              mobileNav ? 'rotate-45 translate-y-2' : ''
-            }`}
-          ></span>
-          <span
-            className={`block h-0.5 bg-gray-900 transition-all duration-300 ${
-              mobileNav ? 'opacity-0' : 'opacity-100'
-            }`}
-          ></span>
-          <span
-            className={`block h-0.5 bg-gray-900 transition-all duration-300 ${
-              mobileNav ? '-rotate-45 -translate-y-2' : ''
-            }`}
-          ></span>
-        </div>
-      </div>
+      {/* Mobile menu button */}
+      <button
+        type="button"
+        aria-label={mobileNav ? 'Close menu' : 'Open menu'}
+        aria-expanded={mobileNav}
+        className="md:hidden cursor-pointer p-3 -m-1.5"
+        onClick={displayMobileNav}
+      >
+        <span
+          className={`block w-[22px] h-[1.5px] bg-ink transition-transform duration-300 ${
+            mobileNav ? 'rotate-45 translate-y-[3.25px]' : ''
+          }`}
+        ></span>
+        <span
+          className={`block w-[22px] h-[1.5px] bg-ink mt-[5px] transition-transform duration-300 ${
+            mobileNav ? '-rotate-45 -translate-y-[3.25px]' : ''
+          }`}
+        ></span>
+      </button>
     </nav>
   )
 }

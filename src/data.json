@@ -4,204 +4,366 @@
       "id": 0,
       "image": "./images/Wang_Phellinus_robiniae.jpg",
       "thumb": "./images/Wang_Phellinus_robiniae_thumb.jpg",
+      "thumbWidth": 524,
+      "thumbHeight": 524,
       "title": "Cracked Cap Polypore Displaying Gravitropism on Fallen Tree",
       "binomial": "Phellinus robiniae",
       "name": "",
       "medium": "Watercolor on paper, 2023",
+      "year": 2023,
       "size": "9 x 13-1/2 in",
-      "status": "In upcoming exhibition at New York Botanical Garden"
+      "status": "In upcoming exhibition at New York Botanical Garden",
+      "collection": "fungi",
+      "alt": "Watercolor of cracked cap polypore fungi on a fallen tree"
     },
     {
       "id": 1,
       "image": "./images/Wang_Laetiporus_cincinnatus.jpg",
       "thumb": "./images/Wang_Laetiporus_cincinnatus_thumb.jpg",
+      "thumbWidth": 610,
+      "thumbHeight": 610,
       "title": "Chicken of the Woods",
       "binomial": "Laetiporus cincinnatus",
       "name": "",
       "medium": "Watercolor on paper, 2022",
+      "year": 2022,
       "size": "12 x 16 in",
-      "status": "In upcoming exhibition at New York Botanical Garden"
+      "status": "In upcoming exhibition at New York Botanical Garden",
+      "collection": "fungi",
+      "alt": "Watercolor of a chicken of the woods mushroom"
     },
     {
       "id": 2,
       "image": "./images/Wang_Porcini.jpg",
       "thumb": "./images/Wang_Porcini_thumb.jpg",
+      "thumbWidth": 791,
+      "thumbHeight": 791,
       "title": "Porcini",
       "binomial": "Porcini",
       "name": "",
       "medium": "Watercolor on paper, 2024",
+      "year": 2024,
       "size": "8 x 12 in",
-      "status": "Currently not for sale"
+      "status": "Currently not for sale",
+      "collection": "fungi",
+      "alt": "Watercolor of porcini mushrooms"
     },
     {
       "id": 3,
       "image": "./images/birdnest.png",
       "thumb": "./images/birdnest_thumb.png",
+      "thumbWidth": 601,
+      "thumbHeight": 600,
       "title": "Bird’s Nest Fungi on Woodchips",
       "binomial": "Nidulariaceae sp.",
       "name": "",
       "medium": "Watercolor on paper, 2020",
+      "year": 2020,
       "size": "6 x 6 in",
-      "status": "Currently not for sale"
+      "status": "Currently not for sale",
+      "collection": "fungi",
+      "alt": "Watercolor of bird's nest fungi on woodchips"
     },
     {
       "id": 4,
       "image": "./images/Wang_SuperHot2.png",
       "thumb": "./images/Wang_SuperHot2_thumb.png",
+      "thumbWidth": 601,
+      "thumbHeight": 600,
       "title": "Super Hot 2",
       "binomial": "Capsicum chinense",
       "name": "Chocolate Champion",
       "medium": "Color pencil on paper, 2020",
+      "year": 2020,
       "size": "7.5 x 7.5 in",
-      "status": "In Exhibition at Wave Hill"
+      "status": "In Exhibition at Wave Hill",
+      "collection": "botanical",
+      "alt": "Color pencil drawing of a chocolate champion super hot pepper"
     },
     {
       "id": 5,
       "image": "./images/Wang_SuperHot1.png",
       "thumb": "./images/Wang_SuperHot1_thumb.png",
+      "thumbWidth": 600,
+      "thumbHeight": 600,
       "title": "Super Hot 1",
       "binomial": "Capsicum chinense",
       "name": "Apocalypse Scorpion",
       "medium": "Color pencil on paper, 2020",
+      "year": 2020,
       "size": "7 x 5 in",
-      "status": "Available for Purchase"
+      "status": "Available for Purchase",
+      "collection": "botanical",
+      "alt": "Color pencil drawing of an apocalypse scorpion pepper"
     },
     {
       "id": 6,
       "image": "./images/Wang_PitcherPlant.png",
       "thumb": "./images/Wang_PitcherPlant_thumb.png",
+      "thumbWidth": 600,
+      "thumbHeight": 600,
       "title": "Pitcher Plant Portrait",
       "binomial": "Sarracenia leucophylla",
       "name": "",
       "medium": "Watercolor on paper, 2019",
+      "year": 2019,
       "size": "10.5 x 8.5 in",
-      "status": "Available for Purchase"
+      "status": "Available for Purchase",
+      "collection": "botanical",
+      "alt": "Watercolor portrait of a white-topped pitcher plant"
     },
     {
       "id": 7,
       "image": "./images/Wang_YuanYuan6.png",
       "thumb": "./images/Wang_YuanYuan6_thumb.png",
+      "thumbWidth": 600,
+      "thumbHeight": 601,
       "title": "Pitcher Plant in Bloom",
       "binomial": "Sarracenia purpurea",
       "name": "",
       "medium": "Watercolor on paper, 2019",
+      "year": 2019,
       "size": "13 x 10 in",
-      "status": "Available for Purchase"
+      "status": "Available for Purchase",
+      "collection": "botanical",
+      "alt": "Watercolor of a pitcher plant in bloom"
     },
     {
       "id": 8,
       "image": "./images/Wang_LeafMeditation.png",
       "thumb": "./images/Wang_LeafMeditation_thumb.png",
+      "thumbWidth": 600,
+      "thumbHeight": 600,
       "title": "Leaf Meditation",
       "binomial": "Acer saccharum",
       "name": "",
       "medium": "Graphite on paper, 2019",
+      "year": 2019,
       "size": "9.5 x 7.5 in",
-      "status": "Available for Purchase"
+      "status": "Available for Purchase",
+      "collection": "botanical",
+      "alt": "Graphite drawing of a sugar maple leaf"
     },
     {
       "id": 9,
       "image": "./images/Wang_OrnamentalGourd2.png",
       "thumb": "./images/Wang_OrnamentalGourd2_thumb.png",
+      "thumbWidth": 600,
+      "thumbHeight": 600,
       "title": "Ornamental Gourd 2",
       "binomial": "Curcubita pepo",
       "name": "",
       "medium": "Watercolor on paper, 2018",
+      "year": 2018,
       "size": "7 x 5 in",
-      "status": "Sold Out"
+      "status": "Sold Out",
+      "collection": "botanical",
+      "alt": "Watercolor of an ornamental gourd"
     },
     {
       "id": 10,
       "image": "./images/Wang_YuanYuan3.png",
       "thumb": "./images/Wang_YuanYuan3_thumb.png",
+      "thumbWidth": 600,
+      "thumbHeight": 600,
       "title": "The Story of an Iris",
       "binomial": "Iris versicolor",
       "name": "",
       "medium": "Watercolor on paper, 2019",
+      "year": 2019,
       "size": "17 x 14 in",
-      "status": "Available for Purchase"
+      "status": "Available for Purchase",
+      "collection": "botanical",
+      "alt": "Watercolor of a blue flag iris"
     },
     {
       "id": 11,
       "image": "./images/Wang_OrnamentalGourd1.png",
       "thumb": "./images/Wang_OrnamentalGourd1_thumb.png",
+      "thumbWidth": 600,
+      "thumbHeight": 600,
       "title": "Ornamental Gourd 1",
       "binomial": "Curcubita pepo",
       "name": "",
       "medium": "Watercolor on paper, 2018",
+      "year": 2018,
       "size": "7 x 5 in",
-      "status": "Available for Purchase"
+      "status": "Available for Purchase",
+      "collection": "botanical",
+      "alt": "Watercolor of an ornamental gourd"
     },
     {
       "id": 12,
       "image": "./images/Wang_Monterey_Pine.png",
       "thumb": "./images/Wang_Monterey_Pine_thumb.png",
+      "thumbWidth": 600,
+      "thumbHeight": 600,
       "title": "Monterey Pine Cones",
       "binomial": "Pinus radiata",
       "name": "",
       "medium": "Watercolor on paper, 2019",
+      "year": 2019,
       "size": "11 x 11 in",
-      "status": "Work in Progress"
+      "status": "Work in Progress",
+      "collection": "botanical",
+      "alt": "Watercolor of Monterey pine cones"
     }
   ],
   "exhibitions": [
     {
+      "year": 2024,
       "name": "5th New York Botanical Garden Triennial",
-      "description": "May 18 – October 27, 2024, New York Botanical Garden, Bronx, NY",
-      "status": "Upcoming"
+      "venueDate": "May 18 – October 27, 2024 · New York Botanical Garden, Bronx, NY"
     },
     {
-      "name": "23rd Annual International Exhibition by American Society of Botanical Artists and Wave Hill",
-      "description": "September 5 – December 6, 2020, Wave Hill, Bronx, NY",
-      "status": "Over"
+      "year": 2021,
+      "name": "The Horticultural Society of New York — Solo Online Exhibition",
+      "venueDate": "Spring 2021 · New York, NY"
     },
     {
-      "name": "The Horticultural Society of New York, Solo Online Exhibition",
-      "description": "Spring 2021, New York, NY",
-      "status": "Over"
+      "year": 2020,
+      "name": "23rd Annual International Exhibition — ASBA & Wave Hill",
+      "venueDate": "September 5 – December 6, 2020 · Wave Hill, Bronx, NY"
     },
     {
-      "name": "21st Annual International Exhibition by American Society of Botanical Artists and Wave Hill",
-      "description": "September 8 – December 2, 2018, Wave Hill, Bronx, NY",
-      "status": "Over"
+      "year": 2018,
+      "name": "21st Annual International Exhibition — ASBA & Wave Hill",
+      "venueDate": "September 8 – December 2, 2018 · Wave Hill, Bronx, NY"
     }
   ],
   "residencies": [
     {
+      "year": 2020,
       "name": "Jessica Tcherepnine Artist-in-Residence Program",
-      "description": "Spring 2020, Greenhouse at Denny Farrell Riverbank State Park – Horticultural Society of New York, New York, NY"
+      "venueDate": "Spring 2020 · Greenhouse at Denny Farrell Riverbank State Park — Horticultural Society of New York, NY"
     }
   ],
   "classes": [
     {
       "id": 0,
-      "title": "Introduction to Botanical Watercolor",
-      "description": "Learn the fundamentals of botanical illustration using traditional watercolor techniques. Perfect for beginners interested in painting plants with scientific accuracy and artistic beauty.",
-      "schedule": "Saturdays, 10:00 AM - 1:00 PM",
-      "duration": "6 weeks",
-      "price": "$450",
-      "level": "Beginner",
-      "registrationLink": ""
+      "title": "Mini Session: Watercolor Painting",
+      "location": "CSMA · Mountain View",
+      "venue": "csma",
+      "platform": "CSMA",
+      "type": "series",
+      "sessions": 4,
+      "startDate": "2026-07-08",
+      "dates": "Wed, Jul 8 – 29",
+      "datesLong": "Wednesdays, Jul 8 – 29",
+      "time": "6:30 – 8:30 PM",
+      "registrationLink": "https://arts4all.asapconnected.com/#CourseID=310945"
     },
     {
       "id": 1,
-      "title": "Fungi & Mushroom Illustration",
-      "description": "Explore the fascinating world of mycological illustration. Students will learn to capture the unique textures, forms, and colors of mushrooms and other fungi.",
-      "schedule": "Thursdays, 2:00 PM - 5:00 PM",
-      "duration": "4 weeks",
-      "price": "$350",
-      "level": "Intermediate",
-      "registrationLink": ""
+      "title": "Mini Session: Intro to Linocut Printmaking",
+      "location": "CSMA · Mountain View",
+      "venue": "csma",
+      "platform": "CSMA",
+      "type": "series",
+      "sessions": 4,
+      "startDate": "2026-07-09",
+      "dates": "Thu, Jul 9 – 30",
+      "datesLong": "Thursdays, Jul 9 – 30",
+      "time": "6:30 – 8:30 PM",
+      "registrationLink": "https://arts4all.asapconnected.com/#EventID=2990978"
     },
     {
       "id": 2,
-      "title": "Advanced Botanical Techniques",
-      "description": "Refine your skills with advanced watercolor methods including layering, wet-on-wet techniques, and achieving photorealistic detail in botanical subjects.",
-      "schedule": "Sundays, 1:00 PM - 4:00 PM",
-      "duration": "8 weeks",
-      "price": "$600",
-      "level": "Advanced",
-      "registrationLink": ""
+      "title": "Watercolor Painting",
+      "location": "CSMA · Belmont",
+      "venue": "csma",
+      "platform": "CSMA",
+      "type": "series",
+      "sessions": 8,
+      "startDate": "2026-08-25",
+      "dates": "Tue, Aug 25 – Oct 13",
+      "datesLong": "Tuesdays, Aug 25 – Oct 13",
+      "time": "7:00 – 8:45 PM",
+      "registrationLink": "https://arts4all.asapconnected.com/#CourseID=295223"
+    },
+    {
+      "id": 3,
+      "title": "Beginning Watercolor",
+      "location": "Intel Corporation",
+      "venue": "other",
+      "platform": "Arts4All",
+      "type": "corp",
+      "sessions": 7,
+      "startDate": "2026-09-01",
+      "dates": "Tue, Sep 1 – Oct 13",
+      "datesLong": "Tuesdays, Sep 1 – Oct 13",
+      "time": "4:00 – 6:00 PM",
+      "registrationLink": "https://arts4all.org/community/corporate-arts-program/"
+    },
+    {
+      "id": 4,
+      "title": "Botanical Drawing",
+      "location": "CSMA · Mountain View",
+      "venue": "csma",
+      "platform": "CSMA",
+      "type": "series",
+      "sessions": 6,
+      "startDate": "2026-09-06",
+      "dates": "Sun, Sep 6 – Oct 11",
+      "datesLong": "Sundays, Sep 6 – Oct 11",
+      "time": "2:00 – 4:00 PM",
+      "registrationLink": "https://arts4all.asapconnected.com/#CourseID=315625"
+    },
+    {
+      "id": 5,
+      "title": "Botanical Drawing Class Series (6 Sessions)",
+      "location": "Pacific Art League · Palo Alto",
+      "venue": "pal",
+      "platform": "Pacific Art League",
+      "type": "series",
+      "sessions": 6,
+      "startDate": "2026-09-10",
+      "dates": "Thu, Sep 10 – Oct 15",
+      "datesLong": "Thursdays, Sep 10 – Oct 15",
+      "time": "2:00 – 4:00 PM",
+      "registrationLink": "https://www.pacificartleague.org/class/?eventtemplate=1532-09-10-botanical-drawing"
+    },
+    {
+      "id": 6,
+      "title": "Watercolor Mushrooms Workshop",
+      "location": "Pacific Art League · Palo Alto",
+      "venue": "pal",
+      "platform": "Pacific Art League",
+      "type": "day",
+      "sessions": 1,
+      "startDate": "2026-09-12",
+      "dates": "Sat, Sep 12",
+      "datesLong": "Saturday, Sep 12",
+      "time": "1:00 – 4:00 PM",
+      "registrationLink": "https://www.pacificartleague.org/class/?eventtemplate=1529-09-12-watercolor-mushrooms-workshop"
+    },
+    {
+      "id": 7,
+      "title": "Botanical Painting Class Series (6 Sessions)",
+      "location": "Pacific Art League · Palo Alto",
+      "venue": "pal",
+      "platform": "Pacific Art League",
+      "type": "series",
+      "sessions": 6,
+      "startDate": "2026-10-15",
+      "dates": "Thu, Oct 15 – Dec 3",
+      "datesLong": "Thursdays, Oct 15 – Dec 3",
+      "time": "2:00 – 4:00 PM",
+      "registrationLink": "https://www.pacificartleague.org/class/?eventtemplate=1533-10-22-botanical-painting-in-watercolor"
+    },
+    {
+      "id": 8,
+      "title": "Botanical Painting",
+      "location": "CSMA · Mountain View",
+      "venue": "csma",
+      "platform": "CSMA",
+      "type": "series",
+      "sessions": 6,
+      "startDate": "2026-10-18",
+      "dates": "Sun, Oct 18 – Nov 22",
+      "datesLong": "Sundays, Oct 18 – Nov 22",
+      "time": "2:00 – 4:00 PM",
+      "registrationLink": "https://arts4all.asapconnected.com/#CourseID=327786"
     }
   ]
 }

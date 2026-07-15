@@ -1,243 +1,133 @@
 import React from 'react'
-
 import { useSelector, useDispatch } from 'react-redux'
+import usePageMeta from '../usePageMeta'
 
 //Parents: App
 
-const Contact = (props) => {
+const infoRows = (
+  <div className="flex flex-col gap-3 md:gap-3.5 text-[14.5px] md:text-[15px]">
+    <div>
+      <span className="text-[#8a897d]">Email</span>{' '}
+      <a href="mailto:katywangwebsite@gmail.com" className="ml-2">
+        katywangwebsite@gmail.com
+      </a>
+    </div>
+    <div>
+      <span className="text-[#8a897d]">Studio</span>{' '}
+      <span className="ml-2">San Francisco Bay Area, CA</span>
+    </div>
+    <div>
+      <span className="text-[#8a897d]">Instagram</span>{' '}
+      <a
+        href="https://www.instagram.com/katywangstudio/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="ml-2"
+      >
+        @katywangstudio
+      </a>
+    </div>
+  </div>
+)
+
+const fields = [
+  { name: 'name', label: 'Name', type: 'text', placeholder: 'Your name' },
+  { name: 'email', label: 'Email', type: 'email', placeholder: 'you@email.com' },
+]
+
+const Contact = () => {
+  usePageMeta(
+    'Contact — Katy Wang Studio',
+    'Get in touch with Katy Wang about classes, artwork, commissions, or anything else.',
+  )
+
   const dispatch = useDispatch()
   const contact = useSelector((state) => state.contact)
 
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    dispatch({ type: 'UPDATE_CONTACT', payload: { name, value } })
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    // console.log(props.contact)
-    // let nameField = e.target.querySelector('input[name="name"]')
-    // let emailField = e.target.querySelector('input[name="email"]')
-    // let subjectField = e.target.querySelector('input[name="subject"]')
-    // let messageField = e.target.querySelector('textarea[name="message"]')
-    // let errors = validate(
-    //   nameField.value,
-    //   emailField.value,
-    //   subjectField.value,
-    //   messageField.value
-    // )
-
-    // if (errors.name) {
-    //   nameField.style.boxShadow = "0 0 0 2pt red"
-    //   nameField.className = "shake"
-    //   nameField.previousSibling.previousSibling.innerHTML = ""
-    //   let nameErrorLi = document.createElement("li")
-    //   nameErrorLi.innerText = errors.name
-    //   nameField.previousSibling.previousSibling.appendChild(nameErrorLi)
-    //   nameField.previousSibling.previousSibling.style.display = "block"
-    // }
-    // if (errors.email) {
-    //   emailField.style.boxShadow = "0 0 0 2pt red"
-    //   emailField.className = "shake"
-    //   emailField.previousSibling.previousSibling.innerHTML = ""
-    //   errors.email.forEach((e) => {
-    //     let errorLi = document.createElement("li")
-    //     errorLi.innerText = e
-    //     emailField.previousSibling.previousSibling.appendChild(errorLi)
-    //   })
-    //   emailField.previousSibling.previousSibling.style.display = "block"
-    // }
-    // if (errors.subject) {
-    //   subjectField.style.boxShadow = "0 0 0 2pt red"
-    //   subjectField.className = "shake"
-    //   subjectField.previousSibling.previousSibling.innerHTML = ""
-    //   let subjectErrorLi = document.createElement("li")
-    //   subjectErrorLi.innerText = errors.subject
-    //   subjectField.previousSibling.previousSibling.appendChild(subjectErrorLi)
-    //   subjectField.previousSibling.previousSibling.style.display = "block"
-    // }
-    // if (errors.message) {
-    //   messageField.style.boxShadow = "0 0 0 2pt red"
-    //   messageField.className = "shake"
-    //   messageField.previousSibling.previousSibling.innerHTML = ""
-    //   let messageErrorLi = document.createElement("li")
-    //   messageErrorLi.innerText = errors.message
-    //   messageField.previousSibling.previousSibling.appendChild(messageErrorLi)
-    //   messageField.previousSibling.previousSibling.style.display = "block"
-    // }
-
-    // window.setTimeout(() => {
-    //   nameField.className = "stop-shake"
-    //   emailField.className = "stop-shake"
-    //   subjectField.className = "stop-shake"
-    //   messageField.className = "stop-shake"
-    // }, 200)
-
-    // if (errors.number === 0) {
-    // alert(
-    //   "Message Sent. You should receive a confirmation email that your message was sent."
-    // )
-    let mailObj = contact
-    resetForm()
-    // fetch("https://stormy-wildwood-98268.herokuapp.com/send", {
-    //   method: "POST",
-    //   body: JSON.stringify(mailObj),
-    //   headers: {
-    //     Accept: "application/json",
-    //     "Content-Type": "application/json",
-    //   },
-    // })
-    //   .then((r) => r.json())
-    //   .then((response) => {
-    //     if (response.message === "ok") {
-    //       // alert("Message Sent. You should receive a confirmation email that your message was sent.");
-    //       // resetForm()
-    //     } else {
-    //       alert("Message failed to send.")
-    //     }
-    //   })
-    const mailtoLink =
+    const subject = contact.name
+      ? `Website message from ${contact.name}`
+      : 'Website message'
+    const body = `${contact.message}\n\nFrom: ${contact.name} (${contact.email})`
+    window.location.href =
       'mailto:katywangwebsite@gmail.com?subject=' +
-      encodeURIComponent(mailObj.subject) +
+      encodeURIComponent(subject) +
       '&body=' +
-      encodeURIComponent(mailObj.message)
-
-    window.location.href = mailtoLink
-    // }
+      encodeURIComponent(body)
   }
-
-  const resetForm = () => {
-    dispatch({ type: 'UPDATE_CONTACT', payload: { name: 'name', value: '' } })
-    dispatch({ type: 'UPDATE_CONTACT', payload: { name: 'email', value: '' } })
-    dispatch({
-      type: 'UPDATE_CONTACT',
-      payload: { name: 'subject', value: '' },
-    })
-    dispatch({
-      type: 'UPDATE_CONTACT',
-      payload: { name: 'message', value: '' },
-    })
-  }
-
-  const handleChange = (e) => {
-    e.target.style.boxShadow = '0 0 0 3pt transparent'
-    e.target.previousSibling.previousSibling.innerText = ''
-    e.target.previousSibling.previousSibling.style.display = 'none'
-    let { name, value } = e.target
-    let contactObj = { name, value }
-    dispatch({ type: 'UPDATE_CONTACT', payload: contactObj })
-  }
-
-  // const validate = (name, email, subject, message) => {
-  //   // we are going to store errors for all fields
-  //   // in a signle array
-  //   const errors = { number: 0 }
-
-  //   //Name
-  //   if (name.length === 0) {
-  //     errors.name = "Name cannot be empty"
-  //     errors.number += 1
-  //   }
-
-  //   //Email
-  //   if (email.length < 5) {
-  //     if (!errors.email) {
-  //       errors.email = []
-  //     }
-  //     errors.email.push("Email should be at least 5 characters long")
-  //     errors.number += 1
-  //   }
-  //   if (email.split("").filter((x) => x === "@").length !== 1) {
-  //     if (!errors.email) {
-  //       errors.email = []
-  //     }
-  //     errors.email.push("Email should contain an @")
-  //     errors.number += 1
-  //   }
-  //   if (email.indexOf(".") === -1) {
-  //     if (!errors.email) {
-  //       errors.email = []
-  //     }
-  //     errors.email.push("Email should contain at least one dot")
-  //     errors.number += 1
-  //   }
-
-  //   //Subject
-  //   if (subject.length === 0) {
-  //     errors.subject = "Subject cannot be empty"
-  //     errors.number += 1
-  //   }
-
-  //   //Message
-  //   if (message.length === 0) {
-  //     errors.message = "Message cannot be empty"
-  //     errors.number += 1
-  //   }
-  //   return errors
-  // }
 
   return (
-    <div className="min-h-screen bg-cream py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-2xl mx-auto">
-        <form
-          className="bg-white rounded-lg shadow-xl p-8 md:p-12"
-          onSubmit={handleSubmit}
-        >
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-center text-gray-900 mb-8">
-            Get in Touch
-          </h1>
-          <p className="text-center text-gray-600 mb-8">
-            Have a question or interested in commissioning a piece? Send me a
-            message.
-          </p>
+    <div className="w-full md:grid md:grid-cols-[1fr_520px] md:gap-[72px] md:items-start px-5 pt-7 pb-9 md:px-[120px] md:pt-16 md:pb-20 text-left">
+      <div>
+        <h1 className="font-serif text-[30px] md:text-[40px] font-medium mb-2.5 md:mb-4">
+          Get in touch
+        </h1>
+        <p className="text-[15px] md:text-[16.5px] leading-[1.65] text-body-gray mb-6 md:mb-8">
+          Questions about classes, artwork, commissions, or anything else —
+          send a note.
+        </p>
+        <div className="hidden md:block">{infoRows}</div>
+      </div>
 
-          <div className="space-y-6">
-            <div>
-              <div className="error text-red-600 text-sm mb-2"></div>
+      <form
+        onSubmit={handleSubmit}
+        className="bg-panel rounded p-5 md:p-9 mb-6 md:mb-0"
+      >
+        <div className="flex flex-col gap-4 md:gap-[18px]">
+          {fields.map((field) => (
+            <div key={field.name}>
               <label
-                htmlFor="subject"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                htmlFor={field.name}
+                className="block text-[13px] md:text-[13.5px] font-semibold text-[#44443c] mb-1.5"
               >
-                Subject
+                {field.label}
               </label>
               <input
-                type="text"
+                id={field.name}
+                type={field.type}
+                name={field.name}
+                required
                 autoComplete="off"
-                name="subject"
-                value={contact.subject}
+                value={contact[field.name]}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-sage-green focus:border-transparent transition-all duration-200"
-                placeholder="What is this regarding?"
+                placeholder={field.placeholder}
+                className="w-full bg-white border border-[#DDDACB] rounded-[3px] px-3.5 py-[13px] text-[14.5px] placeholder:text-[#9a9889] focus:outline-none focus:border-sage-border"
               />
             </div>
-
-            <div>
-              <div className="error text-red-600 text-sm mb-2"></div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Message
-              </label>
-              <textarea
-                name="message"
-                value={contact.message}
-                onChange={handleChange}
-                rows="6"
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-sage-green focus:border-transparent transition-all duration-200 resize-none"
-                placeholder="Tell me more..."
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-forest-green text-white font-medium py-3 px-6 rounded-md hover:bg-sage-green transition-colors duration-300 text-lg"
+          ))}
+          <div>
+            <label
+              htmlFor="message"
+              className="block text-[13px] md:text-[13.5px] font-semibold text-[#44443c] mb-1.5"
             >
-              Send Message
-            </button>
-
-            <p className="text-center text-sm text-gray-500 mt-4">
-              This will open your email client with a pre-filled message to
-              katywangwebsite@gmail.com
-            </p>
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              value={contact.message}
+              onChange={handleChange}
+              placeholder="Tell me more…"
+              className="w-full min-h-[120px] bg-white border border-[#DDDACB] rounded-[3px] px-3.5 py-[13px] text-[14.5px] placeholder:text-[#9a9889] resize-y focus:outline-none focus:border-sage-border"
+            />
           </div>
-        </form>
-      </div>
+          <button
+            type="submit"
+            className="w-full bg-forest-green text-paper py-[15px] text-center text-[15px] font-semibold rounded-[3px] hover:bg-forest-hover transition-colors duration-200"
+          >
+            Send message
+          </button>
+        </div>
+      </form>
+
+      <div className="md:hidden">{infoRows}</div>
     </div>
   )
 }

@@ -1,19 +1,17 @@
 import React from 'react'
 import './App.css'
 import NavBar from './Components/NavBar'
-import ProjectContainer from './Components/ProjectContainer'
-import ProjectDisplay from './Components/ProjectDisplay'
+import MobileNav from './Components/MobileNav'
+import Footer from './Components/Footer'
+import HomePage from './Components/HomePage'
+import GalleryPage from './Components/GalleryPage'
+import ClassesContainer from './Components/ClassesContainer'
 import AboutPage from './Components/AboutPage'
 import ExhibitionsContainer from './Components/ExhibitionsContainer'
-import MobileNav from './Components/MobileNav'
 import Contact from './Components/Contact'
-import ShopPage from './Components/ShopPage'
-import SplashPage from './Components/SplashPage'
-import ClassesContainer from './Components/ClassesContainer'
-// import Media from './Components/Media'
 
 import { useDispatch } from 'react-redux'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 
 const App = () => {
   const dispatch = useDispatch()
@@ -23,29 +21,26 @@ const App = () => {
   }
 
   return (
-    <div className="App">
-      <div className="site-content">
-        <header>
-          <NavBar toggleNav={toggleNav} />
-          <MobileNav toggleNav={toggleNav} />
-        </header>
-        <main>
-          <Routes>
-            <Route path="/" element={<SplashPage />} />
-            <Route path="/gallery" element={<ProjectContainer />} />
-            <Route
-              path="/project"
-              element={<ProjectDisplay toggleNav={toggleNav} />}
-            />
-            <Route path="/classes" element={<ClassesContainer />} />
-            <Route path="/exhibitions" element={<ExhibitionsContainer />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/shop" element={<ShopPage />} />
-            <Route path="/contact" element={<Contact />} />
-            {/* <Media/> */}
-          </Routes>
-        </main>
-      </div>
+    <div className="App min-h-screen flex flex-col">
+      <header className="sticky top-0 z-50 bg-white">
+        <NavBar toggleNav={toggleNav} />
+        <MobileNav toggleNav={toggleNav} />
+      </header>
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/classes" element={<ClassesContainer />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/exhibitions" element={<ExhibitionsContainer />} />
+          <Route path="/contact" element={<Contact />} />
+          {/* Old routes cut in the redesign */}
+          <Route path="/project" element={<Navigate to="/gallery" replace />} />
+          <Route path="/shop" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </main>
+      <Footer />
     </div>
   )
 }

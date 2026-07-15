@@ -1,48 +1,68 @@
 import React from 'react'
-import Exhibition from './Exhibition'
-import Residency from './Residency'
+import data from '../data.json'
+import usePageMeta from '../usePageMeta'
 
-import { useSelector } from 'react-redux'
+//Parents: App
 
-//Parents: ProjectContainer
+const byYearDesc = (list) => [...list].sort((a, b) => b.year - a.year)
 
-const ExhibitionContainer = (props) => {
-  const exhibitions = useSelector((state) => state.exhibitions)
-  const residencies = useSelector((state) => state.residencies)
+const SectionHeading = ({ children, className = '' }) => (
+  <div
+    className={`text-xs md:text-[13px] tracking-[.14em] uppercase text-[#7d8a68] border-b border-ink pb-2 md:pb-2.5 ${className}`}
+  >
+    {children}
+  </div>
+)
 
-  const exhibitionArray = exhibitions.map((exhibition) => {
-    return <Exhibition key={exhibition.id} exhibition={exhibition} />
-  })
+const Row = ({ item }) => (
+  <div className="md:grid md:grid-cols-[64px_1fr] md:gap-x-7 md:items-baseline py-[18px] border-b border-hairline">
+    <div className="font-serif text-[15px] md:text-lg text-[#7d8a68] mb-1 md:mb-0">
+      {item.year}
+    </div>
+    <div>
+      <div className="text-[15px] md:text-[16.5px] font-semibold mb-[3px]">
+        {item.name}
+      </div>
+      <div className="text-[13.5px] md:text-[14.5px] text-body-gray">
+        {item.venueDate}
+      </div>
+    </div>
+  </div>
+)
 
-  const residencyArray = residencies.map((residency) => {
-    return <Residency key={residency.id} residency={residency} />
-  })
+const ExhibitionsContainer = () => {
+  usePageMeta(
+    'Exhibitions & Projects — Katy Wang Studio',
+    'Selected exhibitions and residencies of botanical artist Katy Wang, including the New York Botanical Garden Triennial and Wave Hill.',
+  )
 
   return (
-    <>
-      <div className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-center text-gray-900 mb-12">
-            Exhibitions & Residencies
-          </h1>
-          <div className="space-y-12">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-forest-green mb-6 pb-2 border-b-2 border-sage-green">
-                Exhibitions
-              </h2>
-              <div className="space-y-4">{exhibitionArray}</div>
-            </div>
-            <div>
-              <h2 className="text-2xl md:text-3xl font-serif font-semibold text-forest-green mb-6 pb-2 border-b-2 border-sage-green">
-                Artist Residencies
-              </h2>
-              <div className="space-y-4">{residencyArray}</div>
-            </div>
-          </div>
-        </div>
+    <div className="w-full max-w-[820px] mx-auto px-5 pt-7 pb-9 md:px-14 md:pt-[52px] md:pb-16 text-left">
+      <div className="md:flex md:items-baseline md:justify-between mb-6 md:mb-9">
+        <h1 className="font-serif text-[28px] md:text-[40px] font-medium mb-1.5 md:mb-0">
+          Exhibitions &amp; Projects
+        </h1>
+        <a
+          href="./KatyWang_CV.pdf"
+          className="text-[13.5px] md:text-sm font-semibold text-forest-green"
+        >
+          Download CV (PDF)
+        </a>
       </div>
-    </>
+
+      <SectionHeading className="mb-1">Selected exhibitions</SectionHeading>
+      {byYearDesc(data.exhibitions).map((exhibition) => (
+        <Row key={exhibition.name} item={exhibition} />
+      ))}
+
+      <SectionHeading className="mt-8 md:mt-11 mb-1">
+        Residencies
+      </SectionHeading>
+      {byYearDesc(data.residencies).map((residency) => (
+        <Row key={residency.name} item={residency} />
+      ))}
+    </div>
   )
 }
 
-export default ExhibitionContainer
+export default ExhibitionsContainer
