@@ -70,9 +70,12 @@ const ClassesContainer = () => {
       </div>
 
       {/* Class rows */}
-      <div className="border-t border-ink">
+      <div>
         {classes.map((c) => (
-          <div key={c.id} className="border-b border-hairline">
+          <div
+            key={c.id}
+            className="border-b border-hairline -mx-4 px-4 md:-mx-5 md:px-5 even:bg-[#F5F4EE] first:border-t first:border-t-ink"
+          >
             {/* Desktop row */}
             <div className="hidden md:grid grid-cols-[200px_minmax(0,1fr)_210px_245px] gap-8 items-baseline py-[22px]">
               <div>
