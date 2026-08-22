@@ -1,231 +1,138 @@
-import React from "react"
-
-import { connect } from "react-redux"
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import usePageMeta from '../usePageMeta'
 
 //Parents: App
 
-const Contact = (props) => {
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // console.log(props.contact)
-    // let nameField = e.target.querySelector('input[name="name"]')
-    // let emailField = e.target.querySelector('input[name="email"]')
-    // let subjectField = e.target.querySelector('input[name="subject"]')
-    // let messageField = e.target.querySelector('textarea[name="message"]')
-    // let errors = validate(
-    //   nameField.value,
-    //   emailField.value,
-    //   subjectField.value,
-    //   messageField.value
-    // )
+const infoRows = (
+  <div className="flex flex-col gap-3 md:gap-3.5 text-[15px] md:text-[16.5px]">
+    <div>
+      <span className="italic text-muted">Email</span>{' '}
+      <a href="mailto:katywangwebsite@gmail.com" className="ml-2">
+        katywangwebsite@gmail.com
+      </a>
+    </div>
+    <div>
+      <span className="italic text-muted">Studio</span>{' '}
+      <span className="ml-2">San Francisco Bay Area, CA</span>
+    </div>
+    <div>
+      <span className="italic text-muted">Instagram</span>{' '}
+      <a
+        href="https://www.instagram.com/katywangstudio/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="ml-2"
+      >
+        @katywangstudio
+      </a>
+    </div>
+  </div>
+)
 
-    // if (errors.name) {
-    //   nameField.style.boxShadow = "0 0 0 2pt red"
-    //   nameField.className = "shake"
-    //   nameField.previousSibling.previousSibling.innerHTML = ""
-    //   let nameErrorLi = document.createElement("li")
-    //   nameErrorLi.innerText = errors.name
-    //   nameField.previousSibling.previousSibling.appendChild(nameErrorLi)
-    //   nameField.previousSibling.previousSibling.style.display = "block"
-    // }
-    // if (errors.email) {
-    //   emailField.style.boxShadow = "0 0 0 2pt red"
-    //   emailField.className = "shake"
-    //   emailField.previousSibling.previousSibling.innerHTML = ""
-    //   errors.email.forEach((e) => {
-    //     let errorLi = document.createElement("li")
-    //     errorLi.innerText = e
-    //     emailField.previousSibling.previousSibling.appendChild(errorLi)
-    //   })
-    //   emailField.previousSibling.previousSibling.style.display = "block"
-    // }
-    // if (errors.subject) {
-    //   subjectField.style.boxShadow = "0 0 0 2pt red"
-    //   subjectField.className = "shake"
-    //   subjectField.previousSibling.previousSibling.innerHTML = ""
-    //   let subjectErrorLi = document.createElement("li")
-    //   subjectErrorLi.innerText = errors.subject
-    //   subjectField.previousSibling.previousSibling.appendChild(subjectErrorLi)
-    //   subjectField.previousSibling.previousSibling.style.display = "block"
-    // }
-    // if (errors.message) {
-    //   messageField.style.boxShadow = "0 0 0 2pt red"
-    //   messageField.className = "shake"
-    //   messageField.previousSibling.previousSibling.innerHTML = ""
-    //   let messageErrorLi = document.createElement("li")
-    //   messageErrorLi.innerText = errors.message
-    //   messageField.previousSibling.previousSibling.appendChild(messageErrorLi)
-    //   messageField.previousSibling.previousSibling.style.display = "block"
-    // }
+const fields = [
+  { name: 'name', label: 'Name', type: 'text', placeholder: 'Your name' },
+  { name: 'email', label: 'Email', type: 'email', placeholder: 'you@email.com' },
+]
 
-    // window.setTimeout(() => {
-    //   nameField.className = "stop-shake"
-    //   emailField.className = "stop-shake"
-    //   subjectField.className = "stop-shake"
-    //   messageField.className = "stop-shake"
-    // }, 200)
+const fieldClass =
+  'w-full bg-field-bg border border-field-border rounded-none px-3.5 py-[13px] text-base text-ink placeholder:text-[#A5A290] focus:outline-none focus:border-green'
 
-    // if (errors.number === 0) {
-    // alert(
-    //   "Message Sent. You should receive a confirmation email that your message was sent."
-    // )
-    let mailObj = props.contact
-    resetForm()
-    // fetch("https://stormy-wildwood-98268.herokuapp.com/send", {
-    //   method: "POST",
-    //   body: JSON.stringify(mailObj),
-    //   headers: {
-    //     Accept: "application/json",
-    //     "Content-Type": "application/json",
-    //   },
-    // })
-    //   .then((r) => r.json())
-    //   .then((response) => {
-    //     if (response.message === "ok") {
-    //       // alert("Message Sent. You should receive a confirmation email that your message was sent.");
-    //       // resetForm()
-    //     } else {
-    //       alert("Message failed to send.")
-    //     }
-    //   })
-    const mailtoLink =
-      "mailto:katywangwebsite@gmail.com?subject=" +
-      encodeURIComponent(mailObj.subject) +
-      "&body=" +
-      encodeURIComponent(mailObj.message)
+const Contact = () => {
+  usePageMeta(
+    'Contact — Katy Wang Studio',
+    'Get in touch with Katy Wang about classes, artwork, commissions, or anything else.',
+  )
 
-    window.location.href = mailtoLink
-    // }
-  }
-
-  const resetForm = () => {
-    props.contactDispatch({ name: "name", value: "" })
-    props.contactDispatch({ name: "email", value: "" })
-    props.contactDispatch({ name: "subject", value: "" })
-    props.contactDispatch({ name: "message", value: "" })
-  }
+  const dispatch = useDispatch()
+  const contact = useSelector((state) => state.contact)
 
   const handleChange = (e) => {
-    e.target.style.boxShadow = "0 0 0 3pt transparent"
-    e.target.previousSibling.previousSibling.innerText = ""
-    e.target.previousSibling.previousSibling.style.display = "none"
-    let { name, value } = e.target
-    let contactObj = { name, value }
-    props.contactDispatch(contactObj)
+    const { name, value } = e.target
+    dispatch({ type: 'UPDATE_CONTACT', payload: { name, value } })
   }
 
-  // const validate = (name, email, subject, message) => {
-  //   // we are going to store errors for all fields
-  //   // in a signle array
-  //   const errors = { number: 0 }
-
-  //   //Name
-  //   if (name.length === 0) {
-  //     errors.name = "Name cannot be empty"
-  //     errors.number += 1
-  //   }
-
-  //   //Email
-  //   if (email.length < 5) {
-  //     if (!errors.email) {
-  //       errors.email = []
-  //     }
-  //     errors.email.push("Email should be at least 5 characters long")
-  //     errors.number += 1
-  //   }
-  //   if (email.split("").filter((x) => x === "@").length !== 1) {
-  //     if (!errors.email) {
-  //       errors.email = []
-  //     }
-  //     errors.email.push("Email should contain an @")
-  //     errors.number += 1
-  //   }
-  //   if (email.indexOf(".") === -1) {
-  //     if (!errors.email) {
-  //       errors.email = []
-  //     }
-  //     errors.email.push("Email should contain at least one dot")
-  //     errors.number += 1
-  //   }
-
-  //   //Subject
-  //   if (subject.length === 0) {
-  //     errors.subject = "Subject cannot be empty"
-  //     errors.number += 1
-  //   }
-
-  //   //Message
-  //   if (message.length === 0) {
-  //     errors.message = "Message cannot be empty"
-  //     errors.number += 1
-  //   }
-  //   return errors
-  // }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const subject = contact.name
+      ? `Website message from ${contact.name}`
+      : 'Website message'
+    const body = `${contact.message}\n\nFrom: ${contact.name} (${contact.email})`
+    window.location.href =
+      'mailto:katywangwebsite@gmail.com?subject=' +
+      encodeURIComponent(subject) +
+      '&body=' +
+      encodeURIComponent(body)
+  }
 
   return (
-    <div className="contact-page">
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <h1>Contact</h1>
-        {/* <div className="error"></div>
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          name="name"
-          value={props.contact.name}
-          onChange={handleChange}
-        /> */}
-        {/* <div className="error"></div>
-        <label htmlFor="email">Email</label>
-        <input
-          type="text"
-          autoComplete="off"
-          name="email"
-          value={props.contact.email}
-          onChange={handleChange}
-        /> */}
-        <div className="error"></div>
-        <label htmlFor="subject">Subject</label>
-        <input
-          type="text"
-          autoComplete="off"
-          name="subject"
-          value={props.contact.subject}
-          onChange={handleChange}
-        />
-        <div className="error"></div>
-        <label htmlFor="message">Message</label>
-        <textarea
-          name="message"
-          value={props.contact.message}
-          onChange={handleChange}
-        />
-        <input className="submit-btn" type="submit" value="Submit" />
-      </form>
-      {/* <div className="contact-form">
-        <h1>Contact</h1>
-        <p>
-          <a href="mailto:katywangwebsite@gmail.com">Send email</a>
+    <div className="w-full md:grid md:grid-cols-[1fr_500px] md:gap-[88px] md:items-start px-5 pt-7 pb-9 md:px-[120px] md:pt-16 md:pb-[88px] text-left">
+      <div>
+        <h1 className="text-[30px] md:text-[44px] font-normal mb-2.5 md:mb-[18px]">
+          Get in touch
+        </h1>
+        <p className="text-[15px] md:text-lg leading-[1.65] text-soft mb-6 md:mb-9">
+          Questions about classes, artwork, commissions, or anything else —
+          send a note.
         </p>
-      </div> */}
+        <div className="hidden md:block">{infoRows}</div>
+      </div>
+
+      <form
+        onSubmit={handleSubmit}
+        className="border-t border-ink pt-6 md:pt-7 mb-6 md:mb-0"
+      >
+        <div className="flex flex-col gap-4 md:gap-[22px]">
+          {fields.map((field) => (
+            <div key={field.name}>
+              <label
+                htmlFor={field.name}
+                className="block text-[15px] italic text-soft mb-[7px]"
+              >
+                {field.label}
+              </label>
+              <input
+                id={field.name}
+                type={field.type}
+                name={field.name}
+                required
+                autoComplete="off"
+                value={contact[field.name]}
+                onChange={handleChange}
+                placeholder={field.placeholder}
+                className={fieldClass}
+              />
+            </div>
+          ))}
+          <div>
+            <label
+              htmlFor="message"
+              className="block text-[15px] italic text-soft mb-[7px]"
+            >
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              value={contact.message}
+              onChange={handleChange}
+              placeholder="Tell me more…"
+              className={`${fieldClass} min-h-[130px] resize-y`}
+            />
+          </div>
+          <button
+            type="submit"
+            className="self-start bg-green text-[#F7F5EC] px-[34px] py-[13px] text-base rounded-none hover:bg-green-dark transition-colors duration-200"
+          >
+            Send message
+          </button>
+        </div>
+      </form>
+
+      <div className="md:hidden">{infoRows}</div>
     </div>
   )
 }
 
-let updateContact = (contactObj) => {
-  return {
-    type: "UPDATE_CONTACT",
-    payload: contactObj,
-  }
-}
-
-const mapDispatchToProps = {
-  contactDispatch: updateContact,
-}
-
-let mapStateToProps = (reduxState) => {
-  return {
-    contact: reduxState.contact,
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Contact)
+export default Contact

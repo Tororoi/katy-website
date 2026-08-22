@@ -1,92 +1,73 @@
-import React from "react"
-import { NavLink } from "react-router-dom"
-import { connect } from "react-redux"
+import { Link, NavLink, useLocation } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 //Parents: App
 
+const navLinks = [
+  { to: '/gallery', label: 'Gallery' },
+  { to: '/classes', label: 'Classes' },
+  { to: '/about', label: 'About' },
+  { to: '/contact', label: 'Contact' },
+]
+
 const NavBar = (props) => {
+  const mobileNav = useSelector((state) => state.mobileNav)
+  const { pathname } = useLocation()
+
   const displayMobileNav = (e) => {
     props.toggleNav()
   }
 
   return (
-    <div
-      className="nav-cont"
-      style={props.fullImage ? { display: "none" } : { display: "flex" }}
+    <nav
+      className={`w-full bg-paper flex items-center md:items-baseline justify-between px-5 py-4 md:px-14 md:py-6 ${
+        pathname === '/' ? '' : 'border-b border-hairline'
+      }`}
     >
-      <NavLink className="artist" to="/">
-        <div>Yuan Yuan Wang</div>
-        <div className="nickname">'Katy'</div>
-      </NavLink>
-      <ul className="nav">
-        <li>
-          <NavLink className="navlink" to="/gallery">
-            Gallery
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="navlink" to="/exhibitions">
-            Exhibitions
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="navlink" to="/bio">
-            Bio
-          </NavLink>
-        </li>
-        <li>
-          <a
-            className="navlink"
-            href="https://www.etsy.com/shop/MushroomKaty?ref=shop_sugg"
-            target="_blank"
-            rel="noopener noreferrer"
+      <Link
+        to="/"
+        className="text-[21px] md:text-[25px] font-medium tracking-[.01em] text-ink leading-none"
+      >
+        Katy Wang
+      </Link>
+
+      <div className="hidden md:flex items-baseline gap-8 text-[15.5px] text-ink">
+        {navLinks.map((link) => (
+          <NavLink
+            key={link.to}
+            to={link.to}
+            className={({ isActive }) =>
+              isActive
+                ? 'underline underline-offset-[6px] decoration-1'
+                : ''
+            }
           >
-            Shop
-          </a>
-        </li>
-        <li>
-          <NavLink className="navlink" to="/contact">
-            Contact
+            {link.label}
           </NavLink>
-        </li>
-      </ul>
-      <div className="hamburger-click-area" onClick={displayMobileNav}>
-        <div className="hamburger">
-          <i
-            id="top-bun"
-            style={
-              props.mobileNav
-                ? { transform: "matrix(1, -1, 1, 1, 0, 7)" }
-                : { transform: "rotate(0deg)" }
-            }
-          ></i>
-          <i
-            id="patty"
-            style={
-              props.mobileNav
-                ? { width: "0px", marginLeft: "12px" }
-                : { width: "24px", marginLeft: "0px" }
-            }
-          ></i>
-          <i
-            id="bottom-bun"
-            style={
-              props.mobileNav
-                ? { transform: "matrix(1, 1, -1, 1, 0, -7)" }
-                : { transform: "rotate(0deg)" }
-            }
-          ></i>
-        </div>
+        ))}
       </div>
-    </div>
+
+      {/* Mobile menu button */}
+      <button
+        type="button"
+        aria-label={mobileNav ? 'Close menu' : 'Open menu'}
+        aria-expanded={mobileNav}
+        className="md:hidden cursor-pointer p-3 -m-1.5"
+        onClick={displayMobileNav}
+      >
+        <span
+          className={`block w-[22px] h-[1.5px] bg-ink transition-transform duration-300 ${
+            mobileNav ? 'rotate-45 translate-y-[3.25px]' : ''
+          }`}
+        ></span>
+        <span
+          className={`block w-[22px] h-[1.5px] bg-ink mt-[5px] transition-transform duration-300 ${
+            mobileNav ? '-rotate-45 -translate-y-[3.25px]' : ''
+          }`}
+        ></span>
+      </button>
+    </nav>
   )
 }
 
-let mapStateToProps = (reduxState) => {
-  return {
-    mobileNav: reduxState.mobileNav,
-    fullImage: reduxState.fullImage,
-  }
-}
-
-export default connect(mapStateToProps)(NavBar)
+export default NavBar
