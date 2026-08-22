@@ -21,7 +21,7 @@ const AboutPage = () => {
 
   return (
     <div className="w-full text-left">
-      <div className="md:grid md:grid-cols-[440px_1fr] md:gap-16 md:items-start md:px-14 md:pt-[52px] md:pb-14">
+      <div className="md:grid md:grid-cols-[440px_1fr] md:gap-16 md:items-start md:px-14 md:py-14">
         <img
           src="./images/KatyBioPhoto.png"
           alt="Katy Wang at work on a botanical watercolor"
@@ -29,11 +29,11 @@ const AboutPage = () => {
           height="360"
           className="w-full block"
         />
-        <div className="px-5 pt-7 pb-8 md:p-0">
-          <h1 className="font-serif text-[30px] md:text-[40px] font-medium mb-3.5 md:mb-5">
+        <div className="px-5 pt-7 pb-8 md:p-0 max-w-[640px]">
+          <h1 className="text-[30px] md:text-[44px] font-normal mb-3.5 md:mb-[22px]">
             About the artist
           </h1>
-          <div className="text-[15px] md:text-[16.5px] leading-[1.7] text-[#44443c] space-y-3.5 md:space-y-4">
+          <div className="text-[16px] md:text-lg leading-[1.72] text-body space-y-3.5 md:space-y-4">
             <p>
               Katy Wang first became drawn to plants while exploring the cloud
               forests of South America with her husband.
@@ -59,29 +59,31 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* Credibility strip */}
-      <div className="bg-panel px-5 py-7 md:px-14 md:py-11">
-        <div className="text-xs md:text-[13px] tracking-[.14em] uppercase text-[#7d8a68] mb-4 md:mb-5">
-          Selected exhibitions &amp; residencies
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-          {credits.map((credit) => (
-            <div key={credit.name}>
-              <div className="font-serif text-[16.5px] md:text-lg font-medium mb-1">
-                {credit.name}
+      {/* Credits strip */}
+      <div className="px-5 pb-10 pt-2 md:px-14 md:pb-[72px] md:pt-0">
+        <div className="border-t border-ink pt-6 md:pt-[26px]">
+          <div className="text-xl md:text-2xl italic mb-5 md:mb-[26px]">
+            Selected exhibitions &amp; residencies
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-9">
+            {credits.map((credit) => (
+              <div key={credit.name}>
+                <div className="text-[16.5px] md:text-lg text-ink mb-[3px]">
+                  {credit.name}
+                </div>
+                <div className="text-[13.5px] md:text-[15px] text-muted">
+                  {credit.detail}
+                </div>
               </div>
-              <div className="text-[13.5px] md:text-sm text-body-gray">
-                {credit.detail}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <Link
+            to="/exhibitions"
+            className="inline-block text-[13.5px] md:text-[15.5px] text-green underline underline-offset-4 decoration-1 hover:text-green-dark mt-[18px] md:mt-7"
+          >
+            Full exhibitions &amp; projects record
+          </Link>
         </div>
-        <Link
-          to="/exhibitions"
-          className="inline-block text-[13.5px] md:text-sm font-semibold text-forest-green mt-[18px] md:mt-6"
-        >
-          Full exhibitions &amp; projects record →
-        </Link>
       </div>
     </div>
   )

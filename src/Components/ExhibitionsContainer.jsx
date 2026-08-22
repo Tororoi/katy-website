@@ -8,22 +8,22 @@ const byYearDesc = (list) => [...list].sort((a, b) => b.year - a.year)
 
 const SectionHeading = ({ children, className = '' }) => (
   <div
-    className={`text-xs md:text-[13px] tracking-[.14em] uppercase text-[#7d8a68] border-b border-ink pb-2 md:pb-2.5 ${className}`}
+    className={`text-xl md:text-2xl italic border-b border-ink pb-2.5 md:pb-3 ${className}`}
   >
     {children}
   </div>
 )
 
 const Row = ({ item }) => (
-  <div className="md:grid md:grid-cols-[64px_1fr] md:gap-x-7 md:items-baseline py-[18px] border-b border-hairline">
-    <div className="font-serif text-[15px] md:text-lg text-[#7d8a68] mb-1 md:mb-0">
+  <div className="md:grid md:grid-cols-[72px_1fr] md:gap-x-7 md:items-baseline py-[18px] md:py-5 border-b border-hairline">
+    <div className="text-[15px] md:text-[17px] text-muted mb-1 md:mb-0">
       {item.year}
     </div>
     <div>
-      <div className="text-[15px] md:text-[16.5px] font-semibold mb-[3px]">
+      <div className="text-[16px] md:text-lg text-ink mb-[3px]">
         {item.name}
       </div>
-      <div className="text-[13.5px] md:text-[14.5px] text-body-gray">
+      <div className="text-[13.5px] md:text-[15px] text-muted">
         {item.venueDate}
       </div>
     </div>
@@ -37,25 +37,25 @@ const ExhibitionsContainer = () => {
   )
 
   return (
-    <div className="w-full max-w-[820px] mx-auto px-5 pt-7 pb-9 md:px-14 md:pt-[52px] md:pb-16 text-left">
-      <div className="md:flex md:items-baseline md:justify-between mb-6 md:mb-9">
-        <h1 className="font-serif text-[28px] md:text-[40px] font-medium mb-1.5 md:mb-0">
+    <div className="w-full max-w-[840px] mx-auto px-5 pt-7 pb-9 md:px-14 md:pt-14 md:pb-20 text-left">
+      <div className="md:flex md:items-baseline md:justify-between mb-6 md:mb-10">
+        <h1 className="text-[28px] md:text-[44px] font-normal mb-1.5 md:mb-0">
           Exhibitions &amp; Projects
         </h1>
         <a
           href="./KatyWang_CV.pdf"
-          className="text-[13.5px] md:text-sm font-semibold text-forest-green"
+          className="text-[13.5px] md:text-[15.5px] text-green underline underline-offset-4 decoration-1 hover:text-green-dark whitespace-nowrap"
         >
           Download CV (PDF)
         </a>
       </div>
 
-      <SectionHeading className="mb-1">Selected exhibitions</SectionHeading>
+      <SectionHeading className="mb-0.5">Selected exhibitions</SectionHeading>
       {byYearDesc(data.exhibitions).map((exhibition) => (
         <Row key={exhibition.name} item={exhibition} />
       ))}
 
-      <SectionHeading className="mt-8 md:mt-11 mb-1">
+      <SectionHeading className="mt-10 md:mt-[52px] mb-0.5">
         Residencies
       </SectionHeading>
       {byYearDesc(data.residencies).map((residency) => (

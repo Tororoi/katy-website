@@ -20,28 +20,26 @@ const NavBar = (props) => {
 
   return (
     <nav
-      className={`w-full bg-white flex items-center justify-between px-5 py-4 md:px-14 md:py-[22px] ${
+      className={`w-full bg-paper flex items-center md:items-baseline justify-between px-5 py-4 md:px-14 md:py-6 ${
         pathname === '/' ? '' : 'border-b border-hairline'
       }`}
     >
       <Link
         to="/"
-        className="font-serif text-[21px] md:text-[26px] font-semibold text-forest-green leading-none"
+        className="text-[21px] md:text-[25px] font-medium tracking-[.01em] text-ink leading-none"
       >
         Katy Wang
       </Link>
 
-      <div className="hidden md:flex items-center gap-[34px] text-sm font-medium text-[#44443c]">
+      <div className="hidden md:flex items-baseline gap-8 text-[15.5px] text-ink">
         {navLinks.map((link) => (
           <NavLink
             key={link.to}
             to={link.to}
             className={({ isActive }) =>
-              `pb-[3px] border-b-2 transition-colors duration-200 hover:text-forest-green ${
-                isActive
-                  ? 'text-forest-green border-forest-green'
-                  : 'border-transparent'
-              }`
+              isActive
+                ? 'underline underline-offset-[6px] decoration-1'
+                : ''
             }
           >
             {link.label}

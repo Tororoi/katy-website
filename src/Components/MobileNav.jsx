@@ -20,7 +20,7 @@ const MobileNav = (props) => {
 
   return (
     <div
-      className={`md:hidden absolute top-full left-0 right-0 bg-white border-b border-hairline shadow-lg overflow-hidden transition-all duration-300 z-40 ${
+      className={`md:hidden absolute top-full left-0 right-0 bg-paper border-b border-hairline shadow-lg overflow-hidden transition-all duration-300 z-40 ${
         mobileNav ? 'max-h-96' : 'max-h-0'
       }`}
     >
@@ -34,10 +34,10 @@ const MobileNav = (props) => {
           <li key={link.to} className={i > 0 ? 'border-t border-hairline' : ''}>
             <NavLink
               className={({ isActive }) =>
-                `block px-5 py-3.5 text-[15px] font-medium transition-colors duration-200 ${
+                `block px-5 py-3.5 text-[16px] text-ink transition-colors duration-200 ${
                   isActive
-                    ? 'text-forest-green'
-                    : 'text-[#44443c] hover:text-forest-green'
+                    ? 'underline underline-offset-[6px] decoration-1'
+                    : ''
                 }`
               }
               to={link.to}

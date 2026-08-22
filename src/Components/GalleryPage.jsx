@@ -15,28 +15,30 @@ const GalleryPage = () => {
   const artworks = data.artwork
 
   return (
-    <div className="w-full px-5 pt-7 pb-8 md:px-14 md:pt-[52px] md:pb-16 text-left">
-      <h1 className="font-serif text-[30px] md:text-[40px] font-medium mb-5 md:mb-[26px]">
+    <div className="w-full px-5 pt-7 pb-8 md:px-14 md:pt-14 md:pb-[72px] text-left">
+      <h1 className="text-[30px] md:text-[44px] font-normal mb-5 md:mb-[34px]">
         Gallery
       </h1>
-      <div className="columns-2 gap-3 md:columns-3 md:gap-[22px]">
+      <div className="columns-2 gap-3 md:columns-3 md:gap-[26px]">
         {artworks.map((art, i) => (
           <button
             key={art.id}
             type="button"
             onClick={() => setLightboxIndex(i)}
-            className="block w-full break-inside-avoid mb-4 md:mb-[26px] cursor-zoom-in group"
+            className="block w-full break-inside-avoid mb-4 md:mb-[30px] cursor-zoom-in group text-left"
           >
             {/* Native aspect ratio — never hard-crop grid images */}
-            <img
-              src={art.thumb}
-              alt={art.alt}
-              width={art.thumbWidth}
-              height={art.thumbHeight}
-              loading="lazy"
-              className="w-full h-auto block transform group-hover:scale-[1.02] transition-transform duration-500"
-            />
-            <div className="text-xs md:text-sm italic text-[#6b6a5f] text-center pt-1.5 md:pt-[9px]">
+            <div className="overflow-hidden">
+              <img
+                src={art.thumb}
+                alt={art.alt}
+                width={art.thumbWidth}
+                height={art.thumbHeight}
+                loading="lazy"
+                className="w-full h-auto block transform group-hover:scale-[1.04] transition-transform duration-500"
+              />
+            </div>
+            <div className="text-[13.5px] md:text-[15px] italic text-[#6C6A5C] pt-1.5 md:pt-[9px]">
               {art.binomial}, {art.year}
             </div>
           </button>

@@ -5,19 +5,19 @@ import usePageMeta from '../usePageMeta'
 //Parents: App
 
 const infoRows = (
-  <div className="flex flex-col gap-3 md:gap-3.5 text-[14.5px] md:text-[15px]">
+  <div className="flex flex-col gap-3 md:gap-3.5 text-[15px] md:text-[16.5px]">
     <div>
-      <span className="text-[#8a897d]">Email</span>{' '}
+      <span className="italic text-muted">Email</span>{' '}
       <a href="mailto:katywangwebsite@gmail.com" className="ml-2">
         katywangwebsite@gmail.com
       </a>
     </div>
     <div>
-      <span className="text-[#8a897d]">Studio</span>{' '}
+      <span className="italic text-muted">Studio</span>{' '}
       <span className="ml-2">San Francisco Bay Area, CA</span>
     </div>
     <div>
-      <span className="text-[#8a897d]">Instagram</span>{' '}
+      <span className="italic text-muted">Instagram</span>{' '}
       <a
         href="https://www.instagram.com/katywangstudio/"
         target="_blank"
@@ -34,6 +34,9 @@ const fields = [
   { name: 'name', label: 'Name', type: 'text', placeholder: 'Your name' },
   { name: 'email', label: 'Email', type: 'email', placeholder: 'you@email.com' },
 ]
+
+const fieldClass =
+  'w-full bg-field-bg border border-field-border rounded-none px-3.5 py-[13px] text-base text-ink placeholder:text-[#A5A290] focus:outline-none focus:border-green'
 
 const Contact = () => {
   usePageMeta(
@@ -63,12 +66,12 @@ const Contact = () => {
   }
 
   return (
-    <div className="w-full md:grid md:grid-cols-[1fr_520px] md:gap-[72px] md:items-start px-5 pt-7 pb-9 md:px-[120px] md:pt-16 md:pb-20 text-left">
+    <div className="w-full md:grid md:grid-cols-[1fr_500px] md:gap-[88px] md:items-start px-5 pt-7 pb-9 md:px-[120px] md:pt-16 md:pb-[88px] text-left">
       <div>
-        <h1 className="font-serif text-[30px] md:text-[40px] font-medium mb-2.5 md:mb-4">
+        <h1 className="text-[30px] md:text-[44px] font-normal mb-2.5 md:mb-[18px]">
           Get in touch
         </h1>
-        <p className="text-[15px] md:text-[16.5px] leading-[1.65] text-body-gray mb-6 md:mb-8">
+        <p className="text-[15px] md:text-lg leading-[1.65] text-soft mb-6 md:mb-9">
           Questions about classes, artwork, commissions, or anything else —
           send a note.
         </p>
@@ -77,14 +80,14 @@ const Contact = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="bg-panel rounded p-5 md:p-9 mb-6 md:mb-0"
+        className="border-t border-ink pt-6 md:pt-7 mb-6 md:mb-0"
       >
-        <div className="flex flex-col gap-4 md:gap-[18px]">
+        <div className="flex flex-col gap-4 md:gap-[22px]">
           {fields.map((field) => (
             <div key={field.name}>
               <label
                 htmlFor={field.name}
-                className="block text-[13px] md:text-[13.5px] font-semibold text-[#44443c] mb-1.5"
+                className="block text-[15px] italic text-soft mb-[7px]"
               >
                 {field.label}
               </label>
@@ -97,14 +100,14 @@ const Contact = () => {
                 value={contact[field.name]}
                 onChange={handleChange}
                 placeholder={field.placeholder}
-                className="w-full bg-white border border-[#DDDACB] rounded-[3px] px-3.5 py-[13px] text-[14.5px] placeholder:text-[#9a9889] focus:outline-none focus:border-sage-border"
+                className={fieldClass}
               />
             </div>
           ))}
           <div>
             <label
               htmlFor="message"
-              className="block text-[13px] md:text-[13.5px] font-semibold text-[#44443c] mb-1.5"
+              className="block text-[15px] italic text-soft mb-[7px]"
             >
               Message
             </label>
@@ -115,12 +118,12 @@ const Contact = () => {
               value={contact.message}
               onChange={handleChange}
               placeholder="Tell me more…"
-              className="w-full min-h-[120px] bg-white border border-[#DDDACB] rounded-[3px] px-3.5 py-[13px] text-[14.5px] placeholder:text-[#9a9889] resize-y focus:outline-none focus:border-sage-border"
+              className={`${fieldClass} min-h-[130px] resize-y`}
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-forest-green text-paper py-[15px] text-center text-[15px] font-semibold rounded-[3px] hover:bg-forest-hover transition-colors duration-200"
+            className="self-start bg-green text-[#F7F5EC] px-[34px] py-[13px] text-base rounded-none hover:bg-green-dark transition-colors duration-200"
           >
             Send message
           </button>

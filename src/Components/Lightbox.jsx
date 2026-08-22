@@ -48,13 +48,13 @@ const Lightbox = ({ artworks, index, setIndex, onClose }) => {
       role="dialog"
       aria-modal="true"
       aria-label={art.title}
-      className="fixed inset-0 z-[100] flex flex-col bg-[rgba(20,22,17,.94)] text-paper text-left"
+      className="fixed inset-0 z-[100] flex flex-col bg-[rgba(26,26,20,.95)] text-[#F2F0E6] text-left"
     >
       <div className="flex justify-end pt-5 px-4 md:px-7">
         <button
           type="button"
           onClick={onClose}
-          className="text-[15px] font-semibold tracking-[.06em] text-[#DDDACB] px-3 py-2 hover:text-white transition-colors duration-200"
+          className="text-base text-[#D9D6C6] px-3 py-2 hover:text-white transition-colors duration-200"
         >
           Close ✕
         </button>
@@ -64,7 +64,7 @@ const Lightbox = ({ artworks, index, setIndex, onClose }) => {
           type="button"
           onClick={prev}
           aria-label="Previous artwork"
-          className="text-[34px] text-[#DDDACB] p-2 md:p-4 select-none hover:text-white transition-colors duration-200"
+          className="text-[34px] text-[#D9D6C6] p-2 md:p-4 select-none hover:text-white transition-colors duration-200"
         >
           ‹
         </button>
@@ -79,26 +79,24 @@ const Lightbox = ({ artworks, index, setIndex, onClose }) => {
           type="button"
           onClick={next}
           aria-label="Next artwork"
-          className="text-[34px] text-[#DDDACB] p-2 md:p-4 select-none hover:text-white transition-colors duration-200"
+          className="text-[34px] text-[#D9D6C6] p-2 md:p-4 select-none hover:text-white transition-colors duration-200"
         >
           ›
         </button>
       </div>
       <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 px-6 md:px-[72px] pt-5 pb-4 md:pb-[26px]">
         <div>
-          <span className="font-serif text-[21px] font-medium">
-            {art.title}
-          </span>
-          <span className="italic text-[15px] text-[#CBD6B8] ml-3">
+          <span className="text-[21px]">{art.title}</span>
+          <span className="italic text-base text-[#BFC6A8] ml-3">
             {art.binomial}
             {art.name !== '' ? ` ‘${art.name}’` : ''}
           </span>
         </div>
-        <div className="text-sm text-[#DDDACB] whitespace-nowrap">
+        <div className="text-[15px] text-[#D9D6C6] whitespace-nowrap">
           {art.medium} · {art.size}
         </div>
       </div>
-      <div className="text-center text-[13px] text-[#9aa588] pb-[18px]">
+      <div className="text-center text-[13.5px] text-[#9aa080] pb-[18px]">
         {art.status} · {index + 1} of {total}
       </div>
     </div>

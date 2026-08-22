@@ -22,7 +22,7 @@ const App = () => {
 
   return (
     <div className="App min-h-screen flex flex-col">
-      <header className="sticky top-0 z-50 bg-white">
+      <header className="sticky top-0 z-50 bg-paper">
         <NavBar toggleNav={toggleNav} />
         <MobileNav toggleNav={toggleNav} />
       </header>
