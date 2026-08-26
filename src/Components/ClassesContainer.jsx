@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import data from '../data.json'
-import { sortByStartDate, durationLabel, registerLabel } from '../classInfo'
+import { partitionClasses, durationLabel, registerLabel } from '../classInfo'
 import usePageMeta from '../usePageMeta'
 
 //Parents: App
@@ -24,6 +24,37 @@ const RegisterLink = ({ classItem, className = '' }) => (
   </a>
 )
 
+const ClassRow = ({ classItem: c }) => (
+  <div className="border-b border-hairline -mx-4 px-4 md:-mx-5 md:px-5 even:bg-[#F5F4EE] first:border-t first:border-t-ink">
+    {/* Desktop row */}
+    <div className="hidden md:grid grid-cols-[200px_minmax(0,1fr)_210px_245px] gap-8 items-baseline py-[22px]">
+      <div>
+        <div className="text-base text-ink">{c.dates}</div>
+        <div className="text-[14.5px] text-muted">{c.time}</div>
+      </div>
+      <div>
+        <h2 className="text-[21px] font-normal mb-0.5">{c.title}</h2>
+        <div className="text-[14.5px] italic text-muted">{durationLabel(c)}</div>
+      </div>
+      <div className="text-[15.5px] text-soft self-center">{c.location}</div>
+      <RegisterLink classItem={c} className="self-center" />
+    </div>
+
+    {/* Mobile card */}
+    <div className="md:hidden py-[18px]">
+      <h2 className="text-xl font-normal mb-0.5">{c.title}</h2>
+      <div className="text-[14px] italic text-muted mb-1.5">
+        {durationLabel(c)}
+      </div>
+      <div className="text-[14px] text-soft mb-1">{c.location}</div>
+      <div className="text-[14px] text-soft mb-3">
+        {c.datesLong} · {c.time}
+      </div>
+      <RegisterLink classItem={c} className="inline-block" />
+    </div>
+  </div>
+)
+
 const ClassesContainer = () => {
   usePageMeta(
     'Classes & Workshops — Katy Wang Studio',
@@ -31,9 +62,12 @@ const ClassesContainer = () => {
   )
 
   const [venueFilter, setVenueFilter] = useState('all')
+  const [showArchived, setShowArchived] = useState(false)
 
-  const classes = sortByStartDate(data.classes).filter(
-    (c) => venueFilter === 'all' || c.venue === venueFilter,
+  // Partition first, then filter, so the archive count reflects the venue in
+  // view. Both lists come back sorted soonest start date first.
+  const { current, archived } = partitionClasses(
+    data.classes.filter((c) => venueFilter === 'all' || c.venue === venueFilter),
   )
 
   return (
@@ -71,44 +105,44 @@ const ClassesContainer = () => {
 
       {/* Class rows */}
       <div>
-        {classes.map((c) => (
-          <div
-            key={c.id}
-            className="border-b border-hairline -mx-4 px-4 md:-mx-5 md:px-5 even:bg-[#F5F4EE] first:border-t first:border-t-ink"
-          >
-            {/* Desktop row */}
-            <div className="hidden md:grid grid-cols-[200px_minmax(0,1fr)_210px_245px] gap-8 items-baseline py-[22px]">
-              <div>
-                <div className="text-base text-ink">{c.dates}</div>
-                <div className="text-[14.5px] text-muted">{c.time}</div>
-              </div>
-              <div>
-                <h2 className="text-[21px] font-normal mb-0.5">{c.title}</h2>
-                <div className="text-[14.5px] italic text-muted">
-                  {durationLabel(c)}
-                </div>
-              </div>
-              <div className="text-[15.5px] text-soft self-center">
-                {c.location}
-              </div>
-              <RegisterLink classItem={c} className="self-center" />
-            </div>
-
-            {/* Mobile card */}
-            <div className="md:hidden py-[18px]">
-              <h2 className="text-xl font-normal mb-0.5">{c.title}</h2>
-              <div className="text-[14px] italic text-muted mb-1.5">
-                {durationLabel(c)}
-              </div>
-              <div className="text-[14px] text-soft mb-1">{c.location}</div>
-              <div className="text-[14px] text-soft mb-3">
-                {c.datesLong} · {c.time}
-              </div>
-              <RegisterLink classItem={c} className="inline-block" />
-            </div>
-          </div>
+        {current.map((c) => (
+          <ClassRow key={c.id} classItem={c} />
         ))}
+        {current.length === 0 && (
+          <div className="border-t border-t-ink border-b border-hairline py-[22px] text-[15.5px] text-soft">
+            No classes are currently scheduled &mdash; new dates are announced
+            each season.
+          </div>
+        )}
       </div>
+
+      {/* Past classes — a separate list, collapsed by default */}
+      {archived.length > 0 && (
+        <div className="mt-8 md:mt-11">
+          <button
+            type="button"
+            onClick={() => setShowArchived((v) => !v)}
+            aria-expanded={showArchived}
+            className="text-[15px] md:text-[15.5px] text-muted hover:text-ink underline underline-offset-4 decoration-1 transition-colors duration-200"
+          >
+            {showArchived ? 'Hide' : 'Show'} past classes ({archived.length})
+          </button>
+          {showArchived && (
+            <div className="mt-4 md:mt-5">
+              <h2 className="text-[19px] md:text-[22px] font-normal italic text-soft mb-3 md:mb-4">
+                Past classes
+              </h2>
+              {/* Own wrapper so the top rule and row striping restart here
+                  rather than continuing the current-classes list. */}
+              <div className="opacity-70">
+                {archived.map((c) => (
+                  <ClassRow key={c.id} classItem={c} />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Private lessons */}
       <div className="mt-9 md:mt-12 flex flex-col md:flex-row md:items-baseline justify-between gap-4 md:gap-8 max-w-[820px]">
