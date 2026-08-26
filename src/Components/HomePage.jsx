@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import data from '../data.json'
-import { sortByStartDate, registerLabel } from '../classInfo'
+import { partitionClasses, registerLabel } from '../classInfo'
 import usePageMeta from '../usePageMeta'
 
 //Parents: App
@@ -17,7 +17,9 @@ const HomePage = () => {
   const featured = featuredIds.map((id) =>
     data.artwork.find((art) => art.id === id),
   )
-  const upcoming = sortByStartDate(data.classes).slice(0, 3)
+  // Finished classes drop off automatically; the rest are soonest start date
+  // first, matching the Classes page. A series already under way still shows.
+  const upcoming = partitionClasses(data.classes).current.slice(0, 3)
 
   return (
     <div className="w-full">
@@ -116,6 +118,12 @@ const HomePage = () => {
           </Link>
         </div>
         <div className="border-t border-ink">
+          {upcoming.length === 0 && (
+            <div className="py-4 md:py-5 border-b border-hairline text-[15px] md:text-base text-soft">
+              No classes are currently scheduled &mdash; new dates are
+              announced each season.
+            </div>
+          )}
           {upcoming.map((c) => (
             <div
               key={c.id}
