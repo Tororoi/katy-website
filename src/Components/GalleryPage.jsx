@@ -7,7 +7,7 @@ import usePageMeta from '../usePageMeta'
 
 const GalleryPage = () => {
   usePageMeta(
-    'Gallery — Katy Wang Studio',
+    'Gallery - Katy Wang',
     'Watercolors of fungi, carnivorous plants and botanical specimens by Katy Wang.',
   )
 
@@ -27,7 +27,7 @@ const GalleryPage = () => {
             onClick={() => setLightboxIndex(i)}
             className="block w-full break-inside-avoid mb-4 md:mb-[30px] cursor-zoom-in group text-left"
           >
-            {/* Native aspect ratio — never hard-crop grid images */}
+            {/* Native aspect ratio - never hard-crop grid images */}
             <div className="overflow-hidden">
               <img
                 src={art.thumb}

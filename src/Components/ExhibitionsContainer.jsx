@@ -32,7 +32,7 @@ const Row = ({ item }) => (
 
 const ExhibitionsContainer = () => {
   usePageMeta(
-    'Exhibitions & Projects — Katy Wang Studio',
+    'Exhibitions & Projects - Katy Wang',
     'Selected exhibitions and residencies of botanical artist Katy Wang, including the New York Botanical Garden Triennial and Wave Hill.',
   )
 

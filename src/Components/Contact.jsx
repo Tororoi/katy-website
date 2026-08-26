@@ -32,7 +32,12 @@ const infoRows = (
 
 const fields = [
   { name: 'name', label: 'Name', type: 'text', placeholder: 'Your name' },
-  { name: 'email', label: 'Email', type: 'email', placeholder: 'you@email.com' },
+  {
+    name: 'email',
+    label: 'Email',
+    type: 'email',
+    placeholder: 'you@email.com',
+  },
 ]
 
 const fieldClass =
@@ -40,7 +45,7 @@ const fieldClass =
 
 const Contact = () => {
   usePageMeta(
-    'Contact — Katy Wang Studio',
+    'Contact - Katy Wang',
     'Get in touch with Katy Wang about classes, artwork, commissions, or anything else.',
   )
 
@@ -72,8 +77,8 @@ const Contact = () => {
           Get in touch
         </h1>
         <p className="text-[15px] md:text-lg leading-[1.65] text-soft mb-6 md:mb-9">
-          Questions about classes, artwork, commissions, or anything else —
-          send a note.
+          Questions about classes, artwork, commissions, or anything else - send
+          a note.
         </p>
         <div className="hidden md:block">{infoRows}</div>
       </div>

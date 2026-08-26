@@ -34,7 +34,9 @@ const ClassRow = ({ classItem: c }) => (
       </div>
       <div>
         <h2 className="text-[21px] font-normal mb-0.5">{c.title}</h2>
-        <div className="text-[14.5px] italic text-muted">{durationLabel(c)}</div>
+        <div className="text-[14.5px] italic text-muted">
+          {durationLabel(c)}
+        </div>
       </div>
       <div className="text-[15.5px] text-soft self-center">{c.location}</div>
       <RegisterLink classItem={c} className="self-center" />
@@ -57,7 +59,7 @@ const ClassRow = ({ classItem: c }) => (
 
 const ClassesContainer = () => {
   usePageMeta(
-    'Classes & Workshops — Katy Wang Studio',
+    'Classes & Workshops - Katy Wang',
     'In-person watercolor and botanical drawing classes for adults across the Bay Area, at CSMA and Pacific Art League.',
   )
 
@@ -67,7 +69,9 @@ const ClassesContainer = () => {
   // Partition first, then filter, so the archive count reflects the venue in
   // view. Both lists come back sorted soonest start date first.
   const { current, archived } = partitionClasses(
-    data.classes.filter((c) => venueFilter === 'all' || c.venue === venueFilter),
+    data.classes.filter(
+      (c) => venueFilter === 'all' || c.venue === venueFilter,
+    ),
   )
 
   return (
@@ -76,9 +80,9 @@ const ClassesContainer = () => {
         Classes &amp; Workshops
       </h1>
       <p className="hidden md:block text-[17.5px] leading-[1.6] text-soft max-w-[620px] mb-[34px]">
-        In-person watercolor and botanical drawing classes for adults across
-        the Bay Area. Registration is handled by each venue — the register
-        link opens the venue&rsquo;s site in a new tab.
+        In-person watercolor and botanical drawing classes for adults across the
+        Bay Area. Registration is handled by each venue - the register link
+        opens the venue&rsquo;s site in a new tab.
       </p>
       <p className="md:hidden text-[15px] leading-[1.6] text-soft mb-[18px]">
         In-person classes across the Bay Area. Registration opens on the
@@ -116,7 +120,7 @@ const ClassesContainer = () => {
         )}
       </div>
 
-      {/* Past classes — a separate list, collapsed by default */}
+      {/* Past classes - a separate list, collapsed by default */}
       {archived.length > 0 && (
         <div className="mt-8 md:mt-11">
           <button

@@ -15,8 +15,8 @@ const credits = [
 
 const AboutPage = () => {
   usePageMeta(
-    'About the Artist — Katy Wang Studio',
-    'Katy Wang is a Bay Area botanical artist focused on fungi, exhibited at the New York Botanical Garden and Wave Hill.',
+    'About the Artist - Katy Wang',
+    'Yuan Yuan ‘Katy’ Wang is a San Francisco Bay Area botanical artist focused on the kingdom of Fungi, exhibited at the New York Botanical Garden and Wave Hill.',
   )
 
   return (
@@ -35,25 +35,24 @@ const AboutPage = () => {
           </h1>
           <div className="text-[16px] md:text-lg leading-[1.72] text-body space-y-3.5 md:space-y-4">
             <p>
-              Katy Wang first became drawn to plants while exploring the cloud
-              forests of South America with her husband.
+              Yuan Yuan &lsquo;Katy&rsquo; Wang first became drawn to plants
+              when exploring the cloud forests of South America with her
+              husband.
             </p>
             <p>
               Back at home in New York City, she went on to study botanical art
-              at the New York Botanical Garden and exhibit her work in the
-              American Society of Botanical Artists&rsquo; Annual International
-              shows.
+              at the New York Botanical Garden and exhibit her work in American
+              Society of Botanical Artists&rsquo; Annual International shows.
             </p>
             <p>
               In 2019, she became involved with the New York Mycological
-              Society, which launched her interest in the diverse and enigmatic
-              world of fungi.
+              Society, which launched her interest into the diverse and
+              enigmatic world of Fungi.
             </p>
             <p>
               She currently resides in the San Francisco Bay Area, where she
               continues to work on botanical artwork with a focus on the
-              fascinating kingdom of Fungi — and teaches watercolor and
-              botanical drawing in person across the Peninsula.
+              fascinating kingdom of Fungi.
             </p>
           </div>
         </div>
