@@ -81,7 +81,7 @@ const ClassesContainer = () => {
       </h1>
       <p className="hidden md:block text-[17.5px] leading-[1.6] text-soft max-w-[620px] mb-[34px]">
         In-person watercolor and botanical drawing classes for adults across the
-        Bay Area. Registration is handled by each venue - the register link
+        Bay Area. Registration is handled by each venue — the register link
         opens the venue&rsquo;s site in a new tab.
       </p>
       <p className="md:hidden text-[15px] leading-[1.6] text-soft mb-[18px]">
