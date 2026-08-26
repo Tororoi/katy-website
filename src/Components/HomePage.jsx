@@ -10,7 +10,7 @@ const featuredIds = [1, 6, 2]
 
 const HomePage = () => {
   usePageMeta(
-    'Katy Wang Studio — Botanical & Mushroom Watercolors',
+    'Katy Wang - Botanical & Mushroom Watercolors',
     'Botanical and mushroom watercolors by Katy Wang. In-person watercolor and botanical drawing classes across the San Francisco Bay Area.',
   )
 
@@ -120,8 +120,8 @@ const HomePage = () => {
         <div className="border-t border-ink">
           {upcoming.length === 0 && (
             <div className="py-4 md:py-5 border-b border-hairline text-[15px] md:text-base text-soft">
-              No classes are currently scheduled &mdash; new dates are
-              announced each season.
+              No classes are currently scheduled &mdash; new dates are announced
+              each season.
             </div>
           )}
           {upcoming.map((c) => (
