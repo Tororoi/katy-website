@@ -38,17 +38,9 @@ const ExhibitionsContainer = () => {
 
   return (
     <div className="w-full max-w-[840px] mx-auto px-5 pt-7 pb-9 md:px-14 md:pt-14 md:pb-20 text-left">
-      <div className="md:flex md:items-baseline md:justify-between mb-6 md:mb-10">
-        <h1 className="text-[28px] md:text-[44px] font-normal mb-1.5 md:mb-0">
-          Exhibitions &amp; Projects
-        </h1>
-        <a
-          href="./KatyWang_CV.pdf"
-          className="text-[13.5px] md:text-[15.5px] text-green underline underline-offset-4 decoration-1 hover:text-green-dark whitespace-nowrap"
-        >
-          Download CV (PDF)
-        </a>
-      </div>
+      <h1 className="text-[28px] md:text-[44px] font-normal mb-6 md:mb-10">
+        Exhibitions &amp; Projects
+      </h1>
 
       <SectionHeading className="mb-0.5">Selected exhibitions</SectionHeading>
       {byYearDesc(data.exhibitions).map((exhibition) => (
